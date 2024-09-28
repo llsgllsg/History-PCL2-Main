@@ -229,7 +229,6 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <FlowDocumentScrollViewer >
 <FlowDocument>
 <Paragraph Style="{StaticResource H2}">PCL 正式版已同步更新至 2.8.7！</Paragraph>
-<ListItem>    <Paragraph>以下是Snapshot的更新日志</Paragraph></ListItem>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 
