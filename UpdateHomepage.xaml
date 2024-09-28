@@ -240,7 +240,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 </List><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
 <ListItem>    <Paragraph>不再完全支持 32 位系统，若在 32 位系统下运行会显示环境警告</Paragraph></ListItem>
 <ListItem>    <Paragraph>使用新的正版登录方式，以提高安全性（#122，@zkitefly，PR @Pigeon0v0）</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">优化&amp;新功能</Paragraph><List>
+</List><Paragraph Style="{StaticResource H2}">优化 &amp; 新功能</Paragraph><List>
 <ListItem>    <Paragraph>略微减轻了左下角提示遮挡 UI 的情况（#4082，@qndm）</Paragraph></ListItem>
 <ListItem>    <Paragraph>需要更新密钥的同时显示识别码（#4188，@Louis-Harsune）</Paragraph></ListItem>
 <ListItem>    <Paragraph>Workflow 编译支持替换部分 Secret（#4228，PR @allMagicNB）</Paragraph></ListItem>
