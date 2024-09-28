@@ -259,33 +259,33 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 
 <WrapPanel Margin="-2,2" Orientation="Horizontal" VerticalAlignment="Center">
 <local:MyIconTextButton Text="查看其他修复的20个Bug" ToolTip="Bug Fix" EventType="弹出窗口"
-    EventData="其他被修复的20个Bug | 　　\n·若 Mod 缓存有误，则再也无法加载 Mod 信息（#3433，@SDHsuifeng）
-　　\n·在非 NTFS 磁盘上无法为远古版本下载资源（#3684，@misividkoukou）
-　　\n·下载游戏可能失败：版本 json 不规范（#3710，@Afdian-User-1145）
-　　\n·游戏内打开文件夹的路径可能有误（#3868，@EndlessEmptiness，PR @Pigeon0v0）
-　　\n·access_token 过期后启动游戏不会自动刷新（#4333，@allMagicNB）
-　　\n·Mod 标题太长会点不到升级图标（#4465，@AlbertInf299）
-　　\n·local:MyIconTextButton 的 ColorType 属性无效（#4538，@MFn233）
-　　\n·无法删除远古版本 MC 与文件夹符号链接（#4549，@AptS-1547）
-　　\n·远古版本在开启版本隔离后没有声音（#4628，@zec896219）
-　　\n·删除 Mod 后报错（#4691，@Zecci9）
-　　\n·Mod 筛选器的显示条件有误（#4701，@yizhi9jiyan9）
-　　\n·版本设置的自动分配和全局设置的行为不一致（#4752，@hxabcd）
-　　\n·双击 Mod 更新按钮会导致更新无法正常结束（#4754，@addion7）
-　　\n·有多个下载任务时结束任务会出现意料之外的行为（#4766，@MacroMeng）
-　　\n·检查的可更新的 Mod 存在遗漏（#4805，@Lmy1503）
-　　\n·显示前置 Mod 时可能出错（#4806，@Molacs）
-　　\n·代码中的 Unavailable 拼写错误
-　　\n·请求速率会超出 BMCLAPI QPS 限制
-　　\n·每次打开均会尝试联网获取本地 Mod 信息
-　　\n·部分 Mod 的图标无法加载" LogoScale="1.05" Logo="{StaticResource LaunchIcon}" />
+    EventData="其他被修复的20个Bug | 　　\n· 若 Mod 缓存有误，则再也无法加载 Mod 信息（#3433，@SDHsuifeng）
+　　\n· 在非 NTFS 磁盘上无法为远古版本下载资源（#3684，@misividkoukou）
+　　\n· 下载游戏可能失败：版本 json 不规范（#3710，@Afdian-User-1145）
+　　\n· 游戏内打开文件夹的路径可能有误（#3868，@EndlessEmptiness，PR @Pigeon0v0）
+　　\n· access_token 过期后启动游戏不会自动刷新（#4333，@allMagicNB）
+　　\n· Mod 标题太长会点不到升级图标（#4465，@AlbertInf299）
+　　\n· local:MyIconTextButton 的 ColorType 属性无效（#4538，@MFn233）
+　　\n· 无法删除远古版本 MC 与文件夹符号链接（#4549，@AptS-1547）
+　　\n· 远古版本在开启版本隔离后没有声音（#4628，@zec896219）
+　　\n· 删除 Mod 后报错（#4691，@Zecci9）
+　　\n· Mod 筛选器的显示条件有误（#4701，@yizhi9jiyan9）
+　　\n· 版本设置的自动分配和全局设置的行为不一致（#4752，@hxabcd）
+　　\n· 双击 Mod 更新按钮会导致更新无法正常结束（#4754，@addion7）
+　　\n· 有多个下载任务时结束任务会出现意料之外的行为（#4766，@MacroMeng）
+　　\n· 检查的可更新的 Mod 存在遗漏（#4805，@Lmy1503）
+　　\n· 显示前置 Mod 时可能出错（#4806，@Molacs）
+　　\n· 代码中的 Unavailable 拼写错误
+　　\n· 请求速率会超出 BMCLAPI QPS 限制
+　　\n· 每次打开均会尝试联网获取本地 Mod 信息
+　　\n· 部分 Mod 的图标无法加载" LogoScale="1.05" Logo="{StaticResource LaunchIcon}" />
 <local:MyIconTextButton Text="原更新日志" ToolTip="2.8.7 更新日志" EventType="打开网页"
     EventData="https://github.com/Hex-Dragon/PCL2/discussions/4814" LogoScale="1.05" Logo="{StaticResource GithubIcon}" />
 <local:MyIconTextButton Text="未来计划" ToolTip="Todo" EventType="弹出窗口"
-    EventData="下一个版本的计划： | \n(如果这个版本有大 bug 会补一个临时更新)
-\n导入 / 导出启动器设置 复活 #4707
-\n解决中优先度的 issue（现在堆得还是太多了）
-\n也许会做 新功能：原版服务端下载功能 #4810" LogoScale="1.05" Logo="M4.146 3.646a.5.5 0 0 0 0 .708L7.793 8l-3.647 3.646a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708 0zM11.5 1a.5.5 0 0 1 .5.5v13a.5.5 0 0 1-1 0v-13a.5.5 0 0 1 .5-.5z" />
+    EventData="下一个版本的计划： | \n· (如果这个版本有大 bug 会补一个临时更新)
+\n· 导入 / 导出启动器设置 复活 #4707
+\n· 解决中优先度的 issue（现在堆得还是太多了）
+\n· 也许会做 新功能：原版服务端下载功能 #4810" LogoScale="1.05" Logo="M4.146 3.646a.5.5 0 0 0 0 .708L7.793 8l-3.647 3.646a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708 0zM11.5 1a.5.5 0 0 1 .5.5v13a.5.5 0 0 1-1 0v-13a.5.5 0 0 1 .5-.5z" />
 </WrapPanel>
 
 <Border BorderBrush="{DynamicResource ColorBrush3}" Margin="-0.6" CornerRadius="5" BorderThickness="4,4,4,4">
