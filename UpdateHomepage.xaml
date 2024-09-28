@@ -197,9 +197,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph Style="{StaticResource H1}">PCL2 Update To Snapshot 2.8.7</Paragraph><Paragraph Style="{StaticResource H4}">由最亮的信标-HomepageBuilder构建生成</Paragraph>    <BlockUIContainer>
-<Image Style="{StaticResource InnerImage}" Source="https://i0.hdslb.com/bfs/article/6c37391d1d70abb3fbb3a62f2248d3ce11343203.png"/>
-</BlockUIContainer><Paragraph Style="{StaticResource H2}">应当也能缓解 Mod 更新检测不到、Forge 下载卡住等等问题……</Paragraph>    <Paragraph>==========================================================</Paragraph><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
+<Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
 <ListItem>    <Paragraph>不再完全支持 32 位系统，若在 32 位系统下运行会显示环境警告</Paragraph></ListItem>
 <ListItem>    <Paragraph>使用新的正版登录方式，以提高安全性（#122，@zkitefly，PR @Pigeon0v0）</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H2}">软件优化</Paragraph><List>
@@ -218,11 +216,51 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <ListItem><Paragraph>[关闭文件校验] 选项可能失效（#3792，@wuliaodexiaoluo）</Paragraph></ListItem>
 <ListItem><Paragraph>[检查更新] 按钮不会积极地获取更新（#4217，@allMagicNB）</Paragraph></ListItem>
 <ListItem><Paragraph>在开启 [关闭文件校验] 时手动补全文件，会忽略设置并正常进行文件校验</Paragraph></ListItem>
-<ListItem></ListItem>
+<ListItem><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-9" EventType="弹出窗口" EventData="其余20个被修复的Bug | 
+　　\n·若 Mod 缓存有误，则再也无法加载 Mod 信息（#3433，@SDHsuifeng）
+
+　　\n·在非 NTFS 磁盘上无法为远古版本下载资源（#3684，@misividkoukou）
+
+　　\n·下载游戏可能失败：版本 json 不规范（#3710，@Afdian-User-1145）
+
+　　\n·游戏内打开文件夹的路径可能有误（#3868，@EndlessEmptiness，PR @Pigeon0v0）
+
+　　\n·access_token 过期后启动游戏不会自动刷新（#4333，@allMagicNB）
+
+　　\n·Mod 标题太长会点不到升级图标（#4465，@AlbertInf299）
+
+　　\n·local:MyIconTextButton 的 ColorType 属性无效（#4538，@MFn233）
+
+　　\n·无法删除远古版本 MC 与文件夹符号链接（#4549，@AptS-1547）
+
+　　\n·远古版本在开启版本隔离后没有声音（#4628，@zec896219）
+
+　　\n·删除 Mod 后报错（#4691，@Zecci9）
+
+　　\n·Mod 筛选器的显示条件有误（#4701，@yizhi9jiyan9）
+
+　　\n·版本设置的自动分配和全局设置的行为不一致（#4752，@hxabcd）
+
+　　\n·双击 Mod 更新按钮会导致更新无法正常结束（#4754，@addion7）
+
+　　\n·有多个下载任务时结束任务会出现意料之外的行为（#4766，@MacroMeng）
+
+　　\n·检查的可更新的 Mod 存在遗漏（#4805，@Lmy1503）
+
+　　\n·显示前置 Mod 时可能出错（#4806，@Molacs）
+
+　　\n·代码中的 Unavailable 拼写错误
+
+　　\n·请求速率会超出 BMCLAPI QPS 限制
+
+　　\n·每次打开均会尝试联网获取本地 Mod 信息
+
+　　\n·部分 Mod 的图标无法加载">And Other 20 Bug Fix</local:MyTextButton></Underline></Paragraph></ListItem>
 </List></ListItem>
 </List>
 </FlowDocument>
 </FlowDocumentScrollViewer>
+
 <Border BorderBrush="{DynamicResource ColorBrush3}" Margin="-0.6" CornerRadius="5" BorderThickness="4,4,4,4">
 <StackPanel>
   <Grid Margin="26,20,20,2">
