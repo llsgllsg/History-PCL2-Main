@@ -256,11 +256,18 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <ListItem><Paragraph>[关闭文件校验] 选项可能失效（#3792，@wuliaodexiaoluo）</Paragraph></ListItem>
 <ListItem><Paragraph>[检查更新] 按钮不会积极地获取更新（#4217，@allMagicNB）</Paragraph></ListItem>
 <ListItem><Paragraph>在开启 [关闭文件校验] 时手动补全文件，会忽略设置并正常进行文件校验</Paragraph></ListItem>
-<ListItem><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-9" EventType="打开网页" EventData="https://github.com/Hex-Dragon/PCL2/discussions/4814">And Other 20 Bug Fix</local:MyTextButton></Underline></Paragraph></ListItem>
+<ListItem><Paragraph>And Other 20 Bug Fix</Paragraph></ListItem>
 </List></ListItem>
 </List>
 </FlowDocument>
 </FlowDocumentScrollViewer>
+<WrapPanel Margin="-2,2" Orientation="Horizontal" VerticalAlignment="Center">
+<local:MyIconTextButton Text="����" ToolTip="���� 1.21.1" EventType="������Ϸ"
+    EventData="1.21.1" LogoScale="0.85" Logo="{StaticResource LaunchIcon}" />
+<local:MyIconTextButton Text="WIKI" ToolTip="�� Minecraft Wiki �ϲ鿴�ð汾" EventType="����ҳ"
+    EventData="https://zh.minecraft.wiki/w/Java��1.21.1" LogoScale="1.05" Logo="{StaticResource WikiIcon}" />
+</WrapPanel>
+
 <Border BorderBrush="{DynamicResource ColorBrush3}" Margin="-0.6" CornerRadius="5" BorderThickness="4,4,4,4">
 <StackPanel>
   <Grid Margin="26,20,20,2">
