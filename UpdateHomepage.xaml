@@ -212,7 +212,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 </Border>
 <FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph Style="{StaticResource H5}">更新时间:2024年09月24日-HomepageBuilder构建生成</Paragraph>    
+<Paragraph Style="{StaticResource H5}">更新时间:2024年09月24日</Paragraph>    
 <Paragraph Style="{StaticResource H2}">应当也能缓解 Mod 更新检测不到、Forge 下载卡住等等问题……</Paragraph>    <Paragraph>==========================================================</Paragraph><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
 <ListItem>    <Paragraph>不再完全支持 32 位系统，若在 32 位系统下运行会显示环境警告</Paragraph></ListItem>
 <ListItem>    <Paragraph>使用新的正版登录方式，以提高安全性（#122，@zkitefly，PR @Pigeon0v0）</Paragraph></ListItem>
@@ -282,7 +282,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
     <StackPanel>
     <StackPanel VerticalAlignment="Center" Margin="0,0,0,4">
     <TextBlock FontSize="18" Foreground="{DynamicResource ColorBrush3}"><Bold>PCL2 更新日志</Bold></TextBlock>
-    <TextBlock FontSize="12" Foreground="{DynamicResource ColorBrush3}" Text="Get Update Quickly "/>
+    <TextBlock FontSize="12" Foreground="{DynamicResource ColorBrush3}" Text="Get Update Quickly - HomepageBuilder构建生成"/>
     <local:MyTextButton FontSize="12" Foreground="{DynamicResource ColorBrush3}" Text="借鉴新闻主页部分内容 采用CC BY-NC-SA 4.0 " EventType="打开网页"
     EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/blob/main/LICENSE-CONTENT"/>
     </StackPanel>
