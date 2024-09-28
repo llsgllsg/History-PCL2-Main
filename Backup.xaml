@@ -8,11 +8,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 </StackPanel.Triggers>
 <StackPanel.Resources>
 <!--Styles Starts-->
-<Style TargetType="StackPanel" x:Key="ContentStack" >
-<Setter Property="Margin" Value="20,40,20,20"/>
-</Style><Style TargetType="local:MyCard" x:Key="Card" >
-<Setter Property="Margin" Value="0,5"/>
-</Style><Style TargetType="FlowDocumentScrollViewer" >
+<Style TargetType="FlowDocumentScrollViewer" >
 <Setter Property="IsSelectionEnabled" Value="False"/>
 <Setter Property="VerticalScrollBarVisibility" Value="Hidden"/>
 <Setter Property="Margin" Value="0"/>
@@ -20,6 +16,10 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Setter Property="FontFamily" Value="Microsoft YaHei UI"/>
 <Setter Property="FontSize" Value="14"/>
 <Setter Property="TextAlignment" Value="Left"/>
+</Style><Style TargetType="StackPanel" x:Key="ContentStack" >
+<Setter Property="Margin" Value="20,40,20,20"/>
+</Style><Style TargetType="local:MyCard" x:Key="Card" >
+<Setter Property="Margin" Value="0,5"/>
 </Style><Style TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -85,7 +85,39 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/>
 <Setter Property="Padding" Value="10,5"/>
 <Setter Property="Margin" Value="0,5"/>
-</Style><sys:String x:Key="DownloadIcon">
+</Style><Style TargetType="Border" x:Key="cautionQuote" BasedOn="{StaticResource Quote}">
+<Setter Property="BorderBrush" Value="#CC4455"/>
+<Setter Property="Background" Value="#33CC4455"/>
+</Style><Style TargetType="Border" x:Key="noteQuote" BasedOn="{StaticResource Quote}">
+<Setter Property="BorderBrush" Value="#4455AA"/>
+<Setter Property="Background" Value="#334455AA"/>
+</Style><Style TargetType="Border" x:Key="tipQuote" BasedOn="{StaticResource Quote}">
+<Setter Property="BorderBrush" Value="#44AA55"/>
+<Setter Property="Background" Value="#3344AA55"/>
+</Style><Style TargetType="Border" x:Key="importantQuote" BasedOn="{StaticResource Quote}">
+<Setter Property="BorderBrush" Value="#AA55BB"/>
+<Setter Property="Background" Value="#33AA55BB"/>
+</Style><Style TargetType="Border" x:Key="warningQuote" BasedOn="{StaticResource Quote}">
+<Setter Property="BorderBrush" Value="#DDBB44"/>
+<Setter Property="Background" Value="#33DDBB44"/>
+</Style><Style x:Key="imgTitle" TargetType="TextBlock">
+  <Setter Property="FontSize" Value="14" />
+  <Setter Property="Foreground" Value="#FF777777" />
+  <Setter Property="HorizontalAlignment" Value="Center" />
+  <Setter Property="Margin" Value="0,0,0,15" />
+</Style><ControlTemplate x:Key="Separator" TargetType="ContentControl">
+  <Grid Margin="0,10">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="1*" />
+      <ColumnDefinition Width="100" />
+      <ColumnDefinition Width="1*" />
+    </Grid.ColumnDefinitions>
+    <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
+    <TextBlock Text="{TemplateBinding Content}" HorizontalAlignment="Center" FontSize="15" Foreground="{DynamicResource ColorBrush4}" Grid.Column="1" VerticalAlignment="Center" />
+    <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
+  </Grid>
+</ControlTemplate>
+<!--线--><sys:String x:Key="DownloadIcon">
 M802 664v146c0 7.7-6.3 14-14 14H236c-7.7
 0-14-6.3-14-14V664c0-5.5-4.5-10-10-10h-50c-5.5
 0-10 4.5-10 10v170c0 33.1 26.9 60 60 60h600c33.1
@@ -108,9 +140,6 @@ M802 664v146c0 7.7-6.3 14-14 14H236c-7.7
 0-0.4-0.1-0.6-0.1-0.4-0.1-0.7-0.2-1.1-0.2-0.2
 0-0.4-0.1-0.6-0.1-0.4-0.1-0.7-0.2-1.1-0.3-0.2-0.1-0.4-0.1-0.6-0.2-0.3-0.1-0.6-0.2-1-0.3-0.2-0.1-0.5-0.1-0.7-0.2l-0.9-0.3c-0.3-0.1-0.5-0.2-0.8-0.3-0.2-0.1-0.5-0.2-0.7-0.3-0.3-0.1-0.6-0.3-0.8-0.4l-0.6-0.3c-0.3-0.2-0.6-0.3-0.9-0.5-0.2-0.1-0.4-0.2-0.5-0.3-0.3-0.2-0.6-0.4-1-0.6-0.2-0.1-0.3-0.2-0.5-0.3-0.3-0.2-0.6-0.4-1-0.6-0.2-0.1-0.3-0.2-0.5-0.3-0.3-0.2-0.6-0.4-0.9-0.7-0.2-0.1-0.3-0.3-0.5-0.4-0.3-0.2-0.5-0.4-0.8-0.6-0.2-0.2-0.4-0.4-0.7-0.6-0.2-0.2-0.4-0.4-0.6-0.5l-1.2-1.2-233.1-233.1c-13.7-13.7-13.7-35.8 0-49.5 13.7-13.7
 35.8-13.7 49.5 0L477 612.5V163c0-19.3 15.7-35 35-35s35 15.7 35 35z</sys:String>
-<sys:String x:Key="CheckIcon">
-M1091.291429 0H78.935771C35.34848 0.035109 0.029257 35.354331 0 78.935771v863.331475c0 43.534629 35.401143 78.994286 78.935771 78.994285H1091.291429c43.534629 0 78.994286-35.401143 78.994285-78.994285V78.871406C1170.156983 35.319223 1134.849463 0.064366 1091.291429 0z m-8.835658 87.771429v78.754377H87.771429v-78.760229h994.684342zM87.771429 933.425737V254.232869h994.684342v679.140205H87.771429v0.058515zM724.95104 340.00896l-206.19264 547.605943a43.903269 43.903269 0 0 1-82.154057-31.012572l206.139977-547.547428a43.944229 43.944229 0 0 1 82.20672 30.954057zM369.558674 545.909029l-85.489371 85.489371 85.489371 85.542034a43.885714 43.885714 0 0 1-62.025143 62.083657l-116.554605-116.560457a43.8272 43.8272 0 0 1 0-62.025143l116.560457-116.49024a43.885714 43.885714 0 0 1 62.019291 61.966629z m610.567315-37.566172a43.885714 43.885714 0 0 1 0 62.083657l-116.560458 116.560457a43.768686 43.768686 0 0 1-62.019291 0 43.885714 43.885714 0 0 1 0-62.083657l85.547886-85.547885-85.547886-85.542035a43.897417 43.897417 0 0 1 62.083657-62.083657l116.496092 116.618972z
-</sys:String>
 <sys:String x:Key="LaunchIcon">
 M512 97C282.8 97 97 282.8 97 512s185.8 415 415 415 415-185.8
 415-415S741.2 97 512 97z m-1 759c-190.5 0-345-154.5-345-345s154.5-345
@@ -135,23 +164,7 @@ M172.61,196.65h31a7.69,7.69,0,0,1,7.62,6.65l11.19,80.95c2.58,20.09,5.16,40.18,7.
 </sys:String>
 <sys:String x:Key="CreeperIcon">
 M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.333333 85.333333 0 0 0 85.333333 85.333333h597.333334a85.333333 85.333333 0 0 0 85.333333-85.333333V213.333333a85.333333 85.333333 0 0 0-85.333333-85.333333H213.333333z m0 64h597.333334c11.754667 0 21.333333 9.578667 21.333333 21.333333v597.333334c0 11.754667-9.578667 21.333333-21.333333 21.333333H213.333333c-11.754667 0-21.333333-9.578667-21.333333-21.333333V213.333333c0-11.754667 9.578667-21.333333 21.333333-21.333333z m64 106.666667a21.333333 21.333333 0 0 0-21.333333 21.333333v128a21.333333 21.333333 0 0 0 21.333333 21.333333h149.333334v-149.333333a21.333333 21.333333 0 0 0-21.333334-21.333333h-128z m149.333334 170.666666v85.333334h-64a21.333333 21.333333 0 0 0-21.333334 21.333333v160a32 32 0 1 0 64 0V704h213.333334v32a32 32 0 1 0 64 0V576a21.333333 21.333333 0 0 0-21.333334-21.333333h-64v-85.333334h-170.666666z m170.666666 0h149.333334a21.333333 21.333333 0 0 0 21.333333-21.333333v-128a21.333333 21.333333 0 0 0-21.333333-21.333333h-128a21.333333 21.333333 0 0 0-21.333334 21.333333v149.333333z
-</sys:String><ControlTemplate x:Key="Separator" TargetType="ContentControl">
-  <Grid Margin="0,10">
-    <Grid.ColumnDefinitions>
-      <ColumnDefinition Width="1*" />
-      <ColumnDefinition Width="100" />
-      <ColumnDefinition Width="1*" />
-    </Grid.ColumnDefinitions>
-    <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
-    <TextBlock Text="{TemplateBinding Content}" HorizontalAlignment="Center" FontSize="15" Foreground="{DynamicResource ColorBrush4}" Grid.Column="1" VerticalAlignment="Center" />
-    <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
-  </Grid>
-</ControlTemplate><Style x:Key="imgTitle" TargetType="TextBlock">
-  <Setter Property="FontSize" Value="14" />
-  <Setter Property="Foreground" Value="#FF777777" />
-  <Setter Property="HorizontalAlignment" Value="Center" />
-  <Setter Property="Margin" Value="0,0,0,15" />
-</Style><Style TargetType="Border" x:Key="VersionImageBorder" >
+</sys:String><Style TargetType="Border" x:Key="VersionImageBorder" >
 <Setter Property="HorizontalAlignment" Value="Center"/>
 <Setter Property="BorderThickness" Value="4"/>
 <Setter Property="VerticalAlignment" Value="Top"/>
@@ -198,6 +211,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 </StackPanel.Resources>
 <local:MyCard Title="PCL更新日志" CanSwap="True" IsSwaped="False" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
+
 <Border BorderBrush="{DynamicResource ColorBrush3}"
         BorderThickness="3"
         CornerRadius="8"
@@ -208,11 +222,24 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
                     VerticalAlignment="Bottom"
                     Margin="0,0,0,0">
             <Image Height="200"
-                   Source="B站偷个图塞这" />
+                   Source="https://updatehomepage.pages.dev/NewVersion.png" />
         </StackPanel>
     </StackPanel>
 </Border>
-<!--正文部分塞这里-->
+<!--图片需改成Newversion-->
+<FlowDocumentScrollViewer >
+<FlowDocument>
+<!--塞B站引言-->
+</FlowDocument>
+</FlowDocumentScrollViewer>
+
+<ContentControl Content="更 新 日 志" Template="{StaticResource Separator}"/>
+
+<FlowDocumentScrollViewer >
+<FlowDocument>
+<!--正文部分-->
+</FlowDocument>
+</FlowDocumentScrollViewer>
 <Border BorderBrush="{DynamicResource ColorBrush3}" Margin="-0.6" CornerRadius="5" BorderThickness="4,4,4,4">
 <StackPanel>
   <Grid Margin="26,20,20,2">
@@ -230,6 +257,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
     <local:MyIconTextButton HorizontalAlignment="Left" Text="主页反馈" ToolTip="反馈问题" EventType="打开网页"
     EventData="https://github.com/Joker2184/UpdateHomepage/issues"
     LogoScale="1" Logo="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0z M1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0z"/>
+
     <local:MyIconTextButton HorizontalAlignment="Left" Text="刷新" EventType="刷新主页"
     LogoScale="0.9" Logo="M960 416V192l-73.056 73.056a447.712 447.712 0 0 0-373.6-201.088C265.92 63.968 65.312 264.544 65.312 512S265.92 960.032 513.344 960.032a448.064 448.064 0 0 0 415.232-279.488 38.368 38.368 0 1 0-71.136-28.896 371.36 371.36 0 0 1-344.096 231.584C308.32 883.232 142.112 717.024 142.112 512S308.32 140.768 513.344 140.768c132.448 0 251.936 70.08 318.016 179.84L736 416h224z"/>
     </StackPanel>
