@@ -209,7 +209,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <Setter Property="EventType" Value="下载文件"/>
 </Style>
 </StackPanel.Resources>
-<local:MyCard Title="PCL更新日志" CanSwap="True" IsSwaped="False" Style="{StaticResource Card}" Margin="0,0,0,40">
+<local:MyCard Title="PCL更新日志" CanSwap="True" IsSwaped="False" Style="{StaticResource Card}" Margin="0,0,0,15">
 <StackPanel Style="{StaticResource ContentStack}">
 
 <Border BorderBrush="{DynamicResource ColorBrush3}"
