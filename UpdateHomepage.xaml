@@ -193,13 +193,27 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <Setter Property="EventType" Value="下载文件"/>
 </Style>
 </StackPanel.Resources>
+
 <local:MyCard Title="PCL2更新日志" CanSwap="True" IsSwaped="False" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
+<Border BorderBrush="{DynamicResource ColorBrush3}"
+        BorderThickness="3"
+        CornerRadius="8"
+        Margin="0,0,0,0">
+    <StackPanel Margin="0,0,0,0"> 
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Margin="0,0,0,0">
+            <Image Height="200"
+                   Source="https://i0.hdslb.com/bfs/article/6c37391d1d70abb3fbb3a62f2248d3ce11343203.png" />
+        </StackPanel>
+    </StackPanel>
+</Border>
 <FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph Style="{StaticResource H1}">PCL2 Update To Snapshot 2.8.7</Paragraph><Paragraph Style="{StaticResource H4}">HomepageBuilder构建生成</Paragraph>    <BlockUIContainer>
-<Image Style="{StaticResource InnerImage}" Source="https://i0.hdslb.com/bfs/article/6c37391d1d70abb3fbb3a62f2248d3ce11343203.png"/>
-</BlockUIContainer><Paragraph Style="{StaticResource H2}">应当也能缓解 Mod 更新检测不到、Forge 下载卡住等等问题……</Paragraph>    <Paragraph>==========================================================</Paragraph><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
+<Paragraph Style="{StaticResource H5}">更新时间:2024年09月24日-HomepageBuilder构建生成</Paragraph>    
+<Paragraph Style="{StaticResource H2}">应当也能缓解 Mod 更新检测不到、Forge 下载卡住等等问题……</Paragraph>    <Paragraph>==========================================================</Paragraph><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
 <ListItem>    <Paragraph>不再完全支持 32 位系统，若在 32 位系统下运行会显示环境警告</Paragraph></ListItem>
 <ListItem>    <Paragraph>使用新的正版登录方式，以提高安全性（#122，@zkitefly，PR @Pigeon0v0）</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H2}">软件优化</Paragraph><List>
