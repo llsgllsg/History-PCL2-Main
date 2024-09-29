@@ -1,0 +1,18 @@
+<StackPanel Margin="0,-10,0,0" 
+xmlns:sys="clr-namespace:System;assembly=mscorlib" 
+xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
+<!--Animations Starts-->
+<StackPanel.Triggers>
+${animations}
+</StackPanel.Triggers>
+<StackPanel.Resources>
+<!--Styles Starts-->
+${styles}
+</StackPanel.Resources>
+<local:MyCard Title="PCL更新日志" CanSwap="True" IsSwaped="False" Style="{StaticResource Card}"  Margin="0,0,0,15">
+<StackPanel>
+${content}
+</StackPanel>
+</local:MyCard>
+</StackPanel>

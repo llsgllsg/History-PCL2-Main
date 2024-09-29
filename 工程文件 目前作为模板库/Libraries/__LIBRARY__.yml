@@ -1,0 +1,6 @@
+name: root
+fill:
+   canswap: true
+   templates:
+      - MarkdownCard
+      - Raw
