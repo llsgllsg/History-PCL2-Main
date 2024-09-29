@@ -164,11 +164,12 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <Setter Property="VerticalAlignment" Value="Top"/>
 <Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}"/>
 <Setter Property="CornerRadius" Value="7"/>
-<Setter Property="MaxHeight" Value="140"/>
+<Setter Property="MaxHeight" Value="200"/>
+<Setter Property="Margin" Value="0,-40,0,0"/>
 </Style><Style TargetType="Border" x:Key="VersionTitleBorder" >
 <Setter Property="Margin" Value="0,-20,-1,10"/>
 <Setter Property="Background" Value="{DynamicResource ColorBrush3}"/>
-<Setter Property="Width" Value="170"/>
+<Setter Property="Width" Value="200"/>
 <Setter Property="Height" Value="30"/>
 <Setter Property="CornerRadius" Value="7"/>
 <Setter Property="BorderThickness" Value="0,0,0,2"/>
@@ -203,23 +204,19 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <Setter Property="EventType" Value="下载文件"/>
 </Style>
 </StackPanel.Resources>
+
 <local:MyCard Title="PCL更新日志" CanSwap="True" IsSwaped="False" Style="{StaticResource Card}"  Margin="0,0,0,15">
 <StackPanel Style="{StaticResource ContentStack}">
 
-<Border BorderBrush="{DynamicResource ColorBrush3}"
-        BorderThickness="3"
-        CornerRadius="8"
-        Margin="0,0,0,0">
-    <StackPanel Margin="0,0,0,0"> 
-        <StackPanel Orientation="Horizontal"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Bottom"
-                    Margin="0,0,0,0">
-            <Image Height="200"
-                   Source="https://updatehomepage.pages.dev/NewVersion.png" />
-        </StackPanel>
-    </StackPanel>
+<StackPanel Style="{StaticResource ContentStack}">
+<Border Style="{StaticResource VersionImageBorder}">
+<Border.Background>
+<ImageBrush ImageSource="https://updatehomepage.pages.dev/NewVersion.png" Stretch="UniformToFill" />
+</Border.Background>
+<Image Source="https://updatehomepage.pages.dev/NewVersion.png" Opacity="0" Stretch="Fill"/>
 </Border>
+</StackPanel>
+
 
 <FlowDocumentScrollViewer >
 <FlowDocument>
@@ -281,8 +278,8 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 　　\n· 部分 Mod 的图标无法加载" LogoScale="1.05" Logo="{StaticResource LaunchIcon}" />
 <local:MyIconTextButton Text="原更新日志" ToolTip="2.8.7 更新日志" EventType="打开网页"
     EventData="https://github.com/Hex-Dragon/PCL2/discussions/4814" LogoScale="1.05" Logo="{StaticResource GithubIcon}" />
-<local:MyIconTextButton Text="未来计划" ToolTip="Todo" EventType="弹出窗口"
-    EventData="下一个版本的计划： | \n· (如果这个版本有大 bug 会补一个临时更新)
+<local:MyIconTextButton Text="龙猫说" ToolTip="Todo" EventType="弹出窗口"
+    EventData="下一个版本的计划：| \n· (如果这个版本有大 bug 会补一个临时更新)
 \n· 导入 / 导出启动器设置 复活 #4707
 \n· 解决中优先度的 issue（现在堆得还是太多了）
 \n· 也许会做 新功能：原版服务端下载功能 #4810" LogoScale="1.05" Logo="M4.146 3.646a.5.5 0 0 0 0 .708L7.793 8l-3.647 3.646a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708 0zM11.5 1a.5.5 0 0 1 .5.5v13a.5.5 0 0 1-1 0v-13a.5.5 0 0 1 .5-.5z" />
