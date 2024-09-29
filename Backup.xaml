@@ -232,13 +232,6 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 </FlowDocument>
 </FlowDocumentScrollViewer>
 
-<WrapPanel Margin="-2,2" Orientation="Horizontal" VerticalAlignment="Center">
-<local:MyIconTextButton Text="查看其他修复的N个Bug" ToolTip="Bug Fix" EventType="弹出窗口"
-    EventData="其他被修复的N个Bug | 　　\n" LogoScale="1.05" Logo="{StaticResource LaunchIcon}" />
-<local:MyIconTextButton Text="原更新日志" ToolTip="2.8.7 更新日志" EventType="打开网页"
-    EventData="<!--LASTEST VERSION LOG-->" LogoScale="1.05" Logo="{StaticResource GithubIcon}" />
-<!--<local:MyIconTextButton Text="龙猫说" ToolTip="Todo" EventType="弹出窗口"
-    EventData="下一个版本的计划：| \n 如果有就加" LogoScale="1.05" Logo="M4.146 3.646a.5.5 0 0 0 0 .708L7.793 8l-3.647 3.646a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708 0zM11.5 1a.5.5 0 0 1 .5.5v13a.5.5 0 0 1-1 0v-13a.5.5 0 0 1 .5-.5z" />-->
 
 </StackPanel>
 </local:MyCard>
