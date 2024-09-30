@@ -340,7 +340,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 　　\n· 部分 Mod 的图标无法加载" LogoScale="1.05" Logo="{StaticResource LaunchIcon}" />
 <local:MyIconTextButton Text="原更新日志" ToolTip="2.8.7 更新日志" EventType="打开网页"
     EventData="https://github.com/Hex-Dragon/PCL2/discussions/4814" LogoScale="1.05" Logo="{StaticResource GithubIcon}" />
-<local:MyIconTextButton Text="龙猫说" ToolTip="Todo" EventType="弹出窗口"
+<local:MyIconTextButton Text="未来计划" ToolTip="Todo" EventType="弹出窗口"
     EventData="下一个版本的计划：| \n· (如果这个版本有大 bug 会补一个临时更新)
 \n· 导入 / 导出启动器设置 复活 #4707
 \n· 解决中优先度的 issue（现在堆得还是太多了）
