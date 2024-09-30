@@ -204,8 +204,41 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <Setter Property="EventType" Value="下载文件"/>
 </Style>
 </StackPanel.Resources>
-
-<local:MyCard Title="PCL更新日志" CanSwap="False" IsSwaped="False" Style="{StaticResource Card}"  Margin="0,0,0,15">
+ <local:MyCard Margin="0,0,0,15" Title="PCL日报">
+ <StackPanel> 
+                <Grid Margin="21,40,21,16">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="45" />
+                        <RowDefinition Height="45" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40" />
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="150" />
+                    </Grid.ColumnDefinitions>
+                    <local:MyListItem IsHitTestVisible="False" Title="龙腾猫跃" Margin="-5,0,15,0" Info="2024年08月09日 16:49" Grid.Row="0" Grid.Column="1" />
+                    <Image Source="/Plain Craft Launcher 2;component/Images/Heads/LTCat.jpg" Grid.Row="0" Margin="3">
+                        <Image.Clip>
+                            <EllipseGeometry Center="17 17" RadiusX="17" RadiusY="17" />
+                        </Image.Clip>
+                    </Image>
+                </Grid>
+<StackPanel>
+  <Grid Margin="26,-60,20,2">
+    <StackPanel>
+    <StackPanel VerticalAlignment="Center" Margin="0,0,0,4">
+ <TextBlock FontSize="18" Foreground="{DynamicResource ColorBrush3}"><Bold>新版本 PCL 正在翻新正版账号登录，而新登录流程中，需要向 Mojang 提交申请，然后等他们审核……然后问题来了，Mojang 在文档里说他们一周会查看一次提交的申请，但现在离我提交申请已经过去了十天！十天！麻将的一周是多长啊？
+所以总之，PCL 新版本现在就卡在这了 =。=……
+再给麻将几天机会，如果麻将还是不回复申请的话，那我就只能把新版登录流程先删了，换回老版的，然后含泪把新版本先发出来了……</Bold></TextBlock>
+    </StackPanel>
+    </StackPanel>
+  </Grid>
+  </StackPanel>
+   
+  
+    </StackPanel>       
+</local:MyCard>
+<local:MyCard Title="PCL更新日志" CanSwap="True" IsSwaped="False" Style="{StaticResource Card}"  Margin="0,0,0,15">
 <StackPanel Style="{StaticResource ContentStack}">
 
 <StackPanel Style="{StaticResource ContentStack}">
@@ -286,13 +319,14 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 </WrapPanel>
 </StackPanel>
 </local:MyCard>
+
 <local:MyCard Margin="0,0,0,15">
 <Border BorderBrush="{DynamicResource ColorBrush3}" Margin="-0.6" CornerRadius="5" BorderThickness="4,0,0,0">
 <StackPanel>
   <Grid Margin="26,20,20,2">
     <StackPanel>
     <StackPanel VerticalAlignment="Center" Margin="0,0,0,4">
-<TextBlock FontSize="18" Foreground="{DynamicResource ColorBrush3}"><Bold>PCL2 更新日志</Bold></TextBlock>
+<TextBlock FontSize="18" Foreground="{DynamicResource ColorBrush3}"><Bold>PCL2 新闻速报</Bold></TextBlock>
     <TextBlock FontSize="12" Foreground="{DynamicResource ColorBrush3}" Text="Get Update Quickly - HomepageBuilder构建生成"/>
     <TextBlock FontSize="12" Foreground="{DynamicResource ColorBrush3}" Text="更新时间:专栏更新当天18点前后"/>
     <local:MyTextButton FontSize="12" Foreground="{DynamicResource ColorBrush3}" Text="CC BY-NC-SA 4.0-部分代码来自最亮的信标" EventType="打开网页"
