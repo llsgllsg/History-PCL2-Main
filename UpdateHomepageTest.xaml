@@ -217,7 +217,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 </StackPanel.Resources>
 
 <local:MyCard Margin="0,0,0,15" Title="PCL Daily &amp; 龙猫说">
-<StackPanel> 
+<StackPanel Margin="0,0,0,15"> 
                 <Grid Margin="21,40,21,16">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="45" />
@@ -236,7 +236,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
                     </Image>
                 </Grid>
 
-<StackPanel>
+<StackPanel Margin="0,15,0,7">
   <Grid Margin="26,-60,20,2">
     <StackPanel>
     <StackPanel VerticalAlignment="Center" Margin="0,0,0,4">
