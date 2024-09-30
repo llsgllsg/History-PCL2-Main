@@ -222,12 +222,12 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
     <StackPanel VerticalAlignment="Center" Margin="0,0,0,4">
     <TextBlock Margin="0,0,0,4" 
                     Text="更新内容：【PCL 更新】新正版登录流程、下载优化" Style="{StaticResource LTCattSayH1}"/>
-    <TextBlock Margin="0,0,0,4" 
+    <TextBlock Margin="-1.5,0,0,4" 
                     Text="下载地址 1：https://ltcat.lanzouv.com/b0aj6gsid" Style="{StaticResource LTCattSayH2}"/>
-    <TextBlock Margin="0,0,0,4" 
+    <TextBlock Margin="-1.5,0,0,4" 
                     Text="下载地址 2：https://pan.baidu.com/s/1sw8_zzIpGQLduWM1_-B9lw?pwd=pcl2" Style="{StaticResource LTCattSayH2}"/>
     </StackPanel>
-    <WrapPanel Margin="-2,2" Orientation="Horizontal" VerticalAlignment="Center">
+    <WrapPanel Margin="-10,0,0,4" Orientation="Horizontal" VerticalAlignment="Center">
     <local:MyIconTextButton Text="检查更新" ToolTip="检查更新以获取最新版本" EventType="切换页面" EventData="3|2" LogoScale="1.05" Logo="{StaticResource LaunchIcon}" />
     <local:MyIconTextButton Text="下载链接 1（提取码：pcl2）" ToolTip="P.s你都能查看主页了不能点一下切换后的检查更新吗 Orz" EventType="打开网页" EventData="https://ltcat.lanzouv.com/b0aj6gsid" LogoScale="0.95" Logo="{StaticResource DownloadIcon}" />
     <local:MyIconTextButton Text="下载链接 2（提取码：pcl2）" ToolTip="P.s你都能查看主页了不能点一下切换后的检查更新吗 Orz" EventType="打开网页" EventData="https://pan.baidu.com/s/1sw8_zzIpGQLduWM1_-B9lw?pwd=pcl2" LogoScale="0.95" Logo="{StaticResource DownloadIcon}" />
@@ -341,7 +341,6 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
     LogoScale="1" Logo="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0z M1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0z"/>
     <local:MyIconTextButton HorizontalAlignment="Left" Text="刷新" EventType="刷新主页"
     LogoScale="0.9" Logo="M960 416V192l-73.056 73.056a447.712 447.712 0 0 0-373.6-201.088C265.92 63.968 65.312 264.544 65.312 512S265.92 960.032 513.344 960.032a448.064 448.064 0 0 0 415.232-279.488 38.368 38.368 0 1 0-71.136-28.896 371.36 371.36 0 0 1-344.096 231.584C308.32 883.232 142.112 717.024 142.112 512S308.32 140.768 513.344 140.768c132.448 0 251.936 70.08 318.016 179.84L736 416h224z"/>
-    
     </StackPanel>
     </StackPanel>
   </Grid>
