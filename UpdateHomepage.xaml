@@ -182,6 +182,17 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <Setter Property="Width" Value="180"/>
 <Setter Property="TextWrapping" Value="Wrap"/>
 <Setter Property="FontSize" Value="18"/>
+</Style><Style TargetType="TextBlock" x:Key="LTCattSayH1" >
+<Setter Property="HorizontalAlignment" Value="Left"/>
+<Setter Property="FontSize" Value="18"/>
+<Setter Property="Margin" Value="0,10,0,5"/>
+<Setter Property="FontWeight" Value="Bold"/>
+<Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/>
+</Style><Style TargetType="TextBlock" x:Key="LTCattSayH2" >
+<Setter Property="HorizontalAlignment" Value="Left"/>
+<Setter Property="FontSize" Value="13.5"/>
+<Setter Property="Margin" Value="0,10,0,5"/>
+<Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/>
 </Style><Style TargetType="local:MyButton" x:Key="LinkButtonBase" >
 <Setter Property="Margin" Value="0,0,5,5"/>
 <Setter Property="Height" Value="35"/>
@@ -205,7 +216,45 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 </Style>
 </StackPanel.Resources>
 
-<local:MyCard Title="PCL更新日志" CanSwap="False" IsSwaped="False" Style="{StaticResource Card}"  Margin="0,0,0,15">
+<local:MyCard Margin="0,0,0,15" Title="PCL Daily &amp; 龙猫说">
+<StackPanel Margin="0,0,0,15"> 
+                <Grid Margin="21,40,21,16">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="45" />
+                        <RowDefinition Height="45" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40" />
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="150" />
+                    </Grid.ColumnDefinitions>
+                    <local:MyListItem IsHitTestVisible="False" Title="龙腾猫跃" Margin="-5,0,15,0" Info="2024年09月28日 18:31" Grid.Row="0" Grid.Column="1" />
+                    <Image Source="/Plain Craft Launcher 2;component/Images/Heads/LTCat.jpg" Grid.Row="0" Margin="3">
+                        <Image.Clip>
+                            <EllipseGeometry Center="17 17" RadiusX="17" RadiusY="17" />
+                        </Image.Clip>
+                    </Image>
+                </Grid>
+
+<StackPanel Margin="0,15,0,7">
+  <Grid Margin="26,-60,20,2">
+    <StackPanel>
+    <StackPanel VerticalAlignment="Center" Margin="0,0,0,4">
+   <TextBlock Margin="0,0,0,4" 
+                    Text="更新内容：见下方PCL更新日志" Style="{StaticResource LTCattSayH1}"/>
+   <TextBlock Margin="0,0,0,4" 
+                    Text="下载地址 1：https://ltcat.lanzouv.com/b0aj6gsid" Style="{StaticResource LTCattSayH2}"/>
+    <TextBlock Margin="0,0,0,4" 
+                    Text="下载地址 2：https://pan.baidu.com/s/1sw8_zzIpGQLduWM1_-B9lw?pwd=pcl2" Style="{StaticResource LTCattSayH2}"/>
+    </StackPanel>
+    </StackPanel>
+  </Grid>
+</StackPanel>
+  
+  </StackPanel>
+</local:MyCard>
+
+<local:MyCard Title="PCL更新日志" CanSwap="True" IsSwaped="False" Style="{StaticResource Card}"  Margin="0,0,0,15">
 <StackPanel Style="{StaticResource ContentStack}">
 
 <StackPanel Style="{StaticResource ContentStack}">
@@ -216,7 +265,6 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <Image Source="https://i0.hdslb.com/bfs/new_dyn/85a2fcc7f4cc0a147541720be924129611343203.png" Opacity="0" Stretch="Fill"/>
 </Border>
 </StackPanel>
-
 
 <FlowDocumentScrollViewer >
 <FlowDocument>
@@ -286,13 +334,14 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 </WrapPanel>
 </StackPanel>
 </local:MyCard>
+
 <local:MyCard Margin="0,0,0,15">
 <Border BorderBrush="{DynamicResource ColorBrush3}" Margin="-0.6" CornerRadius="5" BorderThickness="4,0,0,0">
 <StackPanel>
   <Grid Margin="26,20,20,2">
     <StackPanel>
     <StackPanel VerticalAlignment="Center" Margin="0,0,0,4">
-<TextBlock FontSize="18" Foreground="{DynamicResource ColorBrush3}"><Bold>PCL2 更新日志</Bold></TextBlock>
+<TextBlock FontSize="18" Foreground="{DynamicResource ColorBrush3}"><Bold>PCL2 新闻速报</Bold></TextBlock>
     <TextBlock FontSize="12" Foreground="{DynamicResource ColorBrush3}" Text="Get Update Quickly - HomepageBuilder构建生成"/>
     <TextBlock FontSize="12" Foreground="{DynamicResource ColorBrush3}" Text="更新时间:专栏更新当天18点前后"/>
     <local:MyTextButton FontSize="12" Foreground="{DynamicResource ColorBrush3}" Text="CC BY-NC-SA 4.0-部分代码来自最亮的信标" EventType="打开网页"
@@ -307,6 +356,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
     LogoScale="1" Logo="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0z M1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0z"/>
     <local:MyIconTextButton HorizontalAlignment="Left" Text="刷新" EventType="刷新主页"
     LogoScale="0.9" Logo="M960 416V192l-73.056 73.056a447.712 447.712 0 0 0-373.6-201.088C265.92 63.968 65.312 264.544 65.312 512S265.92 960.032 513.344 960.032a448.064 448.064 0 0 0 415.232-279.488 38.368 38.368 0 1 0-71.136-28.896 371.36 371.36 0 0 1-344.096 231.584C308.32 883.232 142.112 717.024 142.112 512S308.32 140.768 513.344 140.768c132.448 0 251.936 70.08 318.016 179.84L736 416h224z"/>
+    
     </StackPanel>
     </StackPanel>
   </Grid>
@@ -314,5 +364,3 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 </Border>
 </local:MyCard>
 </StackPanel>
-
-
