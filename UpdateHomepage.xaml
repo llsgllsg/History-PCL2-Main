@@ -182,12 +182,6 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <Setter Property="Width" Value="180"/>
 <Setter Property="TextWrapping" Value="Wrap"/>
 <Setter Property="FontSize" Value="18"/>
-</Style><Style TargetType="TextBlock" x:Key="LTCattSayH0" >
-<Setter Property="HorizontalAlignment" Value="Left"/>
-<Setter Property="FontSize" Value="22"/>
-<Setter Property="Margin" Value="0,0,0,5"/>
-<Setter Property="FontWeight" Value="Bold"/>
-<Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/>
 </Style><Style TargetType="TextBlock" x:Key="LTCattSayH1" >
 <Setter Property="HorizontalAlignment" Value="Left"/>
 <Setter Property="FontSize" Value="18"/>
@@ -260,15 +254,12 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
   <Grid Margin="26,-60,20,2">
     <StackPanel>
     <StackPanel VerticalAlignment="Center" Margin="0,0,0,4">
-    <TextBlock Text="PCL 正式版已同步更新至 2.8.7！" Style="{StaticResource LTCattSayH0}"/>
     <TextBlock Margin="0,0,0,4" 
-                    Text="更新内容：【PCL 更新】新正版登录流程、下载优化 " Style="{StaticResource LTCattSayH1}"/>
-    <TextBlock Margin="0,0,0,4" 
-                    Text="下载链接 1" Style="{StaticResource LTCattSayH1}"/>
-    <local:MyListItem IsHitTestVisible="True" Title="https://ltcat.lanzouv.com/b0aj6gsid（提取码：pcl2）" Margin="-12.5,0,15,0" Info="" Grid.Row="0" Grid.Column="1" EventType="打开网页" EventData="https://ltcat.lanzouv.com/b0aj6gsid" Type="Clickable"/>
-    <TextBlock Margin="0,0,0,4" 
-                    Text="下载链接 2" Style="{StaticResource LTCattSayH1}"/>
-    <local:MyListItem IsHitTestVisible="True" Title="https://pan.baidu.com/s/1sw8_zzIpGQLduWM1_-B9lw?pwd=pcl2（提取码：pcl2）" Margin="-12.5,0,15,0" Info="" Grid.Row="0" Grid.Column="1" EventType="打开网页" EventData="https://pan.baidu.com/s/1sw8_zzIpGQLduWM1_-B9lw?pwd=pcl2" Type="Clickable"/>
+                    Text="更新内容：见下方PCL更新日志" Style="{StaticResource LTCattSayH1}"/>
+    <local:MyListItem IsHitTestVisible="True" Title="下载链接 1（提取码：pcl2）" Margin="-12.5,0,15,0" Info="https://ltcat.lanzouv.com/b0aj6gsid" Grid.Row="0" Grid.Column="1" EventType="打开网页" EventData="https://ltcat.lanzouv.com/b0aj6gsid" Type="Clickable" Logo="M955 610h-59c-15 0-29 13-29 29v196c0 15-13 29-29 29h-649c-15 0-29-13-29-29v-196c0-15-13-29-29-29h-59c-15 0-29 13-29 29V905c0 43 35 78 78 78h787c43 0 78-35 78-78V640c0-15-13-29-29-29zM492 740c11 11 29 11 41 0l265-265c11-11 11-29 0-41l-41-41c-11-11-29-11-41 0l-110 110c-11 11-33 3-33-13V68C571 53 555 39 541 39h-59c-15 0-29 13-29 29v417c0 17-21 25-33 13l-110-110c-11-11-29-11-41 0L226 433c-11 11-11 29 0 41L492 740z" 
+                                             LogoScale="0.65"/>
+    <local:MyListItem IsHitTestVisible="True" Title="下载链接 2（提取码：pcl2）" Margin="-12.5,0,15,0" Info="https://pan.baidu.com/s/1sw8_zzIpGQLduWM1_-B9lw?pwd=pcl2" Grid.Row="0" Grid.Column="1" EventType="打开网页" EventData="https://pan.baidu.com/s/1sw8_zzIpGQLduWM1_-B9lw?pwd=pcl2" Type="Clickable" Logo="M955 610h-59c-15 0-29 13-29 29v196c0 15-13 29-29 29h-649c-15 0-29-13-29-29v-196c0-15-13-29-29-29h-59c-15 0-29 13-29 29V905c0 43 35 78 78 78h787c43 0 78-35 78-78V640c0-15-13-29-29-29zM492 740c11 11 29 11 41 0l265-265c11-11 11-29 0-41l-41-41c-11-11-29-11-41 0l-110 110c-11 11-33 3-33-13V68C571 53 555 39 541 39h-59c-15 0-29 13-29 29v417c0 17-21 25-33 13l-110-110c-11-11-29-11-41 0L226 433c-11 11-11 29 0 41L492 740z" 
+                                             LogoScale="0.65"/>
     </StackPanel>
     </StackPanel>
   </Grid>
@@ -277,7 +268,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
   </StackPanel>
 </local:MyCard>
 
-<local:MyCard Title="PCL更新日志-正式版 2.8.7" CanSwap="True" IsSwaped="False" Style="{StaticResource Card}"  Margin="0,0,0,15">
+<local:MyCard Title="PCL更新日志" CanSwap="True" IsSwaped="False" Style="{StaticResource Card}"  Margin="0,0,0,15">
 <StackPanel Style="{StaticResource ContentStack}">
 
 <StackPanel Style="{StaticResource ContentStack}">
