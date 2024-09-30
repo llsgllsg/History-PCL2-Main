@@ -300,7 +300,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
     </StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="-8,4,0,10">
     <local:MyIconTextButton HorizontalAlignment="Left" Text="提交PCL Bug" ToolTip="快速提交PCL2Bug！" EventType="打开网页"
-    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/issues/new/choose"
+    EventData="https://github.com/Hex-Dragon/PCL2/issues/new/choose"
     LogoScale="1" Logo="{StaticResource GithubIcon}"/>
     <local:MyIconTextButton HorizontalAlignment="Left" Text="主页反馈" ToolTip="反馈问题" EventType="打开网页"
     EventData="https://github.com/Joker2184/UpdateHomepage/issues"
