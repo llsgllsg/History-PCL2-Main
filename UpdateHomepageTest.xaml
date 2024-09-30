@@ -345,11 +345,6 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
     </StackPanel>
   </Grid>
   </StackPanel>
-
-
-<Image Source="https://updatehomepage.pages.dev/Now.png" Opacity="0" Stretch="Fill"/>
-
-
 </Border>
 </local:MyCard>
 </StackPanel>
