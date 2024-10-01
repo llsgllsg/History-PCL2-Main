@@ -225,6 +225,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <FlowDocumentScrollViewer >
 <FlowDocument>
 <Paragraph Style="{StaticResource H2}">如果上个版本正版登录出现问题，或者搁那儿报错，可以试试新版本……</Paragraph>
+<Paragraph Style="{StaticResource H2}">熬夜整出来了……</Paragraph>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 
