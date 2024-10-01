@@ -242,15 +242,15 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
                         </Image.Clip>
                     </Image>
                 </Grid>
-
+<!--
 <StackPanel Margin="0,0,0,7.5">
   <Grid Margin="26,-60,20,2">
     <StackPanel>
     <StackPanel VerticalAlignment="Center" Margin="0,0,0,4">
     <TextBlock Margin="0,0,0,4" 
                     Text="main" Style="{StaticResource LTCattSayH1}"/>
-    <!--<local:MyListItem IsHitTestVisible="True" Title="下载链接 1（提取码：pcl2）" Margin="-12.5,0,15,0" Info="https://ltcat.lanzouv.com/b0aj6gsid" Grid.Row="0" Grid.Column="1" EventType="打开网页" EventData="https://ltcat.lanzouv.com/b0aj6gsid" Type="Clickable" Logo="M955 610h-59c-15 0-29 13-29 29v196c0 15-13 29-29 29h-649c-15 0-29-13-29-29v-196c0-15-13-29-29-29h-59c-15 0-29 13-29 29V905c0 43 35 78 78 78h787c43 0 78-35 78-78V640c0-15-13-29-29-29zM492 740c11 11 29 11 41 0l265-265c11-11 11-29 0-41l-41-41c-11-11-29-11-41 0l-110 110c-11 11-33 3-33-13V68C571 53 555 39 541 39h-59c-15 0-29 13-29 29v417c0 17-21 25-33 13l-110-110c-11-11-29-11-41 0L226 433c-11 11-11 29 0 41L492 740z" 
-                                             LogoScale="0.65"/> Download-->
+    <local:MyListItem IsHitTestVisible="True" Title="下载链接 1（提取码：pcl2）" Margin="-12.5,0,15,0" Info="https://ltcat.lanzouv.com/b0aj6gsid" Grid.Row="0" Grid.Column="1" EventType="打开网页" EventData="https://ltcat.lanzouv.com/b0aj6gsid" Type="Clickable" Logo="M955 610h-59c-15 0-29 13-29 29v196c0 15-13 29-29 29h-649c-15 0-29-13-29-29v-196c0-15-13-29-29-29h-59c-15 0-29 13-29 29V905c0 43 35 78 78 78h787c43 0 78-35 78-78V640c0-15-13-29-29-29zM492 740c11 11 29 11 41 0l265-265c11-11 11-29 0-41l-41-41c-11-11-29-11-41 0l-110 110c-11 11-33 3-33-13V68C571 53 555 39 541 39h-59c-15 0-29 13-29 29v417c0 17-21 25-33 13l-110-110c-11-11-29-11-41 0L226 433c-11 11-11 29 0 41L492 740z" 
+                                             LogoScale="0.65"/> Download
     <TextBlock Margin="0,0,0,4" 
                     Text="other" Style="{StaticResource LTCattSayH1}"/>
     </StackPanel>
@@ -258,7 +258,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
   </Grid>
     </StackPanel>
 </StackPanel>
-</local:MyCard>
+</local:MyCard>-->
 
 <local:MyCard Title="PCL更新日志" CanSwap="False" IsSwaped="False" Style="{StaticResource Card}"  Margin="0,0,0,15">
 <StackPanel Style="{StaticResource ContentStack}">
@@ -274,7 +274,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 
 <FlowDocumentScrollViewer >
 <FlowDocument>
-<!--引言-->
+<Paragraph Style="{StaticResource H2}">如果上个版本正版登录出现问题，或者搁那儿报错，可以试试新版本……</Paragraph>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 
