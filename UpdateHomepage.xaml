@@ -70,6 +70,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Setter Property="FontSize" Value="14"/>
 <Setter Property="Margin" Value="0,10,0,10"/>
 <Setter Property="Foreground" Value="Red"/>
+<Setter Property="FontWeight" Value="Bold"/>
 </Style><Style TargetType="Paragraph" x:Key="H3" >
 <Setter Property="FontSize" Value="18"/>
 <Setter Property="Margin" Value="0,5,0,5"/>
