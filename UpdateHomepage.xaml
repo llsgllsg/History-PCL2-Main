@@ -66,10 +66,15 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Setter Property="Margin" Value="0,10,0,5"/>
 <Setter Property="FontWeight" Value="Bold"/>
 <Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/>
-</Style><Style TargetType="Paragraph" x:Key="D2" >
+</Style><Style TargetType="Paragraph" x:Key="DR" >
 <Setter Property="FontSize" Value="14.5"/>
 <Setter Property="Margin" Value="0,10,0,10"/>
 <Setter Property="Foreground" Value="Red"/>
+<Setter Property="FontWeight" Value="Bold"/>
+</Style><Style TargetType="Paragraph" x:Key="DO" >
+<Setter Property="FontSize" Value="14.5"/>
+<Setter Property="Margin" Value="0,10,0,10"/>
+<Setter Property="Foreground" Value="Orange"/>
 <Setter Property="FontWeight" Value="Bold"/>
 </Style><Style TargetType="Paragraph" x:Key="H3" >
 <Setter Property="FontSize" Value="18"/>
@@ -234,7 +239,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
     </StackPanel>
     <WrapPanel Margin="-10,0,0,4" Orientation="Horizontal" VerticalAlignment="Center">
     <local:MyIconTextButton Text="检查更新" ToolTip="检查更新以获取最新版本" EventType="切换页面" EventData="3|2" LogoScale="1.05" Logo="{StaticResource LaunchIcon}" />
-    <local:MyIconTextButton Text="获取PCL2正式版" ToolTip="P.s你都能查看主页了不能点一下切换后的检查更新吗 Orz" EventType="打开网页" EventData="https://afdian.com/p/0164034c016c11ebafcb52540025c377" LogoScale="0.95" Logo="{StaticResource DownloadIcon}" />
+    <local:MyIconTextButton Text="获取PCL2正式版" ToolTip="P.s你都能查看主页了不能点一下切换后的检查更新吗 Orz" EventType="打开网页" EventData="https://afdian.com/p/0164034c016c11ebafcb52540025c377 作者：龙腾猫跃 https://www.bilibili.com/read/cv39242517/?spm_id_from=333.999.0.0 出处：bilibili" LogoScale="0.95" Logo="{StaticResource DownloadIcon}" />
     </WrapPanel>
     </StackPanel>
   </Grid>
@@ -266,21 +271,21 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <FlowDocumentScrollViewer >
 <FlowDocument>
 <Paragraph Style="{StaticResource H2}">新功能 &amp; 优化</Paragraph><List>
-<ListItem><Paragraph>新主页预设：PCL 更新日志（#4845，由 @Joker2184 制作）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource DO}">新主页预设：PCL 更新日志（#4845，由 @Joker2184 制作）</Paragraph></ListItem>
 <ListItem><Paragraph>优化许可与版权声明的排版（#4832，@Joker2184）</Paragraph></ListItem>
-<ListItem><Paragraph>帮助库编修（Help#388~391，PR @JingHai-Lingyun、@Ad-closeNN）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource DO}">帮助库编修（Help#388~391，PR @JingHai-Lingyun、@Ad-closeNN）</Paragraph></ListItem>
 <ListItem><Paragraph>更新 9 月赞助者列表，感谢大家的支持！</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H2}">漏洞修复</Paragraph><List>
 <ListItem>    <Paragraph>修复了以下 3 个与新正版登录相关的 Bug</Paragraph><List>
-<ListItem><Paragraph  Style="{StaticResource D2}">需要使用密码登录时，提示登录轮询失败（#4828，@wanweishe）</Paragraph></ListItem>
+<ListItem><Paragraph  Style="{StaticResource DR}">需要使用密码登录时，提示登录轮询失败（#4828，@wanweishe）</Paragraph></ListItem>
 <ListItem><Paragraph>在登录时按回车或 Esc 导致崩溃（#4857，@wuliaodexiaoluo）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource D2}">若出现网络波动，理论上可以导致不应出现的登录失败</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource DR}">若出现网络波动，理论上可以导致不应出现的登录失败</Paragraph></ListItem>
 </List></ListItem>
 <ListItem>    <Paragraph>修复了以下 7 个其他的 Bug</Paragraph><List>
 <ListItem><Paragraph>取消更新 Mod 可能导致更新流程无法结束（#4310，@Louis-Harsune）</Paragraph></ListItem>
 <ListItem><Paragraph>在特定情况下，加载器任务会错误地提前启动（#4835，@lactobionicAcid）</Paragraph></ListItem>
-<ListItem><Paragraph  Style="{StaticResource D2}">缓存文件夹路径存在中文可能导致出错或崩溃（#4849，@sadfadwe）</Paragraph></ListItem>
-<ListItem><Paragraph  Style="{StaticResource D2}">Mod 管理中，特定名字长度的 Mod 会导致极端卡顿（#4854，@Raisel0）</Paragraph></ListItem>
+<ListItem><Paragraph  Style="{StaticResource DR}">缓存文件夹路径存在中文可能导致出错或崩溃（#4849，@sadfadwe）</Paragraph></ListItem>
+<ListItem><Paragraph  Style="{StaticResource DR}">Mod 管理中，特定名字长度的 Mod 会导致极端卡顿（#4854，@Raisel0）</Paragraph></ListItem>
 <ListItem><Paragraph>Mod 管理中，在搜索后先启用/禁用再删除 Mod 导致出错（#4855，@SweeCandy）</Paragraph></ListItem>
 <ListItem><Paragraph>有多个相似的下载任务时，理论上可能出现异常</Paragraph></ListItem>
 <ListItem><Paragraph>下载源返回 Too Many Request 会被错误地禁用</Paragraph></ListItem>
@@ -295,7 +300,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <local:MyIconTextButton Text="原更新日志" ToolTip="2.8.8 更新日志" EventType="打开网页"
     EventData="https://github.com/Hex-Dragon/PCL2/discussions/4858" LogoScale="1.05" Logo="{StaticResource GithubIcon}" />
 <local:MyIconTextButton Text="未来计划" ToolTip="Todo" EventType="弹出窗口"
-    EventData="下一个版本的计划：| 获取中...Emm下个版本暂时还没有未来计划呢" LogoScale="1.05" Logo="M4.146 3.646a.5.5 0 0 0 0 .708L7.793 8l-3.647 3.646a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708 0zM11.5 1a.5.5 0 0 1 .5.5v13a.5.5 0 0 1-1 0v-13a.5.5 0 0 1 .5-.5z" />
+    EventData="下一个版本的计划：| Emm下个版本暂时还没有未来计划呢" LogoScale="1.05" Logo="M4.146 3.646a.5.5 0 0 0 0 .708L7.793 8l-3.647 3.646a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708 0zM11.5 1a.5.5 0 0 1 .5.5v13a.5.5 0 0 1-1 0v-13a.5.5 0 0 1 .5-.5z" />
 </WrapPanel>
 </StackPanel>
 </local:MyCard>
