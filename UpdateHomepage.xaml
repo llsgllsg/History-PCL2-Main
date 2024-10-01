@@ -207,48 +207,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 </Style>
 </StackPanel.Resources>
 
-<local:MyCard Margin="0,0,0,15" Title="龙猫说" CanSwap="True" IsSwaped="True">
-<StackPanel Margin="0,0,0,7.5"> 
-                <Grid Margin="21,40,21,16">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="45" />
-                        <RowDefinition Height="45" />
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="40" />
-                        <ColumnDefinition />
-                        <ColumnDefinition Width="150" />
-                    </Grid.ColumnDefinitions>
-                    <local:MyListItem IsHitTestVisible="False" Title="龙腾猫跃" Margin="-5,0,15,0" Info="2024年10月01日 04:01" Grid.Row="0" Grid.Column="1" />
-                    <Image Source="/Plain Craft Launcher 2;component/Images/Heads/LTCat.jpg" Grid.Row="0" Margin="3">
-                        <Image.Clip>
-                            <EllipseGeometry Center="17 17" RadiusX="17" RadiusY="17" />
-                        </Image.Clip>
-                    </Image>
-                </Grid>
-
-<StackPanel Margin="0,0,0,7.5">
-  <Grid Margin="26,-60,20,2">
-    <StackPanel>
-    <StackPanel VerticalAlignment="Center" Margin="0,0,0,4">
-    <TextBlock Margin="0,0,0,4" 
-                    Text="更新内容：【PCL 更新】正版登录修复、崩溃修复" Style="{StaticResource LTCattSayH1}"/>
-    <TextBlock Margin="-1.5,0,0,4" 
-                    Text="PCL 正式版可永久免费下载使用，无需赞助，也可以用于制作整合包。" Style="{StaticResource LTCattSayH2}"/>
-    <TextBlock Margin="-1.5,0,0,4" 
-                    Text="正式版永久下载地址：https://afdian.com/p/0164034c016c11ebafcb52540025c377" Style="{StaticResource LTCattSayH2}"/>
-    </StackPanel>
-    <WrapPanel Margin="-10,0,0,4" Orientation="Horizontal" VerticalAlignment="Center">
-    <local:MyIconTextButton Text="检查更新" ToolTip="检查更新以获取最新版本" EventType="切换页面" EventData="3|2" LogoScale="1.05" Logo="{StaticResource LaunchIcon}" />
-    <local:MyIconTextButton Text="获取PCL2正式版" ToolTip="P.s你都能查看主页了不能点一下切换后的检查更新吗 Orz" EventType="打开网页" EventData="https://afdian.com/p/0164034c016c11ebafcb52540025c377 作者：龙腾猫跃 https://www.bilibili.com/read/cv39242517/?spm_id_from=333.999.0.0 出处：bilibili" LogoScale="0.95" Logo="{StaticResource DownloadIcon}" />
-    </WrapPanel>
-    </StackPanel>
-  </Grid>
-</StackPanel>
-</StackPanel>
-</local:MyCard>
-
-<local:MyCard Title="【PCL 更新】正版登录修复、崩溃修复" CanSwap="True" IsSwaped="False" Style="{StaticResource Card}"  Margin="0,0,0,15">
+<local:MyCard Title="全版本:2.8.8 正版登录修复、崩溃修复" CanSwap="True" IsSwaped="False" Style="{StaticResource Card}"  Margin="0,0,0,15">
 <StackPanel Style="{StaticResource ContentStack}">
 
 <StackPanel Style="{StaticResource ContentStack}">
@@ -259,7 +218,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <Image Source="https://i0.hdslb.com/bfs/article/5cf16c3dfea80741c0281d2864f8e6ee11343203.png" Opacity="0" Stretch="Fill"/>
 </Border>
 <Border Style="{StaticResource VersionTitleBorder}">
-<TextBlock Style="{StaticResource VersionTitleBlock}" Text="全版本 2.8.7" />
+<TextBlock Style="{StaticResource VersionTitleBlock}" Text="全版本 2.8.8" />
 </Border>
 </StackPanel>
 
@@ -308,6 +267,51 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 </StackPanel>
 </local:MyCard>
 
+
+<ContentControl Content="那 个 猫 说 " Template="{StaticResource Separator}"/>
+
+<local:MyCard Margin="0,0,0,15" Title="龙猫说">
+<StackPanel Margin="0,0,0,7.5"> 
+                <Grid Margin="21,40,21,16">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="45" />
+                        <RowDefinition Height="45" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40" />
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="150" />
+                    </Grid.ColumnDefinitions>
+                    <local:MyListItem IsHitTestVisible="False" Title="龙腾猫跃" Margin="-5,0,15,0" Info="2024年10月01日 04:01" Grid.Row="0" Grid.Column="1" />
+                    <Image Source="/Plain Craft Launcher 2;component/Images/Heads/LTCat.jpg" Grid.Row="0" Margin="3">
+                        <Image.Clip>
+                            <EllipseGeometry Center="17 17" RadiusX="17" RadiusY="17" />
+                        </Image.Clip>
+                    </Image>
+                </Grid>
+
+<StackPanel Margin="0,0,0,7.5">
+  <Grid Margin="26,-60,20,2">
+    <StackPanel>
+    <StackPanel VerticalAlignment="Center" Margin="0,0,0,4">
+    <TextBlock Margin="0,0,0,4" 
+                    Text="更新内容：【PCL 更新】正版登录修复、崩溃修复" Style="{StaticResource LTCattSayH1}"/>
+    <TextBlock Margin="-1.5,0,0,4" 
+                    Text="PCL 正式版可永久免费下载使用，无需赞助，也可以用于制作整合包。" Style="{StaticResource LTCattSayH2}"/>
+    <TextBlock Margin="-1.5,0,0,4" 
+                    Text="正式版永久下载地址：https://afdian.com/p/0164034c016c11ebafcb52540025c377" Style="{StaticResource LTCattSayH2}"/>
+    </StackPanel>
+    <WrapPanel Margin="-10,0,0,4" Orientation="Horizontal" VerticalAlignment="Center">
+    <local:MyIconTextButton Text="检查更新" ToolTip="检查更新以获取最新版本" EventType="切换页面" EventData="3|2" LogoScale="1.05" Logo="{StaticResource LaunchIcon}" />
+    <local:MyIconTextButton Text="获取PCL2正式版" ToolTip="P.s你都能查看主页了不能点一下切换后的检查更新吗 Orz" EventType="打开网页" EventData="https://afdian.com/p/0164034c016c11ebafcb52540025c377 作者：龙腾猫跃 https://www.bilibili.com/read/cv39242517/?spm_id_from=333.999.0.0 出处：bilibili" LogoScale="0.95" Logo="{StaticResource DownloadIcon}" />
+    </WrapPanel>
+    </StackPanel>
+  </Grid>
+</StackPanel>
+</StackPanel>
+</local:MyCard>
+
+<ContentControl Content="周 边 新 闻 " Template="{StaticResource Separator}"/>
 
 <local:MyCard Margin="0,0,0,15">
 <Border BorderBrush="{DynamicResource ColorBrush3}" Margin="-0.6" CornerRadius="5" BorderThickness="4,0,0,0">
