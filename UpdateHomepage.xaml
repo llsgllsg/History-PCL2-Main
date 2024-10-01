@@ -66,6 +66,10 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Setter Property="Margin" Value="0,10,0,5"/>
 <Setter Property="FontWeight" Value="Bold"/>
 <Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/>
+</Style><Style TargetType="Paragraph" x:Key="D2" >
+<Setter Property="FontSize" Value="15"/>
+<Setter Property="Margin" Value="0,10,0,5"/>
+<Setter Property="Foreground" Value="Red"/>
 </Style><Style TargetType="Paragraph" x:Key="H3" >
 <Setter Property="FontSize" Value="18"/>
 <Setter Property="Margin" Value="0,5,0,5"/>
@@ -267,15 +271,15 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <ListItem><Paragraph>更新 9 月赞助者列表，感谢大家的支持！</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H2}">漏洞修复</Paragraph><List>
 <ListItem>    <Paragraph>修复了以下 3 个与新正版登录相关的 Bug</Paragraph><List>
-<ListItem><Paragraph>需要使用密码登录时，提示登录轮询失败（#4828，@wanweishe）</Paragraph></ListItem>
+<ListItem><Paragraph  Style="{StaticResource D2}">需要使用密码登录时，提示登录轮询失败（#4828，@wanweishe）</Paragraph></ListItem>
 <ListItem><Paragraph>在登录时按回车或 Esc 导致崩溃（#4857，@wuliaodexiaoluo）</Paragraph></ListItem>
-<ListItem><Paragraph>若出现网络波动，理论上可以导致不应出现的登录失败</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource D2}">若出现网络波动，理论上可以导致不应出现的登录失败</Paragraph></ListItem>
 </List></ListItem>
 <ListItem>    <Paragraph>修复了以下 7 个其他的 Bug</Paragraph><List>
 <ListItem><Paragraph>取消更新 Mod 可能导致更新流程无法结束（#4310，@Louis-Harsune）</Paragraph></ListItem>
 <ListItem><Paragraph>在特定情况下，加载器任务会错误地提前启动（#4835，@lactobionicAcid）</Paragraph></ListItem>
-<ListItem><Paragraph>缓存文件夹路径存在中文可能导致出错或崩溃（#4849，@sadfadwe）</Paragraph></ListItem>
-<ListItem><Paragraph>Mod 管理中，特定名字长度的 Mod 会导致极端卡顿（#4854，@Raisel0）</Paragraph></ListItem>
+<ListItem><Paragraph  Style="{StaticResource D2}">缓存文件夹路径存在中文可能导致出错或崩溃（#4849，@sadfadwe）</Paragraph></ListItem>
+<ListItem><Paragraph  Style="{StaticResource D2}">Mod 管理中，特定名字长度的 Mod 会导致极端卡顿（#4854，@Raisel0）</Paragraph></ListItem>
 <ListItem><Paragraph>Mod 管理中，在搜索后先启用/禁用再删除 Mod 导致出错（#4855，@SweeCandy）</Paragraph></ListItem>
 <ListItem><Paragraph>有多个相似的下载任务时，理论上可能出现异常</Paragraph></ListItem>
 <ListItem><Paragraph>下载源返回 Too Many Request 会被错误地禁用</Paragraph></ListItem>
