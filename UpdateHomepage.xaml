@@ -303,7 +303,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
     </StackPanel>
     <WrapPanel Margin="-10,0,0,4" Orientation="Horizontal" VerticalAlignment="Center">
     <local:MyIconTextButton Text="检查更新" ToolTip="检查更新以获取最新版本" EventType="切换页面" EventData="3|2" LogoScale="1.05" Logo="{StaticResource LaunchIcon}" />
-    <local:MyIconTextButton Text="获取PCL2正式版" ToolTip="P.s你都能查看主页了不能点一下切换后的检查更新吗 Orz" EventType="打开网页" EventData="https://afdian.com/p/0164034c016c11ebafcb52540025c377 作者：龙腾猫跃 https://www.bilibili.com/read/cv39242517/?spm_id_from=333.999.0.0 出处：bilibili" LogoScale="0.95" Logo="{StaticResource DownloadIcon}" />
+    <local:MyIconTextButton Text="获取PCL2正式版" ToolTip="P.s你都能查看主页了不能点一下切换后的检查更新吗 Orz" EventType="打开网页" EventData="https://afdian.com/p/0164034c016c11ebafcb52540025c377" LogoScale="0.95" Logo="{StaticResource DownloadIcon}" />
     </WrapPanel>
     </StackPanel>
   </Grid>
