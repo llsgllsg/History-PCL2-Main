@@ -62,14 +62,20 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Setter Property="FontWeight" Value="Bold"/>
 <Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/>
 </Style><Style TargetType="Paragraph" x:Key="H2" >
-<Setter Property="FontSize" Value="16"/>
+<Setter Property="FontSize" Value="22"/>
 <Setter Property="Margin" Value="0,10,0,5"/>
 <Setter Property="FontWeight" Value="Bold"/>
 <Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/>
-</Style><Style TargetType="Paragraph" x:Key="D2" >
-<Setter Property="FontSize" Value="14"/>
+</Style><Style TargetType="Paragraph" x:Key="DR" >
+<Setter Property="FontSize" Value="14.5"/>
 <Setter Property="Margin" Value="0,10,0,10"/>
 <Setter Property="Foreground" Value="Red"/>
+<Setter Property="FontWeight" Value="Bold"/>
+</Style><Style TargetType="Paragraph" x:Key="DO" >
+<Setter Property="FontSize" Value="14.5"/>
+<Setter Property="Margin" Value="0,10,0,10"/>
+<Setter Property="Foreground" Value="Orange"/>
+<Setter Property="FontWeight" Value="Bold"/>
 </Style><Style TargetType="Paragraph" x:Key="H3" >
 <Setter Property="FontSize" Value="18"/>
 <Setter Property="Margin" Value="0,5,0,5"/>
@@ -201,7 +207,50 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 </Style>
 </StackPanel.Resources>
 
-<local:MyCard Margin="0,0,0,15" Title="PCL Daily &amp; 龙猫说">
+<local:MyCard Title="全版本:2.8.8 正版登录修复、崩溃修复" CanSwap="True" IsSwaped="False" Style="{StaticResource Card}"  Margin="0,0,0,15">
+<StackPanel Style="{StaticResource ContentStack}">
+
+<StackPanel Style="{StaticResource ContentStack}">
+<Border Style="{StaticResource VersionImageBorder}">
+<Border.Background>
+<ImageBrush ImageSource="图片链接" Stretch="UniformToFill" />
+</Border.Background>
+<Image Source="和上一个一样的图片链接" Opacity="0" Stretch="Fill"/>
+</Border>
+<Border Style="{StaticResource VersionTitleBorder}">
+<TextBlock Style="{StaticResource VersionTitleBlock}" Text="全版本 2.8.8" />
+</Border>
+</StackPanel>
+
+<FlowDocumentScrollViewer >
+<FlowDocument>
+<!--Head-->
+</FlowDocument>
+</FlowDocumentScrollViewer>
+
+<ContentControl Content="更 新 内 容" Template="{StaticResource Separator}"/>
+
+<FlowDocumentScrollViewer >
+<FlowDocument>
+<!--Main-->
+</FlowDocument>
+</FlowDocumentScrollViewer>
+
+<WrapPanel Margin="-2,2" Orientation="Horizontal" VerticalAlignment="Center">
+<!--<local:MyIconTextButton Text="查看其他修复的N个Bug" ToolTip="Bug Fix" EventType="弹出窗口"
+    EventData="其他被修复的N个Bug | 　　" LogoScale="1.05" Logo="{StaticResource LaunchIcon}" />-->
+<local:MyIconTextButton Text="原更新日志" ToolTip="Release/Snapshot 版本号 更新日志" EventType="打开网页"
+    EventData="指向Github更新日志" LogoScale="1.05" Logo="{StaticResource GithubIcon}" />
+<local:MyIconTextButton Text="未来计划" ToolTip="Todo" EventType="弹出窗口"
+    EventData="下一个版本的计划：| 如果有 填入此 记得\n 换行" LogoScale="1.05" Logo="M4.146 3.646a.5.5 0 0 0 0 .708L7.793 8l-3.647 3.646a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708 0zM11.5 1a.5.5 0 0 1 .5.5v13a.5.5 0 0 1-1 0v-13a.5.5 0 0 1 .5-.5z" />
+</WrapPanel>
+</StackPanel>
+</local:MyCard>
+
+
+<ContentControl Content="那 个 猫 说 " Template="{StaticResource Separator}"/>
+
+<local:MyCard Margin="0,0,0,15" Title="龙猫说">
 <StackPanel Margin="0,0,0,7.5"> 
                 <Grid Margin="21,40,21,16">
                     <Grid.RowDefinitions>
@@ -213,91 +262,37 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
                         <ColumnDefinition />
                         <ColumnDefinition Width="150" />
                     </Grid.ColumnDefinitions>
-                    <local:MyListItem IsHitTestVisible="False" Title="龙腾猫跃" Margin="-5,0,15,0" Info="2024年09月28日 18:31" Grid.Row="0" Grid.Column="1" />
+                    <local:MyListItem IsHitTestVisible="False" Title="龙腾猫跃" Margin="-5,0,15,0" Info="2024年10月01日 04:01" Grid.Row="0" Grid.Column="1" />
                     <Image Source="/Plain Craft Launcher 2;component/Images/Heads/LTCat.jpg" Grid.Row="0" Margin="3">
                         <Image.Clip>
                             <EllipseGeometry Center="17 17" RadiusX="17" RadiusY="17" />
                         </Image.Clip>
                     </Image>
                 </Grid>
+
 <StackPanel Margin="0,0,0,7.5">
   <Grid Margin="26,-60,20,2">
     <StackPanel>
     <StackPanel VerticalAlignment="Center" Margin="0,0,0,4">
     <TextBlock Margin="0,0,0,4" 
-                    Text="更新内容：【PCL 更新】正版登录修复、崩溃修复" Style="{StaticResource LTCattSayH1}"/>
+                    Text="更新内容：B动态标题比如(【PCL 更新】正版登录修复、崩溃修复)" Style="{StaticResource LTCattSayH1}"/>
     <TextBlock Margin="-1.5,0,0,4" 
-                    Text="PCL 正式版可永久免费下载使用，无需赞助，也可以用于制作整合包。" Style="{StaticResource LTCattSayH2}"/>
+                    Text="说啥填啥 除标题使用LTCattSayH1其余都使用LTCattSayH2" Style="{StaticResource LTCattSayH2}"/>
     <TextBlock Margin="-1.5,0,0,4" 
-                    Text="正式版永久下载地址：https://afdian.com/p/0164034c016c11ebafcb52540025c377" Style="{StaticResource LTCattSayH2}"/>
+                    Text="说啥填啥" Style="{StaticResource LTCattSayH2}"/>
     </StackPanel>
     <WrapPanel Margin="-10,0,0,4" Orientation="Horizontal" VerticalAlignment="Center">
     <local:MyIconTextButton Text="检查更新" ToolTip="检查更新以获取最新版本" EventType="切换页面" EventData="3|2" LogoScale="1.05" Logo="{StaticResource LaunchIcon}" />
-    <local:MyIconTextButton Text="获取PCL2正式版" ToolTip="P.s你都能查看主页了不能点一下切换后的检查更新吗 Orz" EventType="打开网页" EventData="https://afdian.com/p/0164034c016c11ebafcb52540025c377 作者：龙腾猫跃 https://www.bilibili.com/read/cv39242517/?spm_id_from=333.999.0.0 出处：bilibili" LogoScale="0.95" Logo="{StaticResource DownloadIcon}" />
+    <local:MyIconTextButton Text="获取PCL2正式版" ToolTip="P.s你都能查看主页了不能点一下切换后的检查更新吗 Orz" EventType="打开网页" EventData="https://afdian.com/p/0164034c016c11ebafcb52540025c377" LogoScale="0.95" Logo="{StaticResource DownloadIcon}" />
+    <!--这边不用动 上面按要求填-->
     </WrapPanel>
     </StackPanel>
   </Grid>
 </StackPanel>
-
-  </StackPanel>
-</local:MyCard>
-
-<local:MyCard Title="【PCL 更新】正版登录修复、崩溃修复" CanSwap="True" IsSwaped="False" Style="{StaticResource Card}"  Margin="0,0,0,15">
-<StackPanel Style="{StaticResource ContentStack}">
-
-<StackPanel Style="{StaticResource ContentStack}">
-<Border Style="{StaticResource VersionImageBorder}">
-<Border.Background>
-<ImageBrush ImageSource="https://i0.hdslb.com/bfs/article/5cf16c3dfea80741c0281d2864f8e6ee11343203.png" Stretch="UniformToFill" />
-</Border.Background>
-<Image Source="https://i0.hdslb.com/bfs/article/5cf16c3dfea80741c0281d2864f8e6ee11343203.png" Opacity="0" Stretch="Fill"/>
-</Border>
-</StackPanel>
-
-<FlowDocumentScrollViewer >
-<FlowDocument>
-<Paragraph Style="{StaticResource H2}">如果上个版本正版登录出现问题，或者搁那儿报错，可以试试新版本……</Paragraph>
-</FlowDocument>
-</FlowDocumentScrollViewer>
-
-<ContentControl Content="更 新 日 志" Template="{StaticResource Separator}"/>
-
-<FlowDocumentScrollViewer >
-<FlowDocument>
-<Paragraph Style="{StaticResource H2}">新功能 &amp; 优化</Paragraph><List>
-<ListItem><Paragraph>新主页预设：PCL 更新日志（#4845，由 @Joker2184 制作）</Paragraph></ListItem>
-<ListItem><Paragraph>优化许可与版权声明的排版（#4832，@Joker2184）</Paragraph></ListItem>
-<ListItem><Paragraph>帮助库编修（Help#388~391，PR @JingHai-Lingyun、@Ad-closeNN）</Paragraph></ListItem>
-<ListItem><Paragraph>更新 9 月赞助者列表，感谢大家的支持！</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">漏洞修复</Paragraph><List>
-<ListItem>    <Paragraph>修复了以下 3 个与新正版登录相关的 Bug</Paragraph><List>
-<ListItem><Paragraph  Style="{StaticResource D2}">需要使用密码登录时，提示登录轮询失败（#4828，@wanweishe）</Paragraph></ListItem>
-<ListItem><Paragraph>在登录时按回车或 Esc 导致崩溃（#4857，@wuliaodexiaoluo）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource D2}">若出现网络波动，理论上可以导致不应出现的登录失败</Paragraph></ListItem>
-</List></ListItem>
-<ListItem>    <Paragraph>修复了以下 7 个其他的 Bug</Paragraph><List>
-<ListItem><Paragraph>取消更新 Mod 可能导致更新流程无法结束（#4310，@Louis-Harsune）</Paragraph></ListItem>
-<ListItem><Paragraph>在特定情况下，加载器任务会错误地提前启动（#4835，@lactobionicAcid）</Paragraph></ListItem>
-<ListItem><Paragraph  Style="{StaticResource D2}">缓存文件夹路径存在中文可能导致出错或崩溃（#4849，@sadfadwe）</Paragraph></ListItem>
-<ListItem><Paragraph  Style="{StaticResource D2}">Mod 管理中，特定名字长度的 Mod 会导致极端卡顿（#4854，@Raisel0）</Paragraph></ListItem>
-<ListItem><Paragraph>Mod 管理中，在搜索后先启用/禁用再删除 Mod 导致出错（#4855，@SweeCandy）</Paragraph></ListItem>
-<ListItem><Paragraph>有多个相似的下载任务时，理论上可能出现异常</Paragraph></ListItem>
-<ListItem><Paragraph>下载源返回 Too Many Request 会被错误地禁用</Paragraph></ListItem>
-</List></ListItem>
-</List>
-</FlowDocument>
-</FlowDocumentScrollViewer>
-
-<WrapPanel Margin="-2,2" Orientation="Horizontal" VerticalAlignment="Center">
-<!--<local:MyIconTextButton Text="查看其他修复的N个Bug" ToolTip="Bug Fix" EventType="弹出窗口"
-    EventData="其他被修复的N个Bug | 　　" LogoScale="1.05" Logo="{StaticResource LaunchIcon}" />-->
-<local:MyIconTextButton Text="原更新日志" ToolTip="2.8.8 更新日志" EventType="打开网页"
-    EventData="https://github.com/Hex-Dragon/PCL2/discussions/4858" LogoScale="1.05" Logo="{StaticResource GithubIcon}" />
-<local:MyIconTextButton Text="未来计划" ToolTip="Todo" EventType="弹出窗口"
-    EventData="下一个版本的计划：| 获取中...Emm下个版本暂时还没有未来计划呢" LogoScale="1.05" Logo="M4.146 3.646a.5.5 0 0 0 0 .708L7.793 8l-3.647 3.646a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708 0zM11.5 1a.5.5 0 0 1 .5.5v13a.5.5 0 0 1-1 0v-13a.5.5 0 0 1 .5-.5z" />
-</WrapPanel>
 </StackPanel>
 </local:MyCard>
+
+<ContentControl Content="周 边 新 闻 " Template="{StaticResource Separator}"/>
 
 <local:MyCard Margin="0,0,0,15">
 <Border BorderBrush="{DynamicResource ColorBrush3}" Margin="-0.6" CornerRadius="5" BorderThickness="4,0,0,0">
@@ -308,7 +303,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <TextBlock FontSize="18" Foreground="{DynamicResource ColorBrush3}"><Bold>PCL2 新闻速报</Bold></TextBlock>
     <TextBlock FontSize="12" Foreground="{DynamicResource ColorBrush3}" Text="Get Update Quickly - HomepageBuilder构建生成"/>
     <TextBlock FontSize="12" Foreground="{DynamicResource ColorBrush3}" Text="更新时间:专栏更新当天18点前后"/>
-    <local:MyTextButton FontSize="12" Foreground="{DynamicResource ColorBrush3}" Text="CC BY-NC-SA 4.0-部分代码来自最亮的信标" EventType="打开网页"
+    <local:MyTextButton FontSize="12" Foreground="{DynamicResource ColorBrush3}" Text="CC BY-NC-SA 4.0 - 基于 News 设计" EventType="打开网页"
     EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/blob/main/LICENSE-CONTENT"/>
     </StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="-8,4,0,10">
