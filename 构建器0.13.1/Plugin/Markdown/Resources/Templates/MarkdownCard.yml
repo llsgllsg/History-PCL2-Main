@@ -1,9 +1,0 @@
-components:
- - $MarkdownPresenter
-base: FlowDocCard
-fill:
-  title: ${@GetMdH1}
-filter:
-  file_exten:
-    - md
-    - markdown
