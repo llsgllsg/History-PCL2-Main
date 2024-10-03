@@ -2,7 +2,7 @@
 
 
 
-在 [PCL2](https://github.com/Hex-Dragon/PCL2) 中提供PCL更新的主页, 由 [HomepageBuilder](https://github.com/Light-Beacon/HomepageBuilder) 驱动
+在 [PCL2](https://github.com/Hex-Dragon/PCL2) 中提供***PCL更新日志*** or ***龙猫说***的主页, 由 [HomepageBuilder](https://github.com/Light-Beacon/HomepageBuilder) 驱动
 
 
 授权协议：
