@@ -213,9 +213,9 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <StackPanel Style="{StaticResource ContentStack}">
 <Border Style="{StaticResource VersionImageBorder}">
 <Border.Background>
-<ImageBrush ImageSource="https://i0.hdslb.com/bfs/article/5cf16c3dfea80741c0281d2864f8e6ee11343203.png" Stretch="UniformToFill" />
+<ImageBrush ImageSource="https://pic.imgdb.cn/item/66fde7a30a206445e36ebafe.png" Stretch="UniformToFill" />
 </Border.Background>
-<Image Source="https://i0.hdslb.com/bfs/article/5cf16c3dfea80741c0281d2864f8e6ee11343203.png" Opacity="0" Stretch="Fill"/>
+<Image Source="https://pic.imgdb.cn/item/66fde7a30a206445e36ebafe.png" Opacity="0" Stretch="Fill"/>
 </Border>
 <Border Style="{StaticResource VersionTitleBorder}">
 <TextBlock Style="{StaticResource VersionTitleBlock}" Text="全版本 2.8.8" />
