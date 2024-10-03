@@ -216,6 +216,11 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <ImageBrush ImageSource="https://pic.imgdb.cn/item/66fde7a30a206445e36ebafe.png" Stretch="UniformToFill" />
 </Border.Background>
 <Image Source="https://pic.imgdb.cn/item/66fde7a30a206445e36ebafe.png" Opacity="0" Stretch="Fill"/>
+<!--
+release:https://pic.imgdb.cn/item/66fde7a30a206445e36ebafe.png
+snapshot:https://pic.imgdb.cn/item/66fde7a30a206445e36ebb11.png
+emergency:https://pic.imgdb.cn/item/66fde7a30a206445e36ebb1e.png
+-->
 </Border>
 <Border Style="{StaticResource VersionTitleBorder}">
 <TextBlock Style="{StaticResource VersionTitleBlock}" Text="全版本 2.8.8" />
