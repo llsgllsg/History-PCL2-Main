@@ -116,7 +116,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
   <Setter Property="HorizontalAlignment" Value="Center" />
   <Setter Property="Margin" Value="0,0,0,15" />
 </Style><ControlTemplate x:Key="Separator" TargetType="ContentControl">
-  <Grid Margin="0,10">
+  <Grid Margin="0,0,0,15">
     <Grid.ColumnDefinitions>
       <ColumnDefinition Width="1*" />
       <ColumnDefinition Width="100" />
