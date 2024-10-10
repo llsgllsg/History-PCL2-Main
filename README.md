@@ -1,5 +1,5 @@
-# PCL2 新闻主页
-
+# PCL2 更新日志 
+~~我想叫PCL2新闻快讯但是和信标太像了~~
 
 
 在 [PCL2](https://github.com/Hex-Dragon/PCL2) 中提供***PCL更新日志*** or ***龙猫说***的主页, 由 [HomepageBuilder](https://github.com/Light-Beacon/HomepageBuilder) 驱动
