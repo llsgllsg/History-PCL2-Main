@@ -207,6 +207,22 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 </Style>
 </StackPanel.Resources>
 
+<local:MyCard Title="2.8.9 Will Coming Soon" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}"  Margin="0,0,0,15">
+<StackPanel Style="{StaticResource ContentStack}">
+<FlowDocumentScrollViewer >
+<FlowDocument>
+<Paragraph Style="{StaticResource H2}"> 2.8.9 更新预览 </Paragraph>
+<Paragraph Style="{StaticResource H5}"> 预览仅供参考 请以实际更新为准 </Paragraph>
+<List>
+<ListItem><Paragraph>新主页预设：OpenMCIM Dashboard（#4906，由 @SALTWOOD 制作）</Paragraph></ListItem>
+<ListItem><Paragraph>新主页预设：PCL 新功能说明书（#4905，由 @WForst-Breeze 制作）</Paragraph></ListItem>
+<ListItem><Paragraph>MyImage 控件 (#4868 PR @tangge233)</Paragraph></ListItem>
+</List>
+</FlowDocument>
+</FlowDocumentScrollViewer>
+</StackPanel>
+</local:MyCard>
+
 <local:MyCard Title="全版本:2.8.8 正版登录修复、崩溃修复" CanSwap="True" IsSwaped="False" Style="{StaticResource Card}"  Margin="0,0,0,15">
 <StackPanel Style="{StaticResource ContentStack}">
 
