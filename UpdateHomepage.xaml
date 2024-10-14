@@ -358,7 +358,7 @@ emergency:https://pic.imgdb.cn/item/66fde7a30a206445e36ebb1e.png
     <Grid.RowDefinitions>
     <RowDefinition Height="45" />
     </Grid.RowDefinitions>
-    <local:MyListItem Title="MyImage 控件 #4868" Margin="-10,0,0,0" IsHitTestVisible="False" Info="支持加载本地和在线 WebP 的图片控件，适配之后的帮助库图片格式变更" Grid.Row="0" Grid.Column="1"/>
+    <local:MyListItem Title="feat: 资源收藏 #4933" Margin="-10,0,0,0" IsHitTestVisible="False" Info="实现加入收藏功能 收藏查看 搜索功能" Grid.Row="0" Grid.Column="1"/>
     </Grid>
     </StackPanel>
     <TextBlock FontSize="16"><Bold>你可以帮忙的PR</Bold></TextBlock>
