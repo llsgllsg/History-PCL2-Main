@@ -284,7 +284,7 @@ emergency:https://pic.imgdb.cn/item/66fde7a30a206445e36ebb1e.png
 </local:MyCard>
 
 
-<ContentControl Content="那 个 猫 说 " Template="{StaticResource Separator}"/>
+<!--<ContentControl Content="那 个 猫 说 " Template="{StaticResource Separator}"/>
 
 <local:MyCard Margin="0,0,0,15" Title="龙猫说">
 <StackPanel Margin="0,0,0,7.5"> 
@@ -325,7 +325,7 @@ emergency:https://pic.imgdb.cn/item/66fde7a30a206445e36ebb1e.png
   </Grid>
 </StackPanel>
 </StackPanel>
-</local:MyCard>
+</local:MyCard>-->
 
 <ContentControl Content="周 边 新 闻 " Template="{StaticResource Separator}"/>
 
