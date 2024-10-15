@@ -207,19 +207,13 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 </Style>
 </StackPanel.Resources>
 
-<local:MyCard Title="2.8.9 Will Coming Soon" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}"  Margin="0,0,0,15">
+<local:MyCard Title="2.8.9 Coming Now"  Style="{StaticResource Card}"  Margin="0,0,0,15">
 <StackPanel Style="{StaticResource ContentStack}">
-<FlowDocumentScrollViewer >
-<FlowDocument>
-<Paragraph Style="{StaticResource H2}"> 2.8.9 更新预览 </Paragraph>
-<Paragraph Style="{StaticResource H5}"> 预览仅供参考 请以实际更新为准 </Paragraph>
-<List>
-<ListItem><Paragraph>新主页预设：OpenMCIM Dashboard（#4906，由 @SALTWOOD 制作）</Paragraph></ListItem>
-<ListItem><Paragraph>新主页预设：PCL 新功能说明书（#4905，由 @WForst-Breeze 制作）</Paragraph></ListItem>
-<ListItem><Paragraph>MyImage 控件 (#4868 PR @tangge233)</Paragraph></ListItem>
-</List>
-</FlowDocument>
-</FlowDocumentScrollViewer>
+<local:MyLoading Margin="0,8" Text="上学ing 请先查看此链接 谢谢"/>
+<ContentControl Content="更 新 内 容" Template="{StaticResource Separator}"/>
+<local:MyIconTextButton Text="原更新日志" ToolTip="2.8.9 更新日志" EventType="打开网页"
+    EventData="https://github.com/Hex-Dragon/PCL2/releases/tag/2.8.9" LogoScale="1.05" Logo="{StaticResource GithubIcon}" />
+
 </StackPanel>
 </local:MyCard>
 
