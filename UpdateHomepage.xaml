@@ -217,7 +217,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 </StackPanel>
 </local:MyCard>
 
-<local:MyCard Title="全版本:2.8.8 正版登录修复、崩溃修复" CanSwap="True" IsSwaped="False" Style="{StaticResource Card}"  Margin="0,0,0,15">
+<local:MyCard Title="全版本:2.8.8 正版登录修复、崩溃修复" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}"  Margin="0,0,0,15">
 <StackPanel Style="{StaticResource ContentStack}">
 
 <StackPanel Style="{StaticResource ContentStack}">
