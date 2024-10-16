@@ -1,4 +1,4 @@
-<ContentControl Content="周 边 新 闻 " Template="{StaticResource Separator}"/>
+
 
 <local:MyCard Margin="0,0,0,15">
 <Border BorderBrush="{DynamicResource ColorBrush3}" Margin="-0.6" CornerRadius="5" BorderThickness="4,0,0,0">

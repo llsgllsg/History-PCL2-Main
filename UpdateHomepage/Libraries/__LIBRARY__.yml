@@ -1,9 +1,10 @@
 name: versions
 fill:
-  official-link: 
+  official-link:
   version-image-link: 
   version-id: ${file_name}
-  title: 全版本 2.8.8【PCL 更新】正版登录修复、崩溃修复
+  version-github-link: 
+  title: 📰${file_name}
   templates:
     - Classic/VersionLatestCard
     - Classic/VersionMarkdownCard
