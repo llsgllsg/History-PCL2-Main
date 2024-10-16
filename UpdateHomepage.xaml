@@ -302,7 +302,6 @@ emergency:https://pic.imgdb.cn/item/66fde7a30a206445e36ebb1e.png
 <ListItem><Paragraph Style="{StaticResource Lp}">部分崩溃会给出奇怪的分析结果（#4936，@lactobionicAcid）</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">极端情况下，在下载刚结束时删除版本导致出错（#4949，@lunardream2）</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">同时加载多个相同图片可能出错</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">下一个版本的更新计划</Paragraph></ListItem>
 </List>
 </FlowDocument>
 </FlowDocumentScrollViewer><WrapPanel Margin="-2,2" Orientation="Horizontal" VerticalAlignment="Center">
