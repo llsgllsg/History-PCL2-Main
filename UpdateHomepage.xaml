@@ -8,7 +8,11 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 </StackPanel.Triggers>
 <StackPanel.Resources>
 <!--Styles Starts-->
-<Style TargetType="FlowDocumentScrollViewer" >
+<Style TargetType="StackPanel" x:Key="ContentStack" >
+<Setter Property="Margin" Value="20,40,20,20"/>
+</Style><Style TargetType="local:MyCard" x:Key="Card" >
+<Setter Property="Margin" Value="0,5"/>
+</Style><Style TargetType="FlowDocumentScrollViewer" >
 <Setter Property="IsSelectionEnabled" Value="False"/>
 <Setter Property="VerticalScrollBarVisibility" Value="Hidden"/>
 <Setter Property="Margin" Value="0"/>
@@ -16,10 +20,6 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Setter Property="FontFamily" Value="Microsoft YaHei UI"/>
 <Setter Property="FontSize" Value="14"/>
 <Setter Property="TextAlignment" Value="Left"/>
-</Style><Style TargetType="StackPanel" x:Key="ContentStack" >
-<Setter Property="Margin" Value="20,40,20,20"/>
-</Style><Style TargetType="local:MyCard" x:Key="Card" >
-<Setter Property="Margin" Value="0,5"/>
 </Style><Style TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -40,22 +40,6 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
             </ControlTemplate>
         </Setter.Value>
     </Setter>
-</Style><Style TargetType="Image" x:Key="InnerImage" >
-<Setter Property="MaxHeight" Value="500"/>
-<Setter Property="HorizontalAlignment" Value="Center"/>
-</Style><Style TargetType="TextBlock" >
-<Setter Property="TextWrapping" Value="Wrap"/>
-<Setter Property="HorizontalAlignment" Value="Left"/>
-<Setter Property="FontSize" Value="14"/>
-<Setter Property="Foreground" Value="Black"/>
-</Style><Style TargetType="List" >
-<Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/>
-<Setter Property="Margin" Value="20,0,0,0"/>
-<Setter Property="MarkerStyle" Value="1"/>
-<Setter Property="Padding" Value="0"/>
-</Style><Style TargetType="ListItem" >
-<Setter Property="Foreground" Value="Black"/>
-<Setter Property="LineHeight" Value="22"/>
 </Style><Style TargetType="Paragraph" x:Key="H1" >
 <Setter Property="FontSize" Value="24"/>
 <Setter Property="Margin" Value="0,10,0,10"/>
@@ -66,67 +50,69 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Setter Property="Margin" Value="0,10,0,5"/>
 <Setter Property="FontWeight" Value="Bold"/>
 <Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/>
-</Style><Style TargetType="Paragraph" x:Key="DR" >
-<Setter Property="FontSize" Value="14.5"/>
-<Setter Property="Margin" Value="0,10,0,10"/>
-<Setter Property="Foreground" Value="Red"/>
-<Setter Property="FontWeight" Value="Bold"/>
-</Style><Style TargetType="Paragraph" x:Key="DO" >
-<Setter Property="FontSize" Value="14.5"/>
-<Setter Property="Margin" Value="0,10,0,10"/>
-<Setter Property="Foreground" Value="Orange"/>
-<Setter Property="FontWeight" Value="Bold"/>
 </Style><Style TargetType="Paragraph" x:Key="H3" >
 <Setter Property="FontSize" Value="18"/>
-<Setter Property="Margin" Value="0,5,0,5"/>
+<Setter Property="Margin" Value="0,10,0,3"/>
 <Setter Property="FontWeight" Value="Bold"/>
 <Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/>
 </Style><Style TargetType="Paragraph" x:Key="H4" >
 <Setter Property="FontSize" Value="16"/>
-<Setter Property="Margin" Value="0,3,0,5"/>
+<Setter Property="Margin" Value="0,10,0,1"/>
 <Setter Property="FontWeight" Value="Bold"/>
 <Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/>
 </Style><Style TargetType="Paragraph" x:Key="H5" >
-<Setter Property="FontSize" Value="15"/>
-<Setter Property="Margin" Value="0,3,0,5"/>
+<Setter Property="FontSize" Value="14"/>
+<Setter Property="Margin" Value="0,8,0,1"/>
 <Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/>
-</Style><Style TargetType="Border" x:Key="Quote" >
+</Style><Style TargetType="Image" x:Key="InnerImage" >
+<Setter Property="MaxHeight" Value="500"/>
+<Setter Property="HorizontalAlignment" Value="Center"/>
+</Style><Style TargetType="TextBlock" >
+<Setter Property="TextWrapping" Value="Wrap"/>
+<Setter Property="HorizontalAlignment" Value="Left"/>
+<Setter Property="FontSize" Value="14"/>
+<Setter Property="Foreground" Value="Black"/>
+</Style><Style TargetType="Paragraph" >
+<Setter Property="LineHeight" Value="12"/>
+<Setter Property="TextIndent" Value="0"/>
+<Setter Property="Margin" Value="0,8"/>
+</Style><Style TargetType="Paragraph" x:Key="Lp" >
+<Setter Property="LineHeight" Value="16"/>
+<Setter Property="TextIndent" Value="0"/>
+</Style><Style TargetType="List" >
+<Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/>
+<Setter Property="Margin" Value="20,6,0,6"/>
+<Setter Property="MarkerStyle" Value="1"/>
+<Setter Property="Padding" Value="0"/>
+</Style><Style TargetType="ListItem" >
+<Setter Property="Foreground" Value="Black"/>
+<Setter Property="Margin" Value="0,4"/>
+</Style><Style TargetType="Section" x:Key="Hr" >
+<Setter Property="Margin" Value="0,4,0,0"/>
+<Setter Property="BorderThickness" Value="0,1.5,0,0"/>
+<Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/>
+<Setter Property="FontSize" Value="4"/>
+</Style><Style TargetType="Section" x:Key="Quote" >
 <Setter Property="BorderThickness" Value="5,0,0,0"/>
 <Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/>
 <Setter Property="Padding" Value="10,5"/>
 <Setter Property="Margin" Value="0,5"/>
-</Style><Style TargetType="Border" x:Key="cautionQuote" BasedOn="{StaticResource Quote}">
+</Style><Style TargetType="Section" x:Key="cautionQuote" BasedOn="{StaticResource Quote}">
 <Setter Property="BorderBrush" Value="#CC4455"/>
 <Setter Property="Background" Value="#33CC4455"/>
-</Style><Style TargetType="Border" x:Key="noteQuote" BasedOn="{StaticResource Quote}">
+</Style><Style TargetType="Section" x:Key="noteQuote" BasedOn="{StaticResource Quote}">
 <Setter Property="BorderBrush" Value="#4455AA"/>
 <Setter Property="Background" Value="#334455AA"/>
-</Style><Style TargetType="Border" x:Key="tipQuote" BasedOn="{StaticResource Quote}">
+</Style><Style TargetType="Section" x:Key="tipQuote" BasedOn="{StaticResource Quote}">
 <Setter Property="BorderBrush" Value="#44AA55"/>
 <Setter Property="Background" Value="#3344AA55"/>
-</Style><Style TargetType="Border" x:Key="importantQuote" BasedOn="{StaticResource Quote}">
+</Style><Style TargetType="Section" x:Key="importantQuote" BasedOn="{StaticResource Quote}">
 <Setter Property="BorderBrush" Value="#AA55BB"/>
 <Setter Property="Background" Value="#33AA55BB"/>
-</Style><Style TargetType="Border" x:Key="warningQuote" BasedOn="{StaticResource Quote}">
+</Style><Style TargetType="Section" x:Key="warningQuote" BasedOn="{StaticResource Quote}">
 <Setter Property="BorderBrush" Value="#DDBB44"/>
 <Setter Property="Background" Value="#33DDBB44"/>
-</Style><Style x:Key="imgTitle" TargetType="TextBlock">
-  <Setter Property="FontSize" Value="14" />
-  <Setter Property="Foreground" Value="#FF777777" />
-  <Setter Property="HorizontalAlignment" Value="Center" />
-  <Setter Property="Margin" Value="0,0,0,15" />
-</Style><ControlTemplate x:Key="Separator" TargetType="ContentControl">
-  <Grid Margin="0,0,0,15">
-    <Grid.ColumnDefinitions>
-      <ColumnDefinition Width="1*" />
-      <ColumnDefinition Width="100" />
-      <ColumnDefinition Width="1*" />
-    </Grid.ColumnDefinitions>
-    <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
-    <TextBlock Text="{TemplateBinding Content}" HorizontalAlignment="Center" FontSize="15" Foreground="{DynamicResource ColorBrush4}" Grid.Column="1" VerticalAlignment="Center" />
-    <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
-  </Grid>
-</ControlTemplate><sys:String x:Key="DownloadIcon">
+</Style><sys:String x:Key="DownloadIcon">
 M955 610h-59c-15 0-29 13-29 29v196c0 15-13 29-29 29h-649c-15 0-29-13-29-29v-196c0-15-13-29-29-29h-59c-15 0-29 13-29 29V905c0 43 35 78 78 78h787c43 0 78-35 78-78V640c0-15-13-29-29-29zM492 740c11 11 29 11 41 0l265-265c11-11 11-29 0-41l-41-41c-11-11-29-11-41 0l-110 110c-11 11-33 3-33-13V68C571 53 555 39 541 39h-59c-15 0-29 13-29 29v417c0 17-21 25-33 13l-110-110c-11-11-29-11-41 0L226 433c-11 11-11 29 0 41L492 740z</sys:String>
 <sys:String x:Key="LaunchIcon">
 M1091.291429 0H78.935771C35.34848 0.035109 0.029257 35.354331 0 78.935771v863.331475c0 43.534629 35.401143 78.994286 78.935771 78.994285H1091.291429c43.534629 0 78.994286-35.401143 78.994285-78.994285V78.871406C1170.156983 35.319223 1134.849463 0.064366 1091.291429 0z m-8.835658 87.771429v78.754377H87.771429v-78.760229h994.684342zM87.771429 933.425737V254.232869h994.684342v679.140205H87.771429v0.058515zM724.95104 340.00896l-206.19264 547.605943a43.903269 43.903269 0 0 1-82.154057-31.012572l206.139977-547.547428a43.944229 43.944229 0 0 1 82.20672 30.954057zM369.558674 545.909029l-85.489371 85.489371 85.489371 85.542034a43.885714 43.885714 0 0 1-62.025143 62.083657l-116.554605-116.560457a43.8272 43.8272 0 0 1 0-62.025143l116.560457-116.49024a43.885714 43.885714 0 0 1 62.019291 61.966629z m610.567315-37.566172a43.885714 43.885714 0 0 1 0 62.083657l-116.560458 116.560457a43.768686 43.768686 0 0 1-62.019291 0 43.885714 43.885714 0 0 1 0-62.083657l85.547886-85.547885-85.547886-85.542035a43.897417 43.897417 0 0 1 62.083657-62.083657l116.496092 116.618972z</sys:String>
@@ -134,8 +120,7 @@ M1091.291429 0H78.935771C35.34848 0.035109 0.029257 35.354331 0 78.935771v863.33
 M512 42.666667A464.64 464.64 0 0 0 42.666667 502.186667 460.373333 460.373333 0 0 0 363.52 938.666667c23.466667 4.266667 32-9.813333 32-22.186667v-78.08c-130.56 27.733333-158.293333-61.44-158.293333-61.44a122.026667 122.026667 0 0 0-52.053334-67.413333c-42.666667-28.16 3.413333-27.733333 3.413334-27.733334a98.56 98.56 0 0 1 71.68 47.36 101.12 101.12 0 0 0 136.533333 37.973334 99.413333 99.413333 0 0 1 29.866667-61.44c-104.106667-11.52-213.333333-50.773333-213.333334-226.986667a177.066667 177.066667 0 0 1 47.36-124.16 161.28 161.28 0 0 1 4.693334-121.173333s39.68-12.373333 128 46.933333a455.68 455.68 0 0 1 234.666666 0c89.6-59.306667 128-46.933333 128-46.933333a161.28 161.28 0 0 1 4.693334 121.173333A177.066667 177.066667 0 0 1 810.666667 477.866667c0 176.64-110.08 215.466667-213.333334 226.986666a106.666667 106.666667 0 0 1 32 85.333334v125.866666c0 14.933333 8.533333 26.88 32 22.186667A460.8 460.8 0 0 0 981.333333 502.186667 464.64 464.64 0 0 0 512 42.666667</sys:String>
 <sys:String x:Key="CreeperIcon">
 M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.333333 85.333333 0 0 0 85.333333 85.333333h597.333334a85.333333 85.333333 0 0 0 85.333333-85.333333V213.333333a85.333333 85.333333 0 0 0-85.333333-85.333333H213.333333z m0 64h597.333334c11.754667 0 21.333333 9.578667 21.333333 21.333333v597.333334c0 11.754667-9.578667 21.333333-21.333333 21.333333H213.333333c-11.754667 0-21.333333-9.578667-21.333333-21.333333V213.333333c0-11.754667 9.578667-21.333333 21.333333-21.333333z m64 106.666667a21.333333 21.333333 0 0 0-21.333333 21.333333v128a21.333333 21.333333 0 0 0 21.333333 21.333333h149.333334v-149.333333a21.333333 21.333333 0 0 0-21.333334-21.333333h-128z m149.333334 170.666666v85.333334h-64a21.333333 21.333333 0 0 0-21.333334 21.333333v160a32 32 0 1 0 64 0V704h213.333334v32a32 32 0 1 0 64 0V576a21.333333 21.333333 0 0 0-21.333334-21.333333h-64v-85.333334h-170.666666z m170.666666 0h149.333334a21.333333 21.333333 0 0 0 21.333333-21.333333v-128a21.333333 21.333333 0 0 0-21.333333-21.333333h-128a21.333333 21.333333 0 0 0-21.333334 21.333333v149.333333z
-</sys:String>
-<Style TargetType="Border" x:Key="VersionImageBorder" >
+</sys:String><Style TargetType="Border" x:Key="VersionImageBorder" >
 <Setter Property="HorizontalAlignment" Value="Center"/>
 <Setter Property="BorderThickness" Value="4"/>
 <Setter Property="VerticalAlignment" Value="Top"/>
@@ -159,71 +144,181 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <Setter Property="Width" Value="180"/>
 <Setter Property="TextWrapping" Value="Wrap"/>
 <Setter Property="FontSize" Value="18"/>
-</Style><Style TargetType="TextBlock" x:Key="LTCattSayH1" >
-<Setter Property="HorizontalAlignment" Value="Left"/>
-<Setter Property="FontSize" Value="18"/>
-<Setter Property="Margin" Value="0,10,0,5"/>
+</Style><Style TargetType="Paragraph" x:Key="Black" >
+<Setter Property="FontSize" Value="14.5"/>
+<Setter Property="Margin" Value="0,10,0,10"/>
+<Setter Property="Foreground" Value="Black"/>
 <Setter Property="FontWeight" Value="Bold"/>
+</Style>
+<Style TargetType="Paragraph" x:Key="Gray" >
+<Setter Property="FontSize" Value="14.5"/>
+<Setter Property="Margin" Value="0,10,0,10"/>
+<Setter Property="Foreground" Value="Gray"/>
+<Setter Property="FontWeight" Value="Bold"/>
+</Style>
+<Style TargetType="Paragraph" x:Key="Blue" >
+<Setter Property="FontSize" Value="14.5"/>
+<Setter Property="Margin" Value="0,10,0,10"/>
+<Setter Property="Foreground" Value="Blue"/>
+<Setter Property="FontWeight" Value="Bold"/>
+</Style>
+<Style TargetType="Paragraph" x:Key="Green" >
+<Setter Property="FontSize" Value="14.5"/>
+<Setter Property="Margin" Value="0,10,0,10"/>
+<Setter Property="Foreground" Value="Green"/>
+<Setter Property="FontWeight" Value="Bold"/>
+</Style>
+<Style TargetType="Paragraph" x:Key="Cyan" >
+<Setter Property="FontSize" Value="14.5"/>
+<Setter Property="Margin" Value="0,10,0,10"/>
+<Setter Property="Foreground" Value="Cyan"/>
+<Setter Property="FontWeight" Value="Bold"/>
+</Style>
+<Style TargetType="Paragraph" x:Key="Red" >
+<Setter Property="FontSize" Value="14.5"/>
+<Setter Property="Margin" Value="0,10,0,10"/>
+<Setter Property="Foreground" Value="Red"/>
+<Setter Property="FontWeight" Value="Bold"/>
+</Style>
+<Style TargetType="Paragraph" x:Key="Magenta" >
+<Setter Property="FontSize" Value="14.5"/>
+<Setter Property="Margin" Value="0,10,0,10"/>
+<Setter Property="Foreground" Value="Magenta"/>
+<Setter Property="FontWeight" Value="Bold"/>
+</Style>
+<Style TargetType="Paragraph" x:Key="Yellow" >
+<Setter Property="FontSize" Value="14.5"/>
+<Setter Property="Margin" Value="0,10,0,10"/>
+<Setter Property="Foreground" Value="Yellow"/>
+<Setter Property="FontWeight" Value="Bold"/>
+</Style>
+<Style TargetType="Paragraph" x:Key="Orange" >
+<Setter Property="FontSize" Value="14.5"/>
+<Setter Property="Margin" Value="0,10,0,10"/>
+<Setter Property="Foreground" Value="Orange"/>
+<Setter Property="FontWeight" Value="Bold"/>
+</Style>
+<ControlTemplate x:Key="Separator" TargetType="ContentControl">
+  <Grid Margin="0,0,0,15">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="1*" />
+      <ColumnDefinition Width="100" />
+      <ColumnDefinition Width="1*" />
+    </Grid.ColumnDefinitions>
+    <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
+    <TextBlock Text="{TemplateBinding Content}" HorizontalAlignment="Center" FontSize="15" Foreground="{DynamicResource ColorBrush4}" Grid.Column="1" VerticalAlignment="Center" />
+    <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
+  </Grid>
+</ControlTemplate><Style TargetType="TextBlock" x:Key="LTCattSayH1" >
+<Setter Property="HorizontalAlignment" Value="Left"/>
 <Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/>
+<Setter Property="FontSize" Value="18"/>
+<Setter Property="FontWeight" Value="Bold"/>
+<Setter Property="Margin" Value="0,10,0,5"/>
 </Style><Style TargetType="TextBlock" x:Key="LTCattSayH2" >
 <Setter Property="HorizontalAlignment" Value="Left"/>
-<Setter Property="FontSize" Value="15"/>
-<Setter Property="Margin" Value="0,10,0,5"/>
-<Setter Property="FontWeight" Value="Bold"/>
 <Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/>
+<Setter Property="FontSize" Value="15"/>
+<Setter Property="FontWeight" Value="Bold"/>
+<Setter Property="Margin" Value="0,10,0,5"/>
 </Style><Style TargetType="TextBlock" x:Key="LTCattSayH3" >
 <Setter Property="HorizontalAlignment" Value="Left"/>
+<Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/>
 <Setter Property="FontSize" Value="13.5"/>
-<Setter Property="Margin" Value="0,10,0,5"/>
 <Setter Property="FontWeight" Value="Bold"/>
-<Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/>
-</Style><!--<Style TargetType="local:MyTextButton" x:Key="LTCattSayH2B" >
-<Setter Property="HorizontalAlignment" Value="Left"/>
-<Setter Property="FontSize" Value="15"/>
 <Setter Property="Margin" Value="0,10,0,5"/>
-<Setter Property="FontWeight" Value="Bold"/>
-<Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/>
-<Setter Property="EventType" Value="打开网页"/>
-</Style>--><Style TargetType="local:MyButton" x:Key="LinkButtonBase" >
-<Setter Property="Margin" Value="0,0,5,5"/>
-<Setter Property="Height" Value="35"/>
-<Setter Property="Padding" Value="13,0"/>
-<Setter Property="EventType" Value="打开网页"/>
-</Style><Style TargetType="local:MyButton" x:Key="WikiLinkButton" BasedOn="{StaticResource LinkButtonBase}">
-<Setter Property="Grid.Column" Value="0"/>
-<Setter Property="Text" Value="Minecraft Wiki"/>
-</Style><Style TargetType="local:MyButton" x:Key="OfficalLinkButton" BasedOn="{StaticResource LinkButtonBase}">
-<Setter Property="Grid.Column" Value="2"/>
-<Setter Property="Text" Value="官网"/>
-</Style><Style TargetType="local:MyIconTextButton" x:Key="DownloadVersionButton" >
-<Setter Property="Text" Value="下载"/>
-<Setter Property="ToolTip" Value="转到下载页面"/>
-<Setter Property="EventType" Value="切换页面"/>
-<Setter Property="EventData" Value="1|1"/>
-</Style><Style TargetType="local:MyIconTextButton" x:Key="ServerJarDownloadButton" >
-<Setter Property="Text" Value="服务端"/>
-<Setter Property="ToolTip" Value="下载服务端"/>
-<Setter Property="EventType" Value="下载文件"/>
 </Style>
 </StackPanel.Resources>
-
-<local:MyCard Title="2.8.9 Will Coming Soon" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}"  Margin="0,0,0,15">
+<local:MyCard Title="📰快照版2.8.9" CanSwap="True" IsSwaped="False" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
-<FlowDocumentScrollViewer >
+<StackPanel Style="{StaticResource ContentStack}">
+<Border Style="{StaticResource VersionImageBorder}">
+<Border.Background>
+<ImageBrush ImageSource="https://pic.imgdb.cn/item/66fde7a30a206445e36ebb11.png" Stretch="UniformToFill" />
+</Border.Background>
+<Image Source="https://pic.imgdb.cn/item/66fde7a30a206445e36ebb11.png" Opacity="0" Stretch="Fill"/>
+<!--
+release:https://pic.imgdb.cn/item/66fde7a30a206445e36ebafe.png
+snapshot:https://pic.imgdb.cn/item/66fde7a30a206445e36ebb11.png
+emergency:https://pic.imgdb.cn/item/66fde7a30a206445e36ebb1e.png
+-->
+</Border>
+<Border Style="{StaticResource VersionTitleBorder}">
+<TextBlock Style="{StaticResource VersionTitleBlock}" Text="快照版2.8.9" />
+</Border>
+</StackPanel><FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph Style="{StaticResource H2}"> 2.8.9 更新预览 </Paragraph>
-<Paragraph Style="{StaticResource H5}"> 预览仅供参考 请以实际更新为准 </Paragraph>
-<List>
-<ListItem><Paragraph>新主页预设：OpenMCIM Dashboard（#4906，由 @SALTWOOD 制作）</Paragraph></ListItem>
-<ListItem><Paragraph>新主页预设：PCL 新功能说明书（#4905，由 @WForst-Breeze 制作）</Paragraph></ListItem>
-<ListItem><Paragraph>MyImage 控件 (#4868 PR @tangge233)</Paragraph></ListItem>
+<Paragraph Style="{StaticResource H2}">更新亮点</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Orange}">支持下载原版服务端（#112，@WTP016-CN，PR @tangge233
+</Paragraph><BlockUIContainer>
+<Image Style="{StaticResource InnerImage}" Source="https://i0.hdslb.com/bfs/article/b908e19f9168848db2b3afba5a91792c11343203.png"/>
+</BlockUIContainer></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">本地 Mod 的标题支持选择显示 Mod 原始文件名（#3073，@xingchen-Forever）
+</Paragraph><BlockUIContainer>
+<Image Style="{StaticResource InnerImage}" Source="https://i0.hdslb.com/bfs/article/bcce4a099d1d5e15a918a35bd318bbee11343203.png"/>
+</BlockUIContainer></ListItem>
+<ListItem><Paragraph Style="{StaticResource Orange}">新主页预设：PCL 新功能说明书（#4905，由 @WForst-Breeze 制作）
+</Paragraph><BlockUIContainer>
+<Image Style="{StaticResource InnerImage}" Source="https://i0.hdslb.com/bfs/article/9b4dff7fea19f095e535062fbbf0608711343203.png"/>
+</BlockUIContainer></ListItem>
+<ListItem><Paragraph Style="{StaticResource Orange}">新主页预设：OpenMCIM 仪表盘（#4906，由 @SALTWOOD 制作）
+</Paragraph><BlockUIContainer>
+<Image Style="{StaticResource InnerImage}" Source="https://i0.hdslb.com/bfs/article/fd4ac99170dec6630c6a6d3808e7816011343203.png"/>
+</BlockUIContainer></ListItem>
+</List><Paragraph Style="{StaticResource H2}">Xaml控件更新</Paragraph><List>
+<ListItem>    <Paragraph Style="{StaticResource Orange}">添加 MyImage 控件（#4868，PR @tangge233）</Paragraph></ListItem>
+<ListItem>    <Paragraph>该控件基于 WPF 原生的 Image，支持 WebP 格式，支持缓存</Paragraph></ListItem>
+<ListItem>    <Paragraph>MyListItem、MyCompItem、MyLocalModItem 的图标换用 MyImage 控件</Paragraph></ListItem>
+<ListItem>    <Paragraph>如果你编写了自定义主页或帮助，建议将所有 Image 控件替换为 local:MyImage，并将图片格式更换为 WebP，这可以大大节省流量</Paragraph></ListItem>
+<ListItem>    <Paragraph>你可以通过网络请求的 Header 判断 PCL 的版本，以实现仅在新版本启用 MyImage 控件</Paragraph></ListItem>
+<ListItem>    <Paragraph>新增的属性详见： <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://github.com/Hex-Dragon/PCL2/blob/main/Plain%20Craft%20Launcher%202/Resources/Custom.xaml#L329">新属性</local:MyTextButton></Underline></Paragraph></ListItem>
+</List><BlockUIContainer><ContentControl Content="更 新 内 容" Template="{StaticResource Separator}"/></BlockUIContainer><Paragraph Style="{StaticResource H2}">其他更新内容</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Orange}">重命名时禁止输入 NTFS 8.3 文件名（#4505，@AptS-1547，PR @SALTWOOD）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">搜索筛选 1.13- 且为 Forge 的 Mod 时，视作没有设置 Mod 加载器的筛选项，以应对部分老 Mod 作者没有设置 Mod * 兼容的加载器的情况（#4512，@MinecraftYYDS7）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">将启动器窗口大小存储在文件而非注册表，以便分发整合包（#4678，@LuckiQ）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">安装 Forge/NeoForge 时会自动新建 mods 文件夹（#4898，@ThendJyc）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">为指向百度的下载添加了独特的 UA（#4951，@kazukokawagawa）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Orange}">添加 [使用密码登录正版账号] 帮助（LTCatt/PCL2Help#395，PR @tangge233）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">将 Mod 与整合包的设置独立归类进一张卡片中</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">减淡了本地 Mod 项的标签和描述的颜色，以便与标题区分</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">移除安装整合包时保留原始压缩包选项</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">支持分析误删 Forge 安装后的文件导致的崩溃</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">EventType [下载文件] 支持指定文件名和目标文件夹（#4737，@wuliaodexiaoluo）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">若加载的图片不是 WebP 格式，则不加载 WebP DLL，以优化性能</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">PCL 标题栏、MC 皮肤支持选择 WebP 格式的图片</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">Bug 修复</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">对 Mod 进行操作后，Mod 管理列表会不必要地刷新（#4457，@sinterde）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">罕见情况下，离开 Mod 管理页面导致出错（#4721，@YIEMM）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">用户名有特殊字符时无法使用 LittleSkin 启动游戏（#4777，@Crotina）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">1.0.0-rc2-2 在下载页面错误地被归类到了快照版（#4803，@Crotina）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">拖拽加载主页后设置单选框未刷新（#4826，@JingHai-Lingyun）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">关闭动画时无法解锁某个隐藏主题（#4830，@Joker2184）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Red}">打开老版本 PCL 后需要重新进行登录（#4836，@Apple-alone）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Red}">搜索后启用/禁用 Mod 时出错（#4862，@EasyGuo114514）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Red}">中文路径、中文用户名下 PCL 可能出错（#4869，@h7f8）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">对一个项的两个不同信息源进行搜索时可能遗漏搜索结果（#4912，@ChenXi094）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">热力系列 Mod 中文名显示错误（#4916，@ChenMoFeiJin）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">部分崩溃会给出奇怪的分析结果（#4936，@lactobionicAcid）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">极端情况下，在下载刚结束时删除版本导致出错（#4949，@lunardream2）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">同时加载多个相同图片可能出错</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">下一个版本的更新计划</Paragraph></ListItem>
 </List>
 </FlowDocument>
-</FlowDocumentScrollViewer>
+</FlowDocumentScrollViewer><WrapPanel Margin="-2,2" Orientation="Horizontal" VerticalAlignment="Center">
+<!--<local:MyIconTextButton Text="查看其他修复的n个Bug" ToolTip="Bug Fix" EventType="弹出窗口"
+    EventData="其他修复的n个Bug | Bug_Text" LogoScale="1.05" Logo="{StaticResource LaunchIcon}" />-->
+<local:MyIconTextButton Text="原更新日志" ToolTip="2.8.9 更新日志" EventType="打开网页"
+    EventData="https://github.com/Hex-Dragon/PCL2/releases/tag/2.8.9" LogoScale="1.05" Logo="{StaticResource GithubIcon}" />
+<local:MyIconTextButton Text="未来计划" ToolTip="Todo" EventType="弹出窗口"
+    EventData="下一个版本的计划：| \n尽量完成除导出整合包以外的 中优先度 提交" LogoScale="1.05" Logo="M4.146 3.646a.5.5 0 0 0 0 .708L7.793 8l-3.647 3.646a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708 0zM11.5 1a.5.5 0 0 1 .5.5v13a.5.5 0 0 1-1 0v-13a.5.5 0 0 1 .5-.5z" />
+</WrapPanel>
 </StackPanel>
 </local:MyCard>
 
-<local:MyCard Title="全版本:2.8.8 正版登录修复、崩溃修复" CanSwap="True" IsSwaped="False" Style="{StaticResource Card}"  Margin="0,0,0,15">
+<ContentControl Content="最 近 更 新 " Template="{StaticResource Separator}" Margin="0,15,0,15"/>
+
+<local:MyCard Title="全版本:2.8.8 正版登录修复、崩溃修复" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}"  Margin="0,15,0,15">
 <StackPanel Style="{StaticResource ContentStack}">
 
 <StackPanel Style="{StaticResource ContentStack}">
@@ -255,21 +350,21 @@ emergency:https://pic.imgdb.cn/item/66fde7a30a206445e36ebb1e.png
 <FlowDocumentScrollViewer >
 <FlowDocument>
 <Paragraph Style="{StaticResource H2}">新功能 &amp; 优化</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource DO}">新主页预设：PCL 更新日志（#4845，由 @Joker2184 制作）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Orange}">新主页预设：PCL 更新日志（#4845，由 @Joker2184 制作）</Paragraph></ListItem>
 <ListItem><Paragraph>优化许可与版权声明的排版（#4832，@Joker2184）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource DO}">帮助库编修（Help#388~391，PR @JingHai-Lingyun、@Ad-closeNN）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Orange}">帮助库编修（Help#388~391，PR @JingHai-Lingyun、@Ad-closeNN）</Paragraph></ListItem>
 <ListItem><Paragraph>更新 9 月赞助者列表，感谢大家的支持！</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H2}">漏洞修复</Paragraph><List>
 <ListItem>    <Paragraph>修复了以下 3 个与新正版登录相关的 Bug</Paragraph><List>
-<ListItem><Paragraph  Style="{StaticResource DR}">需要使用密码登录时，提示登录轮询失败（#4828，@wanweishe）</Paragraph></ListItem>
+<ListItem><Paragraph  Style="{StaticResource Red}">需要使用密码登录时，提示登录轮询失败（#4828，@wanweishe）</Paragraph></ListItem>
 <ListItem><Paragraph>在登录时按回车或 Esc 导致崩溃（#4857，@wuliaodexiaoluo）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource DR}">若出现网络波动，理论上可以导致不应出现的登录失败</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Red}">若出现网络波动，理论上可以导致不应出现的登录失败</Paragraph></ListItem>
 </List></ListItem>
 <ListItem>    <Paragraph>修复了以下 7 个其他的 Bug</Paragraph><List>
 <ListItem><Paragraph>取消更新 Mod 可能导致更新流程无法结束（#4310，@Louis-Harsune）</Paragraph></ListItem>
 <ListItem><Paragraph>在特定情况下，加载器任务会错误地提前启动（#4835，@lactobionicAcid）</Paragraph></ListItem>
-<ListItem><Paragraph  Style="{StaticResource DR}">缓存文件夹路径存在中文可能导致出错或崩溃（#4849，@sadfadwe）</Paragraph></ListItem>
-<ListItem><Paragraph  Style="{StaticResource DR}">Mod 管理中，特定名字长度的 Mod 会导致极端卡顿（#4854，@Raisel0）</Paragraph></ListItem>
+<ListItem><Paragraph  Style="{StaticResource Red}">缓存文件夹路径存在中文可能导致出错或崩溃（#4849，@sadfadwe）</Paragraph></ListItem>
+<ListItem><Paragraph  Style="{StaticResource Red}">Mod 管理中，特定名字长度的 Mod 会导致极端卡顿（#4854，@Raisel0）</Paragraph></ListItem>
 <ListItem><Paragraph>Mod 管理中，在搜索后先启用/禁用再删除 Mod 导致出错（#4855，@SweeCandy）</Paragraph></ListItem>
 <ListItem><Paragraph>有多个相似的下载任务时，理论上可能出现异常</Paragraph></ListItem>
 <ListItem><Paragraph>下载源返回 Too Many Request 会被错误地禁用</Paragraph></ListItem>
@@ -279,8 +374,6 @@ emergency:https://pic.imgdb.cn/item/66fde7a30a206445e36ebb1e.png
 </FlowDocumentScrollViewer>
 
 <WrapPanel Margin="-2,2" Orientation="Horizontal" VerticalAlignment="Center">
-<!--<local:MyIconTextButton Text="查看其他修复的N个Bug" ToolTip="Bug Fix" EventType="弹出窗口"
-    EventData="其他被修复的N个Bug | 　　" LogoScale="1.05" Logo="{StaticResource LaunchIcon}" />-->
 <local:MyIconTextButton Text="原更新日志" ToolTip="2.8.8 更新日志" EventType="打开网页"
     EventData="https://github.com/Hex-Dragon/PCL2/discussions/4858" LogoScale="1.05" Logo="{StaticResource GithubIcon}" />
 <local:MyIconTextButton Text="未来计划" ToolTip="Todo" EventType="弹出窗口"
@@ -289,8 +382,7 @@ emergency:https://pic.imgdb.cn/item/66fde7a30a206445e36ebb1e.png
 </StackPanel>
 </local:MyCard>
 
-
-<ContentControl Content="那 个 猫 说 " Template="{StaticResource Separator}"/>
+<ContentControl Content="那 个 猫 说 " Template="{StaticResource Separator}" Margin="0,15,0,15"/>
 
 <local:MyCard Margin="0,0,0,15" Title="龙猫说">
 <StackPanel Margin="0,0,0,7.5"> 
@@ -304,7 +396,7 @@ emergency:https://pic.imgdb.cn/item/66fde7a30a206445e36ebb1e.png
                         <ColumnDefinition />
                         <ColumnDefinition Width="150" />
                     </Grid.ColumnDefinitions>
-                    <local:MyListItem IsHitTestVisible="False" Title="龙腾猫跃" Margin="-5,0,15,0" Info="2024年10月01日 04:01" Grid.Row="0" Grid.Column="1" />
+                    <local:MyListItem IsHitTestVisible="False" Title="龙腾猫跃" Margin="-5,0,15,0" Info="2024年10月16日 04:11" Grid.Row="0" Grid.Column="1" />
                     <Image Source="/Plain Craft Launcher 2;component/Images/Heads/LTCat.jpg" Grid.Row="0" Margin="3">
                         <Image.Clip>
                             <EllipseGeometry Center="17 17" RadiusX="17" RadiusY="17" />
@@ -317,11 +409,13 @@ emergency:https://pic.imgdb.cn/item/66fde7a30a206445e36ebb1e.png
     <StackPanel>
     <StackPanel VerticalAlignment="Center" Margin="0,0,0,4">
     <TextBlock Margin="0,0,0,4" 
-                    Text="更新内容：【PCL 更新】正版登录修复、崩溃修复" Style="{StaticResource LTCattSayH1}"/>
+                    Text="获取 PCL" Style="{StaticResource LTCattSayH1}"/>
     <TextBlock Margin="-1.5,0,0,4" 
-                    Text="PCL 正式版可永久免费下载使用，无需赞助，也可以用于制作整合包。" Style="{StaticResource LTCattSayH2}"/>
+                    Text="本次更新为快照版更新，仅限赞助者获取下载。" Style="{StaticResource LTCattSayH2}"/>
     <TextBlock Margin="-1.5,0,0,4" 
-                    Text="正式版永久下载地址：https://afdian.com/p/0164034c016c11ebafcb52540025c377" Style="{StaticResource LTCattSayH2}"/>
+                    Text="当更新内容稳定后，即会更新至正式版。" Style="{StaticResource LTCattSayH2}"/>
+    <TextBlock Margin="-1.5,0,0,4" 
+                    Text="即使没有赞助，也可以在按钮下载正式版哦：" Style="{StaticResource LTCattSayH2}"/>
     </StackPanel>
     <WrapPanel Margin="-10,0,0,4" Orientation="Horizontal" VerticalAlignment="Center">
     <local:MyIconTextButton Text="检查更新" ToolTip="检查更新以获取最新版本" EventType="切换页面" EventData="3|2" LogoScale="1.05" Logo="{StaticResource LaunchIcon}" />
@@ -358,7 +452,7 @@ emergency:https://pic.imgdb.cn/item/66fde7a30a206445e36ebb1e.png
     <Grid.RowDefinitions>
     <RowDefinition Height="45" />
     </Grid.RowDefinitions>
-    <local:MyListItem Title="feat: 资源收藏 #4933" Margin="-10,0,0,0" IsHitTestVisible="False" Info="实现加入收藏功能 收藏查看 搜索功能" Grid.Row="0" Grid.Column="1"/>
+    <local:MyListItem Title="feat: 资源收藏 #4933" Margin="-10,0,0,0" IsHitTestVisible="False" Info=" 实现加入收藏功能 收藏查看 搜索功能" Grid.Row="0" Grid.Column="1"/>
     </Grid>
     </StackPanel>
     <TextBlock FontSize="16"><Bold>你可以帮忙的PR</Bold></TextBlock>
@@ -403,4 +497,5 @@ emergency:https://pic.imgdb.cn/item/66fde7a30a206445e36ebb1e.png
   </StackPanel>
 </Border>
 </local:MyCard>
+
 </StackPanel>
