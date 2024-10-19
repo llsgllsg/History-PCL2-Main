@@ -38,3 +38,10 @@ PCL 启动器作者 龙腾猫跃
 
 
 [iconfont](https://www.iconfont.cn) - ©ALIMAMA MUX
+
+## 如果你需要获取该库的Json或者xaml
+你可以通过
+```
+https://UpdateHomepage.pages.dev/+文件名.json/xaml
+```
+获取
