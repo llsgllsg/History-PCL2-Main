@@ -229,14 +229,14 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <Setter Property="Margin" Value="0,10,0,5"/>
 </Style>
 </StackPanel.Resources>
-<local:MyCard Title="📰快照版2.8.9" CanSwap="True" IsSwaped="False" Style="{StaticResource Card}" >
+<local:MyCard Title="📰正式版 2.8.9" CanSwap="True" IsSwaped="False" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <StackPanel Style="{StaticResource ContentStack}">
 <Border Style="{StaticResource VersionImageBorder}">
 <Border.Background>
-<ImageBrush ImageSource="https://pic.imgdb.cn/item/66fde7a30a206445e36ebb11.png" Stretch="UniformToFill" />
+<ImageBrush ImageSource="https://pic.imgdb.cn/item/66fde7a30a206445e36ebafe.png" Stretch="UniformToFill" />
 </Border.Background>
-<Image Source="https://pic.imgdb.cn/item/66fde7a30a206445e36ebb11.png" Opacity="0" Stretch="Fill"/>
+<Image Source="https://pic.imgdb.cn/item/66fde7a30a206445e36ebafe.png" Opacity="0" Stretch="Fill"/>
 <!--
 release:https://pic.imgdb.cn/item/66fde7a30a206445e36ebafe.png
 snapshot:https://pic.imgdb.cn/item/66fde7a30a206445e36ebb11.png
@@ -244,10 +244,11 @@ emergency:https://pic.imgdb.cn/item/66fde7a30a206445e36ebb1e.png
 -->
 </Border>
 <Border Style="{StaticResource VersionTitleBorder}">
-<TextBlock Style="{StaticResource VersionTitleBlock}" Text="快照版2.8.9" />
+<TextBlock Style="{StaticResource VersionTitleBlock}" Text="正式版 2.8.9" />
 </Border>
 </StackPanel><FlowDocumentScrollViewer >
 <FlowDocument>
+<Paragraph Style="{StaticResource H2}">2.8.9 更新现已同步到正式版！</Paragraph>
 <Paragraph Style="{StaticResource H2}">更新亮点</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Orange}">支持下载原版服务端（#112，@WTP016-CN，PR @tangge233
 </Paragraph><BlockUIContainer>
@@ -373,6 +374,7 @@ emergency:https://pic.imgdb.cn/item/66fde7a30a206445e36ebb1e.png
 </FlowDocumentScrollViewer>
 
 <WrapPanel Margin="-2,2" Orientation="Horizontal" VerticalAlignment="Center">
+<local:MyIconTextButton Text="检查更新" ToolTip="检查更新以获取最新版本" EventType="切换页面" EventData="3|2" LogoScale="1.05" Logo="{StaticResource LaunchIcon}" />
 <local:MyIconTextButton Text="原更新日志" ToolTip="2.8.8 更新日志" EventType="打开网页"
     EventData="https://github.com/Hex-Dragon/PCL2/discussions/4858" LogoScale="1.05" Logo="{StaticResource GithubIcon}" />
 <local:MyIconTextButton Text="未来计划" ToolTip="Todo" EventType="弹出窗口"
@@ -381,50 +383,10 @@ emergency:https://pic.imgdb.cn/item/66fde7a30a206445e36ebb1e.png
 </StackPanel>
 </local:MyCard>
 
-<ContentControl Content="那 个 猫 说 " Template="{StaticResource Separator}" Margin="0,15,0,15"/>
 
-<local:MyCard Margin="0,0,0,15" Title="龙猫说">
-<StackPanel Margin="0,0,0,7.5"> 
-                <Grid Margin="21,40,21,16">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="45" />
-                        <RowDefinition Height="45" />
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="40" />
-                        <ColumnDefinition />
-                        <ColumnDefinition Width="150" />
-                    </Grid.ColumnDefinitions>
-                    <local:MyListItem IsHitTestVisible="False" Title="龙腾猫跃" Margin="-5,0,15,0" Info="2024年10月16日 04:11" Grid.Row="0" Grid.Column="1" />
-                    <Image Source="/Plain Craft Launcher 2;component/Images/Heads/LTCat.jpg" Grid.Row="0" Margin="3">
-                        <Image.Clip>
-                            <EllipseGeometry Center="17 17" RadiusX="17" RadiusY="17" />
-                        </Image.Clip>
-                    </Image>
-                </Grid>
 
-<StackPanel Margin="0,0,0,7.5">
-  <Grid Margin="26,-60,20,2">
-    <StackPanel>
-    <StackPanel VerticalAlignment="Center" Margin="0,0,0,4">
-    <TextBlock Margin="0,0,0,4" 
-                    Text="获取 PCL" Style="{StaticResource LTCattSayH1}"/>
-    <TextBlock Margin="-1.5,0,0,4" 
-                    Text="本次更新为快照版更新，仅限赞助者获取下载。" Style="{StaticResource LTCattSayH2}"/>
-    <TextBlock Margin="-1.5,0,0,4" 
-                    Text="当更新内容稳定后，即会更新至正式版。" Style="{StaticResource LTCattSayH2}"/>
-    <TextBlock Margin="-1.5,0,0,4" 
-                    Text="即使没有赞助，也可以在按钮下载正式版哦：" Style="{StaticResource LTCattSayH2}"/>
-    </StackPanel>
-    <WrapPanel Margin="-10,0,0,4" Orientation="Horizontal" VerticalAlignment="Center">
-    <local:MyIconTextButton Text="检查更新" ToolTip="检查更新以获取最新版本" EventType="切换页面" EventData="3|2" LogoScale="1.05" Logo="{StaticResource LaunchIcon}" />
-    <local:MyIconTextButton Text="获取PCL2正式版" ToolTip="P.s你都能查看主页了不能点一下切换后的检查更新吗 Orz" EventType="打开网页" EventData="https://afdian.com/p/0164034c016c11ebafcb52540025c377" LogoScale="0.95" Logo="{StaticResource DownloadIcon}" />
-    </WrapPanel>
-    </StackPanel>
-  </Grid>
-</StackPanel>
-</StackPanel>
-</local:MyCard>
+  
+ 
 
 <ContentControl Content="周 边 新 闻 " Template="{StaticResource Separator}"/>
 
@@ -482,7 +444,7 @@ emergency:https://pic.imgdb.cn/item/66fde7a30a206445e36ebb1e.png
     EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/blob/main/LICENSE-CONTENT"/>
     </StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="-8,4,0,10">
-    <local:MyIconTextButton HorizontalAlignment="Left" Text="提交PCL Bug" ToolTip="快速提交PCL2Bug！" EventType="打开网页"
+    <local:MyIconTextButton HorizontalAlignment="Left" Text="提交PCL 错误" ToolTip="快速提交PCL2 错误！" EventType="打开网页"
     EventData="https://github.com/Hex-Dragon/PCL2/issues/new/choose"
     LogoScale="1" Logo="{StaticResource GithubIcon}"/>
     <local:MyIconTextButton HorizontalAlignment="Left" Text="主页反馈" ToolTip="反馈问题" EventType="打开网页"
