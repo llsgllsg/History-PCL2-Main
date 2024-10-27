@@ -245,7 +245,7 @@ emergency:https://pic.imgdb.cn/item/66fde7a30a206445e36ebb1e.png
 -->
 </Border>
 <Border Style="{StaticResource VersionTitleBorder}">
-<TextBlock Style="{StaticResource VersionTitleBlock}" Text="2.8.8存档" />
+<TextBlock Style="{StaticResource VersionTitleBlock}" Text="2.8.8 存档" />
 </Border>
 </StackPanel>
 
@@ -285,11 +285,8 @@ emergency:https://pic.imgdb.cn/item/66fde7a30a206445e36ebb1e.png
 </FlowDocumentScrollViewer>
 
 <WrapPanel Margin="-2,2" Orientation="Horizontal" VerticalAlignment="Center">
-<local:MyIconTextButton Text="检查更新" ToolTip="检查更新以获取最新版本" EventType="切换页面" EventData="3|2" LogoScale="1.05" Logo="{StaticResource LaunchIcon}" />
 <local:MyIconTextButton Text="原更新日志" ToolTip="2.8.8 更新日志" EventType="打开网页"
     EventData="https://github.com/Hex-Dragon/PCL2/discussions/4858" LogoScale="1.05" Logo="{StaticResource GithubIcon}" />
-<local:MyIconTextButton Text="未来计划" ToolTip="Todo" EventType="弹出窗口"
-    EventData="下一个版本的计划：| Emm下个版本暂时还没有未来计划呢" LogoScale="1.05" Logo="M4.146 3.646a.5.5 0 0 0 0 .708L7.793 8l-3.647 3.646a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708 0zM11.5 1a.5.5 0 0 1 .5.5v13a.5.5 0 0 1-1 0v-13a.5.5 0 0 1 .5-.5z" />
 </WrapPanel>
 </StackPanel>
 </local:MyCard>
