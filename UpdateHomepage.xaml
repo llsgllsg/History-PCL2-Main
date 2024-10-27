@@ -229,7 +229,8 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <Setter Property="Margin" Value="0,10,0,5"/>
 </Style>
 </StackPanel.Resources>
-<local:MyCard Title="📰正式版 2.8.9" CanSwap="True" IsSwaped="False" Style="{StaticResource Card}" >
+
+<local:MyCard Title="📰2.8.9" CanSwap="True" IsSwaped="False" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <StackPanel Style="{StaticResource ContentStack}">
 <Border Style="{StaticResource VersionImageBorder}">
@@ -316,79 +317,26 @@ emergency:https://pic.imgdb.cn/item/66fde7a30a206445e36ebb1e.png
 </StackPanel>
 </local:MyCard>
 
-<ContentControl Content="最 近 更 新 " Template="{StaticResource Separator}" Margin="0,15,0,15"/>
+<ContentControl Content="历 史 版 本 " Template="{StaticResource Separator}" Margin="0,15,0,0"/>
 
-<local:MyCard Title="全版本:2.8.8 正版登录修复、崩溃修复" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}"  Margin="0,0,0,15">
-<StackPanel Style="{StaticResource ContentStack}">
-
-<StackPanel Style="{StaticResource ContentStack}">
-<Border Style="{StaticResource VersionImageBorder}">
-<Border.Background>
-<ImageBrush ImageSource="https://pic.imgdb.cn/item/66fde7a30a206445e36ebafe.png" Stretch="UniformToFill" />
-</Border.Background>
-<Image Source="https://pic.imgdb.cn/item/66fde7a30a206445e36ebafe.png" Opacity="0" Stretch="Fill"/>
-<!--
-release:https://pic.imgdb.cn/item/66fde7a30a206445e36ebafe.png
-snapshot:https://pic.imgdb.cn/item/66fde7a30a206445e36ebb11.png
-emergency:https://pic.imgdb.cn/item/66fde7a30a206445e36ebb1e.png
--->
-</Border>
-<Border Style="{StaticResource VersionTitleBorder}">
-<TextBlock Style="{StaticResource VersionTitleBlock}" Text="全版本 2.8.8" />
-</Border>
-</StackPanel>
-
-<FlowDocumentScrollViewer >
-<FlowDocument>
-<Paragraph Style="{StaticResource H2}">如果上个版本正版登录出现问题，或者搁那儿报错，可以试试新版本……</Paragraph>
-<Paragraph Style="{StaticResource H2}">熬夜整出来了……</Paragraph>
-</FlowDocument>
-</FlowDocumentScrollViewer>
-
-<ContentControl Content="更 新 内 容" Template="{StaticResource Separator}"/>
-
-<FlowDocumentScrollViewer >
-<FlowDocument>
-<Paragraph Style="{StaticResource H2}">新功能 &amp; 优化</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Orange}">新主页预设：PCL 更新日志（#4845，由 @Joker2184 制作）</Paragraph></ListItem>
-<ListItem><Paragraph>优化许可与版权声明的排版（#4832，@Joker2184）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Orange}">帮助库编修（Help#388~391，PR @JingHai-Lingyun、@Ad-closeNN）</Paragraph></ListItem>
-<ListItem><Paragraph>更新 9 月赞助者列表，感谢大家的支持！</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">漏洞修复</Paragraph><List>
-<ListItem>    <Paragraph>修复了以下 3 个与新正版登录相关的 Bug</Paragraph><List>
-<ListItem><Paragraph  Style="{StaticResource Red}">需要使用密码登录时，提示登录轮询失败（#4828，@wanweishe）</Paragraph></ListItem>
-<ListItem><Paragraph>在登录时按回车或 Esc 导致崩溃（#4857，@wuliaodexiaoluo）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Red}">若出现网络波动，理论上可以导致不应出现的登录失败</Paragraph></ListItem>
-</List></ListItem>
-<ListItem>    <Paragraph>修复了以下 7 个其他的 Bug</Paragraph><List>
-<ListItem><Paragraph>取消更新 Mod 可能导致更新流程无法结束（#4310，@Louis-Harsune）</Paragraph></ListItem>
-<ListItem><Paragraph>在特定情况下，加载器任务会错误地提前启动（#4835，@lactobionicAcid）</Paragraph></ListItem>
-<ListItem><Paragraph  Style="{StaticResource Red}">缓存文件夹路径存在中文可能导致出错或崩溃（#4849，@sadfadwe）</Paragraph></ListItem>
-<ListItem><Paragraph  Style="{StaticResource Red}">Mod 管理中，特定名字长度的 Mod 会导致极端卡顿（#4854，@Raisel0）</Paragraph></ListItem>
-<ListItem><Paragraph>Mod 管理中，在搜索后先启用/禁用再删除 Mod 导致出错（#4855，@SweeCandy）</Paragraph></ListItem>
-<ListItem><Paragraph>有多个相似的下载任务时，理论上可能出现异常</Paragraph></ListItem>
-<ListItem><Paragraph>下载源返回 Too Many Request 会被错误地禁用</Paragraph></ListItem>
-</List></ListItem>
-</List>
-</FlowDocument>
-</FlowDocumentScrollViewer>
-
-<WrapPanel Margin="-2,2" Orientation="Horizontal" VerticalAlignment="Center">
-<local:MyIconTextButton Text="检查更新" ToolTip="检查更新以获取最新版本" EventType="切换页面" EventData="3|2" LogoScale="1.05" Logo="{StaticResource LaunchIcon}" />
-<local:MyIconTextButton Text="原更新日志" ToolTip="2.8.8 更新日志" EventType="打开网页"
-    EventData="https://github.com/Hex-Dragon/PCL2/discussions/4858" LogoScale="1.05" Logo="{StaticResource GithubIcon}" />
-<local:MyIconTextButton Text="未来计划" ToolTip="Todo" EventType="弹出窗口"
-    EventData="下一个版本的计划：| Emm下个版本暂时还没有未来计划呢" LogoScale="1.05" Logo="M4.146 3.646a.5.5 0 0 0 0 .708L7.793 8l-3.647 3.646a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708 0zM11.5 1a.5.5 0 0 1 .5.5v13a.5.5 0 0 1-1 0v-13a.5.5 0 0 1 .5-.5z" />
-</WrapPanel>
-</StackPanel>
+<local:MyCard Title="文章存档" Margin="0,5">
+    <StackPanel Margin="25,40,23,15">
+    <Grid>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="1*"/>
+        <ColumnDefinition Width="100"/> 
+      </Grid.ColumnDefinitions>
+      <local:MyComboBox x:Name="jumpbox" Height="30" SelectedIndex="0">
+        <local:MyComboBoxItem Content="2.8.8"/>
+      </local:MyComboBox>
+        <local:MyButton HorizontalAlignment="Center" Width="80"
+            Grid.Column="1" Text="打开→" EventType="打开帮助" 
+            EventData="{Binding Path=Text,ElementName=jumpbox,StringFormat=https://updatehomepage.pages.dev/{0}.json}"/>
+    </Grid>
+    </StackPanel>
 </local:MyCard>
 
-
-
-  
- 
-
-<ContentControl Content="周 边 新 闻 " Template="{StaticResource Separator}"/>
+<ContentControl Content="周 边 新 闻 " Template="{StaticResource Separator}" Margin="0,15,0,0"/>
 
 <local:MyCard Margin="0,0,0,15">
 <StackPanel Margin="20,14">
@@ -403,7 +351,7 @@ emergency:https://pic.imgdb.cn/item/66fde7a30a206445e36ebb1e.png
     <TextBlock FontSize="14">他们正为 PCL 伟大的咕咕咕事业贡献自己的力量！</TextBlock>
     </StackPanel>
     <local:MyIconTextButton Grid.Column="1" HorizontalAlignment="Right" EventType="打开网页" LogoScale="1"
-      Text="Pull Request" EventData="https://github.com/Hex-Dragon/PCL2/pulls" ToolTip="提交一个PCL PR 合并后可以获取活跃橙"
+      Text="PR" EventData="https://github.com/Hex-Dragon/PCL2/pulls" ToolTip="提交一个PCL PR 合并后可以获取活跃橙"
       Logo="M256 170.666667a85.333333 85.333333 0 1 0 0 170.666666 85.333333 85.333333 0 0 0 0-170.666666zM85.333333 256a170.666667 170.666667 0 1 1 213.333334 165.290667V896a42.666667 42.666667 0 0 1-85.333334 0V421.290667A170.666667 170.666667 0 0 1 85.333333 256z m426.666667 0a42.666667 42.666667 0 0 1 42.666667-42.666667H682.666667A128 128 0 0 1 810.666667 341.333333v261.376a170.666667 170.666667 0 1 1-85.333334 0V341.333333a42.666667 42.666667 0 0 0-42.666666-42.666666H554.666667A42.666667 42.666667 0 0 1 512 256z m256 426.666667a85.333333 85.333333 0 1 0 0 170.666666 85.333333 85.333333 0 0 0 0-170.666666z"/>
     </Grid>
     <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush6}" StrokeThickness="1.5" Stretch="Fill" Margin="0,8"/>
@@ -413,7 +361,7 @@ emergency:https://pic.imgdb.cn/item/66fde7a30a206445e36ebb1e.png
     <Grid.RowDefinitions>
     <RowDefinition Height="45" />
     </Grid.RowDefinitions>
-    <local:MyListItem Title="feat: 资源收藏 #4933" Margin="-10,0,0,0" IsHitTestVisible="False" Info=" 实现加入收藏功能 收藏查看 搜索功能" Grid.Row="0" Grid.Column="1"/>
+    <local:MyListItem Title="LittleSkin OAuth 登录 #5021" Margin="-10,0,0,0" IsHitTestVisible="False" Info="LittleSkin OAuth 网页登录" Grid.Row="0" Grid.Column="1"/>
     </Grid>
     </StackPanel>
     <TextBlock FontSize="16"><Bold>你可以帮忙的PR</Bold></TextBlock>
