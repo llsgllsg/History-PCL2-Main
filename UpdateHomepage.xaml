@@ -230,89 +230,15 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 </Style>
 </StackPanel.Resources>
 
-<local:MyCard Title="📰2.8.9" CanSwap="True" IsSwaped="False" Style="{StaticResource Card}" >
+<local:MyCard Title="📰 2.8.10" CanSwap="True" IsSwaped="False" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
-<StackPanel Style="{StaticResource ContentStack}">
-<Border Style="{StaticResource VersionImageBorder}">
-<Border.Background>
-<ImageBrush ImageSource="https://pic.imgdb.cn/item/66fde7a30a206445e36ebafe.png" Stretch="UniformToFill" />
-</Border.Background>
-<Image Source="https://pic.imgdb.cn/item/66fde7a30a206445e36ebafe.png" Opacity="0" Stretch="Fill"/>
-<!--
-release:https://pic.imgdb.cn/item/66fde7a30a206445e36ebafe.png
-snapshot:https://pic.imgdb.cn/item/66fde7a30a206445e36ebb11.png
-emergency:https://pic.imgdb.cn/item/66fde7a30a206445e36ebb1e.png
--->
-</Border>
-<Border Style="{StaticResource VersionTitleBorder}">
-<TextBlock Style="{StaticResource VersionTitleBlock}" Text="正式版 2.8.9" />
-</Border>
-</StackPanel><FlowDocumentScrollViewer >
-<FlowDocument>
-<Paragraph Style="{StaticResource H2}">2.8.9 更新现已同步到正式版！</Paragraph>
-<Paragraph Style="{StaticResource H2}">更新亮点</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Orange}">支持下载原版服务端（#112，@WTP016-CN，PR @tangge233
-</Paragraph><BlockUIContainer>
-<Image Style="{StaticResource InnerImage}" Source="https://i0.hdslb.com/bfs/article/b908e19f9168848db2b3afba5a91792c11343203.png"/>
-</BlockUIContainer></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">本地 Mod 的标题支持选择显示 Mod 原始文件名（#3073，@xingchen-Forever）
-</Paragraph><BlockUIContainer>
-<Image Style="{StaticResource InnerImage}" Source="https://i0.hdslb.com/bfs/article/bcce4a099d1d5e15a918a35bd318bbee11343203.png"/>
-</BlockUIContainer></ListItem>
-<ListItem><Paragraph Style="{StaticResource Orange}">新主页预设：PCL 新功能说明书（#4905，由 @WForst-Breeze 制作）
-</Paragraph><BlockUIContainer>
-<Image Style="{StaticResource InnerImage}" Source="https://i0.hdslb.com/bfs/article/9b4dff7fea19f095e535062fbbf0608711343203.png"/>
-</BlockUIContainer></ListItem>
-<ListItem><Paragraph Style="{StaticResource Orange}">新主页预设：OpenMCIM 仪表盘（#4906，由 @SALTWOOD 制作）
-</Paragraph><BlockUIContainer>
-<Image Style="{StaticResource InnerImage}" Source="https://i0.hdslb.com/bfs/article/fd4ac99170dec6630c6a6d3808e7816011343203.png"/>
-</BlockUIContainer></ListItem>
-</List><Paragraph Style="{StaticResource H2}">Xaml控件更新</Paragraph><List>
-<ListItem>    <Paragraph Style="{StaticResource Orange}">添加 MyImage 控件（#4868，PR @tangge233）</Paragraph></ListItem>
-<ListItem>    <Paragraph>该控件基于 WPF 原生的 Image，支持 WebP 格式，支持缓存</Paragraph></ListItem>
-<ListItem>    <Paragraph>MyListItem、MyCompItem、MyLocalModItem 的图标换用 MyImage 控件</Paragraph></ListItem>
-<ListItem>    <Paragraph>如果你编写了自定义主页或帮助，建议将所有 Image 控件替换为 local:MyImage，并将图片格式更换为 WebP，这可以大大节省流量</Paragraph></ListItem>
-<ListItem>    <Paragraph>你可以通过网络请求的 Header 判断 PCL 的版本，以实现仅在新版本启用 MyImage 控件</Paragraph></ListItem>
-<ListItem>    <Paragraph>新增的属性详见： <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://github.com/Hex-Dragon/PCL2/blob/main/Plain%20Craft%20Launcher%202/Resources/Custom.xaml#L329">新属性</local:MyTextButton></Underline></Paragraph></ListItem>
-</List><BlockUIContainer><ContentControl Content="更 新 内 容" Template="{StaticResource Separator}"/></BlockUIContainer><Paragraph Style="{StaticResource H2}">其他更新内容</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Orange}">重命名时禁止输入 NTFS 8.3 文件名（#4505，@AptS-1547，PR @SALTWOOD）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">搜索筛选 1.13- 且为 Forge 的 Mod 时，视作没有设置 Mod 加载器的筛选项，以应对部分老 Mod 作者没有设置 Mod * 兼容的加载器的情况（#4512，@MinecraftYYDS7）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">将启动器窗口大小存储在文件而非注册表，以便分发整合包（#4678，@LuckiQ）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">安装 Forge/NeoForge 时会自动新建 mods 文件夹（#4898，@ThendJyc）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">为指向百度的下载添加了独特的 UA（#4951，@kazukokawagawa）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Orange}">添加 [使用密码登录正版账号] 帮助（LTCatt/PCL2Help#395，PR @tangge233）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">将 Mod 与整合包的设置独立归类进一张卡片中</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">减淡了本地 Mod 项的标签和描述的颜色，以便与标题区分</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">移除安装整合包时保留原始压缩包选项</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">支持分析误删 Forge 安装后的文件导致的崩溃</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">EventType [下载文件] 支持指定文件名和目标文件夹（#4737，@wuliaodexiaoluo）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">若加载的图片不是 WebP 格式，则不加载 WebP DLL，以优化性能</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">PCL 标题栏、MC 皮肤支持选择 WebP 格式的图片</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">Bug 修复</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">对 Mod 进行操作后，Mod 管理列表会不必要地刷新（#4457，@sinterde）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">罕见情况下，离开 Mod 管理页面导致出错（#4721，@YIEMM）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">用户名有特殊字符时无法使用 LittleSkin 启动游戏（#4777，@Crotina）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">1.0.0-rc2-2 在下载页面错误地被归类到了快照版（#4803，@Crotina）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">拖拽加载主页后设置单选框未刷新（#4826，@JingHai-Lingyun）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">关闭动画时无法解锁某个隐藏主题（#4830，@Joker2184）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Red}">打开老版本 PCL 后需要重新进行登录（#4836，@Apple-alone）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Red}">搜索后启用/禁用 Mod 时出错（#4862，@EasyGuo114514）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Red}">中文路径、中文用户名下 PCL 可能出错（#4869，@h7f8）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">对一个项的两个不同信息源进行搜索时可能遗漏搜索结果（#4912，@ChenXi094）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">热力系列 Mod 中文名显示错误（#4916，@ChenMoFeiJin）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">部分崩溃会给出奇怪的分析结果（#4936，@lactobionicAcid）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">极端情况下，在下载刚结束时删除版本导致出错（#4949，@lunardream2）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">同时加载多个相同图片可能出错</Paragraph></ListItem>
-</List>
-</FlowDocument>
-</FlowDocumentScrollViewer><WrapPanel Margin="-2,2" Orientation="Horizontal" VerticalAlignment="Center">
-<!--<local:MyIconTextButton Text="查看其他修复的n个Bug" ToolTip="Bug Fix" EventType="弹出窗口"
-    EventData="其他修复的n个Bug | Bug_Text" LogoScale="1.05" Logo="{StaticResource LaunchIcon}" />-->
-<local:MyIconTextButton Text="原更新日志" ToolTip="2.8.9 更新日志" EventType="打开网页"
-    EventData="https://github.com/Hex-Dragon/PCL2/releases/tag/2.8.9" LogoScale="1.05" Logo="{StaticResource GithubIcon}" />
-<local:MyIconTextButton Text="未来计划" ToolTip="Todo" EventType="弹出窗口"
-    EventData="下一个版本的计划：| \n尽量完成除导出整合包以外的 中优先度 提交" LogoScale="1.05" Logo="M4.146 3.646a.5.5 0 0 0 0 .708L7.793 8l-3.647 3.646a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708 0zM11.5 1a.5.5 0 0 1 .5.5v13a.5.5 0 0 1-1 0v-13a.5.5 0 0 1 .5-.5z" />
+<local:MyLoading Margin="0,8" Text="上学ing 请先查看此链接 谢谢"/>
+<ContentControl Content="更 新 内 容" Template="{StaticResource Separator}"/>
+<<WrapPanel Margin="-2,2" Orientation="Horizontal" VerticalAlignment="Center">
+
+<local:MyIconTextButton Text="原更新日志" ToolTip="2.8.10 更新日志" EventType="打开网页"
+    EventData="https://github.com/Hex-Dragon/PCL2/discussions/5071" LogoScale="1.05" Logo="{StaticResource GithubIcon}" />
+
 </WrapPanel>
 </StackPanel>
 </local:MyCard>
