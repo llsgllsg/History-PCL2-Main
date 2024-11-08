@@ -235,6 +235,25 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <local:MyCard Title="📰 2.8.10" CanSwap="True" IsSwaped="False" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 
+
+
+<StackPanel Style="{StaticResource ContentStack}" Margin="0,45,0,-5">
+<Border Style="{StaticResource VersionImageBorder}">
+<Border.Background>
+<ImageBrush ImageSource="https://pic.imgdb.cn/item/66fde7a30a206445e36ebb11.png" Stretch="UniformToFill" />
+</Border.Background>
+<Image Source="https://pic.imgdb.cn/item/66fde7a30a206445e36ebb11.png" Opacity="0" Stretch="Fill"/>
+<!--
+release:https://pic.imgdb.cn/item/66fde7a30a206445e36ebafe.png
+snapshot:https://pic.imgdb.cn/item/66fde7a30a206445e36ebb11.png
+emergency:https://pic.imgdb.cn/item/66fde7a30a206445e36ebb1e.png
+-->
+</Border>
+<Border Style="{StaticResource VersionTitleBorder}">
+<TextBlock Style="{StaticResource VersionTitleBlock}" Text="快照版 2.8.10" />
+</Border>
+</StackPanel>
+
 <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="8,6,8,2">
 <Path Grid.Column="0" Margin="4,0" Width="14" Height="14" Fill="{DynamicResource ColorBrush4}"
                     Stretch="Uniform"
@@ -259,24 +278,6 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 </Border>
 </WrapPanel>
 <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.2" Stretch="Fill" Margin="8,2"/>
-
-<StackPanel Style="{StaticResource ContentStack}" Margin="0,45,0,-5">
-<Border Style="{StaticResource VersionImageBorder}">
-<Border.Background>
-<ImageBrush ImageSource="https://pic.imgdb.cn/item/66fde7a30a206445e36ebb11.png" Stretch="UniformToFill" />
-</Border.Background>
-<Image Source="https://pic.imgdb.cn/item/66fde7a30a206445e36ebb11.png" Opacity="0" Stretch="Fill"/>
-<!--
-release:https://pic.imgdb.cn/item/66fde7a30a206445e36ebafe.png
-snapshot:https://pic.imgdb.cn/item/66fde7a30a206445e36ebb11.png
-emergency:https://pic.imgdb.cn/item/66fde7a30a206445e36ebb1e.png
--->
-</Border>
-<Border Style="{StaticResource VersionTitleBorder}">
-<TextBlock Style="{StaticResource VersionTitleBlock}" Text="快照版 2.8.10" />
-</Border>
-</StackPanel>
-
 
 <FlowDocumentScrollViewer >
 <FlowDocument>
