@@ -282,7 +282,12 @@ emergency:https://pic.imgdb.cn/item/66fde7a30a206445e36ebb1e.png
 <FlowDocument>
 <Paragraph Style="{StaticResource H2}">更新亮点</Paragraph><Paragraph Style="{StaticResource H3}">整合包导入优化</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">支持安装同时包含 modpack 文件和启动器的懒人包  </Paragraph></ListItem>
-</List>    <Paragraph>在导入这种压缩文件包时，会自动换用被打包的启动器进行后续安装。因此，玩家即使用自己的 PCL 导入整合包，也能看到设置的背景图片、主页和音乐。  </Paragraph>    <Paragraph>下图为目前最推荐的懒人包分发格式：  </Paragraph>    <BlockUIContainer>
+</List><Section Style="{StaticResource Quote}">
+  
+    <Paragraph>在导入这种压缩文件包时，会自动换用被打包的启动器进行后续安装。
+因此，玩家即使用自己的 PCL 导入整合包，也能看到设置的背景图片、主页和音乐。  </Paragraph>
+
+</Section>    <Paragraph>下图为目前最推荐的懒人包分发格式：  </Paragraph>    <BlockUIContainer>
 <Image Style="{StaticResource InnerImage}" Source="https://i0.hdslb.com/bfs/article/91410d326cfb2be867802eabc3dc557511343203.png"/>
 </BlockUIContainer><List>
 <ListItem>    <Paragraph>支持识别、导入嵌套了多层文件夹的压缩文件（<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://github.com/Hex-Dragon/PCL2/issues/4950">#4950</local:MyTextButton></Underline>，@NorthZeroD）  </Paragraph></ListItem>
@@ -295,7 +300,7 @@ emergency:https://pic.imgdb.cn/item/66fde7a30a206445e36ebb1e.png
 </List></FlowDocument>
 </FlowDocumentScrollViewer>
 
-<ContentControl Content="更 新 内 容" Template="{StaticResource Separator}"/>
+<ContentControl Content="更 新 内 容" Template="{StaticResource Separator}" Margin="0,0,0,-15"/>
 
 <FlowDocumentScrollViewer >
 <FlowDocument>
