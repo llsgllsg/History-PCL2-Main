@@ -421,7 +421,7 @@ emergency:https://pic.imgdb.cn/item/66fde7a30a206445e36ebb1e.png
     EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/blob/main/LICENSE-CONTENT"/>
     </StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="-8,4,0,10">
-    <local:MyIconTextButton HorizontalAlignment="Left" Text="提交 PCL Bug" ToolTip="快速提交 PCL2 Bug！" EventType="打开网页"
+    <local:MyIconTextButton HorizontalAlignment="Left" Text="提交 PCL 问题" ToolTip="快速提交 PCL2 问题！" EventType="打开网页"
     EventData="https://github.com/Hex-Dragon/PCL2/issues/new/choose"
     LogoScale="1" Logo="{StaticResource GithubIcon}"/>
     <local:MyIconTextButton HorizontalAlignment="Left" Text="主页反馈" ToolTip="反馈问题" EventType="打开网页"
