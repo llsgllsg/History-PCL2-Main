@@ -26,8 +26,8 @@ jobs:
           mkdir -p /mnt/webdav
           sudo mount -t davfs http://${{ secrets.WEBDAV_HOST }}:${{ secrets.WEBDAV_PORT }}/dav /mnt/webdav
         env:
-          DAVFS_USERNAME: ${{ secrets.WEBDAV_USERNAME }}
-          DAVFS_PASSWORD: ${{ secrets.WEBDAV_PASSWORD }}
+          DAVFS_USERNAME: ${{ secrets.ALIST_USERNAME }}
+          DAVFS_PASSWORD: ${{ secrets.ALIST_PASSWORD }}
           WEBDAV_HOST: ${{ secrets.WEBDAV_HOST }}  # WebDAV Host (domain)
           WEBDAV_PORT: ${{ secrets.WEBDAV_PORT }}  # WebDAV Port (port)
 
