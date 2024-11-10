@@ -1,0 +1,41 @@
+name: Sync to Alist via WebDAV
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  sync_to_alist:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout repository
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Install davfs2 (WebDAV client)
+      - name: Install davfs2
+        run: sudo apt-get install -y davfs2
+
+      # Mount WebDAV server (Alist)
+      - name: Mount WebDAV
+        run: |
+          mkdir -p /mnt/webdav
+          sudo mount -t davfs http://${{ secrets.WEBDAV_HOST }}:${{ secrets.WEBDAV_PORT }}/dav /mnt/webdav
+        env:
+          DAVFS_USERNAME: ${{ secrets.WEBDAV_USERNAME }}
+          DAVFS_PASSWORD: ${{ secrets.WEBDAV_PASSWORD }}
+          WEBDAV_HOST: ${{ secrets.WEBDAV_HOST }}  # WebDAV Host (domain)
+          WEBDAV_PORT: ${{ secrets.WEBDAV_PORT }}  # WebDAV Port (port)
+
+      # Sync files to Alist root directory (sub-account root)
+      - name: Sync files to Alist root
+        run: |
+          cp -r ./your-local-folder/* /mnt/webdav/
+
+      # Unmount WebDAV
+      - name: Unmount WebDAV
+        run: sudo umount /mnt/webdav
