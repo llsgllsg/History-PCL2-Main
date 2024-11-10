@@ -237,7 +237,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,-20,0,0">
     <!-- 主标题部分 -->
     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,10">
-        <TextBlock Text="PCL UpdateHomepage" FontSize="32" FontWeight="Bold" Foreground="{DynamicResource ColorBrush3}" HorizontalAlignment="Center" />
+        <TextBlock Text=""PCL Update Daily" FontSize="32" FontWeight="Bold" Foreground="{DynamicResource ColorBrush3}" HorizontalAlignment="Center" />
         
         <!-- 子标题部分，带边框和圆角 -->
         <Border Background="{DynamicResource ColorBrush4}" Opacity="0.8" CornerRadius="3" Padding="6,2" HorizontalAlignment="Center" Margin="0,5,0,0">
