@@ -16,26 +16,24 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      # Install davfs2 (WebDAV client)
-      - name: Install davfs2
+      # Install rclone
+      - name: Install rclone
         run: |
-          sudo apt-get update
-          sudo apt-get install -y davfs2
+          curl https://rclone.org/install.sh | sudo bash
 
-      # Create directory and mount WebDAV with sudo
-      - name: Mount WebDAV
+      # Configure rclone for WebDAV
+      - name: Configure rclone for WebDAV
         run: |
-          sudo mkdir -p /home/runner/webdav  # Using /home/runner instead of ~
-          sudo mount -t davfs http://${{ secrets.WEBDAV_HOST }}:${{ secrets.WEBDAV_PORT }}/dav /home/runner/webdav
-        env:
-          DAVFS_USERNAME: ${{ secrets.ALIST_USERNAME }}
-          DAVFS_PASSWORD: ${{ secrets.ALIST_PASSWORD }}
-          WEBDAV_HOST: ${{ secrets.WEBDAV_HOST }}  # WebDAV Host (domain)
-          WEBDAV_PORT: ${{ secrets.WEBDAV_PORT }}  # WebDAV Port (port)
+          rclone config create alist_webdav webdav \
+            url http://${{ secrets.WEBDAV_HOST }}:${{ secrets.WEBDAV_PORT }}/dav \
+            user ${ { secrets.ALIST_USERNAME }} \
+            pass ${ { secrets.ALIST_PASSWORD }}
 
-      # Sync files to Alist root directory (sub-account root)
-      - name: Sync files to Alist root
+      # Sync files to Alist WebDAV
+      - name: Sync files to Alist
         run: |
-          sudo cp -r ./your-local-folder/* /home/runner/webdav/
+          rclone copy ./your-local-folder alist_webdav:/  # Sync to the root of your Alist WebDAV
 
-   
+      # Optionally, clean up rclone configuration (for security)
+      - name: Clean up rclone config
+        run: rm -rf ~/.config/rclone
