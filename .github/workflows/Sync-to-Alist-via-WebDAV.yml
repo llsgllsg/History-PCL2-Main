@@ -20,11 +20,11 @@ jobs:
       - name: Install davfs2
         run: sudo apt-get install -y davfs2
 
-      # Mount WebDAV server (Alist)
+      # Create a directory in the home folder and mount WebDAV
       - name: Mount WebDAV
         run: |
-          mkdir -p /mnt/webdav
-          sudo mount -t davfs http://${{ secrets.WEBDAV_HOST }}:${{ secrets.WEBDAV_PORT }}/dav /mnt/webdav
+          mkdir -p ~/webdav
+          sudo mount -t davfs http://${{ secrets.WEBDAV_HOST }}:${{ secrets.WEBDAV_PORT }}/dav ~/webdav
         env:
           DAVFS_USERNAME: ${{ secrets.ALIST_USERNAME }}
           DAVFS_PASSWORD: ${{ secrets.ALIST_PASSWORD }}
@@ -34,8 +34,8 @@ jobs:
       # Sync files to Alist root directory (sub-account root)
       - name: Sync files to Alist root
         run: |
-          cp -r ./your-local-folder/* /mnt/webdav/
+          cp -r ./your-local-folder/* ~/webdav/
 
       # Unmount WebDAV
       - name: Unmount WebDAV
-        run: sudo umount /mnt/webdav
+        run: sudo umount ~/webdav
