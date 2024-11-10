@@ -1,87 +1,79 @@
-import os
 import requests
-from urllib.parse import quote
+import os
+import time
 
-# 登录 URL
-login_url = 'http://pclhomeplazaoss.lingyunawa.top:26994/api/auth/login'
+# 登录获取 token
+def get_token():
+    url = 'http://pclhomeplazaoss.lingyunawa.top:26994/api/auth/login'
+    data = {'Username': 'your_username', 'Password': 'your_password'}
+    response = requests.post(url, data=data)
+    response_data = response.json()
 
-# 从环境变量中获取用户名和密码
-username = os.getenv('ALIST_USERNAME')
-password = os.getenv('ALIST_PASSWORD')
-
-# 登录请求数据
-data = {
-    'Username': username,
-    'Password': password
-}
-
-# 发送 POST 请求获取 Token
-response = requests.post(login_url, data=data)
-
-# 检查是否成功获取 Token
-if response.status_code == 200:
-    # 打印完整的响应内容，以便检查返回数据结构
-    print(f"Response JSON: {response.json()}")
-    
-    # 从 'data' 字段中获取 token
-    response_data = response.json().get('data', {})
-    token = response_data.get('token')
-    
-    if token:
-        print(f"Login successful, Token: {token}")
+    if response.status_code == 200 and 'data' in response_data:
+        token = response_data['data']['token']
+        return token
     else:
-        print("Token not found in response data.")
-        exit(1)
-else:
-    print(f"Login failed. Status code: {response.status_code}, Response: {response.text}")
-    exit(1)
+        raise Exception("无法获取 token，请检查账号密码或登录接口")
 
-# Alist 上传配置
-alist_url = 'http://pclhomeplazaoss.lingyunawa.top:26994/api/fs/put'  # 上传接口
-target_base_path = os.getenv('TARGET_PATH')  # 目标路径（在 Alist 上）
+# 上传文件的函数
+def upload_file(token, file_path, target_path):
+    headers = {
+        'Authorization': f'Bearer {token}',
+        'Content-Type': 'application/octet-stream'
+    }
 
-# 遍历仓库中的所有文件
-for root, dirs, files in os.walk("."):  # 从当前目录开始遍历
-    for file_name in files:
-        file_path = os.path.join(root, file_name)
+    # 读取文件内容
+    with open(file_path, 'rb') as f:
+        file_data = f.read()
 
-        # 跳过不需要上传的文件
-        if file_name == "deploy_to_alist.py" or file_name == ".github":
-            continue
+    # 上传文件
+    upload_url = 'http://pclhomeplazaoss.lingyunawa.top:26994/api/fs/put'
+    params = {
+        'File-Path': target_path,
+        'Content-Length': str(len(file_data))
+    }
 
-        # URL 编码目标文件路径
-        target_path = os.path.join(target_base_path, os.path.relpath(file_path, start="."))
-        encoded_target_path = quote(target_path)
+    # 发起 PUT 请求
+    response = requests.put(upload_url, headers=headers, params=params, data=file_data)
 
-        # 检查文件是否存在
-        if not os.path.isfile(file_path):
-            print(f"File not found: {file_path}")
-            continue
+    # 处理上传结果
+    if response.status_code == 200:
+        print(f"文件 {file_path} 上传成功")
+    else:
+        print(f"上传失败：{response.json()}")
 
-        # 读取文件内容
-        with open(file_path, 'rb') as f:
-            file_content = f.read()
+# 主逻辑
+def main():
+    try:
+        # 获取 token
+        token = get_token()
+        print(f"Token 获取成功: {token}")
+        
+        # 文件路径列表
+        files_to_upload = [
+            'file1.txt', 
+            'file2.txt',
+            # 在此添加其他需要上传的文件
+        ]
+        
+        # 目标目录
+        target_directory = 'Homepages/Joker2184'
 
-        # 获取文件大小
-        content_length = str(len(file_content))
+        # 遍历文件并上传
+        for file in files_to_upload:
+            if os.path.exists(file):  # 检查文件是否存在
+                target_path = os.path.join(target_directory, file)
+                print(f"正在上传 {file} 到 {target_path}...")
+                upload_file(token, file, target_path)
+            else:
+                print(f"文件 {file} 不存在，跳过上传")
 
-        # 设置请求头
-        headers = {
-            'Authorization': f'Bearer {token}',
-            'File-Path': encoded_target_path,
-            'Content-Type': 'application/octet-stream',
-            'Content-Length': content_length,
-        }
+    except Exception as e:
+        print(f"发生错误: {e}")
+        # 如果遇到 token 无效，可以重新获取 token 并重新上传
+        print("尝试重新获取 token 并继续上传...")
+        time.sleep(2)  # 等待几秒钟
+        main()  # 递归调用重新运行
 
-        # 发送 PUT 请求上传文件
-        response = requests.put(alist_url, headers=headers, data=file_content)
-
-        # 打印 Alist 响应内容
-        print(f"Uploading {file_path} to {encoded_target_path}...")
-        print(f"Response: {response.status_code}, {response.text}")
-
-        # 检查响应
-        if response.status_code == 200:
-            print(f"File {file_path} uploaded successfully to {target_path}.")
-        else:
-            print(f"Failed to upload file {file_path}. Status code: {response.status_code}, Response: {response.text}")
+if __name__ == '__main__':
+    main()
