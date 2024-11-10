@@ -18,13 +18,8 @@
 6. 返回启动页，完成！
 #### 使用链接
 4. 点击 “联网更新”
-5. 在 “下载地址” 栏中输入地址：`https://updatehomepage.pages.dev/UpdateHomepage.xaml`
+5. 在 “下载地址” 栏中输入地址：zh_CN:```http://pclhomeplazaoss.lingyunawa.top:27000/d/Homepages/Joker2184/UpdateHomepage.xaml``` en_US：```http://pclhomeplazaoss.lingyunawa.top:27000/d/Homepages/Joker2184/UpdateHomepage_enus.xaml```
 6. 返回启动页，完成！
-
-### 基于Builder构建属于自己的主页
-按HomepageBuilder基本能正常使用...
-
-理论bug没有了.jpg 但是HomepageBuilder这玩意...最好进块讯主页群找信标教...
 
 
 ## 鸣谢
