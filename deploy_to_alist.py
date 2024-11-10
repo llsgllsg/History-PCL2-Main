@@ -1,5 +1,6 @@
 import os
 import requests
+from urllib.parse import quote
 
 # 登录 URL
 login_url = 'http://pclhomeplazaoss.lingyunawa.top:26994/api/auth/login'
@@ -19,42 +20,56 @@ response = requests.post(login_url, data=data)
 
 # 检查是否成功获取 Token
 if response.status_code == 200:
-    # 假设返回的数据包含 token，通常是 JSON 格式
-    token = response.json().get('token')
-    print(f"Login successful, Token: {token}")
+    # 打印完整的响应内容，以便检查返回数据结构
+    print(f"Response JSON: {response.json()}")
+    
+    token = response.json().get('token')  # 确保提取正确的键值
+    if token:
+        print(f"Login successful, Token: {token}")
+    else:
+        print("Token not found in response.")
+        exit(1)
 else:
     print(f"Login failed. Status code: {response.status_code}, Response: {response.text}")
     exit(1)
 
 # Alist 上传配置
 alist_url = 'http://pclhomeplazaoss.lingyunawa.top:26994/api/fs/put'  # 上传接口
-file_path = os.getenv('FILE_PATH')  # 本地文件路径
-target_path = os.getenv('TARGET_PATH')  # 目标路径（在 Alist 上）
+target_base_path = os.getenv('TARGET_PATH')  # 目标路径（在 Alist 上）
 
-# URL 编码目标文件路径
-from urllib.parse import quote
-encoded_target_path = quote(target_path)
+# 遍历仓库中的所有文件
+for root, dirs, files in os.walk("."):  # 从当前目录开始遍历
+    for file_name in files:
+        file_path = os.path.join(root, file_name)
 
-# 读取文件内容
-with open(file_path, 'rb') as f:
-    file_content = f.read()
+        # 跳过不需要上传的文件
+        if file_name == "deploy_to_alist.py" or file_name == ".github":
+            continue
 
-# 获取文件大小
-content_length = str(len(file_content))
+        # URL 编码目标文件路径
+        target_path = os.path.join(target_base_path, os.path.relpath(file_path, start="."))
+        encoded_target_path = quote(target_path)
 
-# 设置请求头
-headers = {
-    'Authorization': f'Bearer {token}',
-    'File-Path': encoded_target_path,
-    'Content-Type': 'application/octet-stream',
-    'Content-Length': content_length,
-}
+        # 读取文件内容
+        with open(file_path, 'rb') as f:
+            file_content = f.read()
 
-# 发送 PUT 请求上传文件
-response = requests.put(alist_url, headers=headers, data=file_content)
+        # 获取文件大小
+        content_length = str(len(file_content))
 
-# 检查响应
-if response.status_code == 200:
-    print(f"File {file_path} uploaded successfully to {target_path}.")
-else:
-    print(f"Failed to upload file. Status code: {response.status_code}, Response: {response.text}")
+        # 设置请求头
+        headers = {
+            'Authorization': f'Bearer {token}',
+            'File-Path': encoded_target_path,
+            'Content-Type': 'application/octet-stream',
+            'Content-Length': content_length,
+        }
+
+        # 发送 PUT 请求上传文件
+        response = requests.put(alist_url, headers=headers, data=file_content)
+
+        # 检查响应
+        if response.status_code == 200:
+            print(f"File {file_path} uploaded successfully to {target_path}.")
+        else:
+            print(f"Failed to upload file {file_path}. Status code: {response.status_code}, Response: {response.text}")
