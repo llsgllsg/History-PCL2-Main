@@ -23,11 +23,14 @@ if response.status_code == 200:
     # 打印完整的响应内容，以便检查返回数据结构
     print(f"Response JSON: {response.json()}")
     
-    token = response.json().get('token')  # 确保提取正确的键值
+    # 从 'data' 字段中获取 token
+    response_data = response.json().get('data', {})
+    token = response_data.get('token')
+    
     if token:
         print(f"Login successful, Token: {token}")
     else:
-        print("Token not found in response.")
+        print("Token not found in response data.")
         exit(1)
 else:
     print(f"Login failed. Status code: {response.status_code}, Response: {response.text}")
