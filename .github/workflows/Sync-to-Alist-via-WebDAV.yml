@@ -29,10 +29,16 @@ jobs:
             user ${{ secrets.ALIST_USERNAME }} \
             pass ${{ secrets.ALIST_PASSWORD }}
 
-      # Sync files to Alist WebDAV
-      - name: Sync files to Alist
+      # Check current working directory (debugging step)
+      - name: Print current working directory
         run: |
-          rclone copy ./your-local-folder alist_webdav:/  # Sync to the root of your Alist WebDAV
+          pwd
+          ls -al
+
+      # Sync all files to Alist WebDAV (sync the entire repo)
+      - name: Sync all files to Alist
+        run: |
+          rclone copy ./ alist_webdav:/  # Sync everything in the repo
 
       # Optionally, clean up rclone configuration (for security)
       - name: Clean up rclone config
