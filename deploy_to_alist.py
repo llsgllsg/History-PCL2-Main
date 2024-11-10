@@ -53,6 +53,11 @@ for root, dirs, files in os.walk("."):  # 从当前目录开始遍历
         target_path = os.path.join(target_base_path, os.path.relpath(file_path, start="."))
         encoded_target_path = quote(target_path)
 
+        # 检查文件是否存在
+        if not os.path.isfile(file_path):
+            print(f"File not found: {file_path}")
+            continue
+
         # 读取文件内容
         with open(file_path, 'rb') as f:
             file_content = f.read()
@@ -70,6 +75,10 @@ for root, dirs, files in os.walk("."):  # 从当前目录开始遍历
 
         # 发送 PUT 请求上传文件
         response = requests.put(alist_url, headers=headers, data=file_content)
+
+        # 打印 Alist 响应内容
+        print(f"Uploading {file_path} to {encoded_target_path}...")
+        print(f"Response: {response.status_code}, {response.text}")
 
         # 检查响应
         if response.status_code == 200:
