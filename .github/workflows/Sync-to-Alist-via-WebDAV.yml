@@ -35,10 +35,15 @@ jobs:
           pwd
           ls -al
 
+      # Clear the target folder on Alist WebDAV
+      - name: Clear target folder on Alist WebDAV
+        run: |
+          rclone delete alist_webdav:/ --rmdirs  # Deletes all files and empty directories from the target folder
+
       # Sync all files to Alist WebDAV (sync the entire repo)
       - name: Sync all files to Alist
         run: |
-          rclone copy ./ alist_webdav:/  # Sync everything in the repo
+          rclone copy ./ alist_webdav:/ --checksum --size-only --retries 3  # Force update every time
 
       # Optionally, clean up rclone configuration (for security)
       - name: Clean up rclone config
