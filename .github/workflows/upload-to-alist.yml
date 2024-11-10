@@ -1,0 +1,35 @@
+name: Deploy to Alist
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '**/*'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Install required libraries
+      run: |
+        pip install requests
+
+    - name: Login to Alist and Upload File
+      run: |
+        python deploy_to_alist.py
+      env:
+        ALIST_URL: "http://pclhomeplazaoss.lingyunawa.top:26994"
+        ALIST_USERNAME: ${{ secrets.ALIST_USERNAME }}  # 从 GitHub Secrets 中获取用户名
+        ALIST_PASSWORD: ${{ secrets.ALIST_PASSWORD }}  # 从 GitHub Secrets 中获取密码
+        FILE_PATH: "path/to/local/file"  # 本地文件路径
+        TARGET_PATH: "Homepages/Joker2184/file"  # 目标路径
