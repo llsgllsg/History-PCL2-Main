@@ -1,5 +1,5 @@
-# PCL2 更新日报
-~~我想叫PCL2新闻速报但是和信标太像了~~
+# PCL2 新闻速报
+~~皇权特赦：龙猫正式同意改名为新闻速报~~
 
 
 在 [PCL2](https://github.com/Hex-Dragon/PCL2) 中提供***PCL更新日志*** or ***龙猫说***的主页, 由 [HomepageBuilder](https://github.com/Light-Beacon/HomepageBuilder) 驱动
@@ -18,9 +18,17 @@
 6. 返回启动页，完成！
 #### 使用链接
 4. 点击 “联网更新”
-5. 在 “下载地址” 栏中输入地址：zh_CN:```http://pclhomeplazaoss.lingyunawa.top:27000/d/Homepages/Joker2184/UpdateHomepage.xaml``` en_US：```http://pclhomeplazaoss.lingyunawa.top:27000/d/Homepages/Joker2184/UpdateHomepage_enus.xaml```
-6. 返回启动页，完成！
+5. 在 “下载地址” 栏中输入地址：
+   zh_CN:```http://pclhomeplazaoss.lingyunawa.top:27000/d/Homepages/Joker2184/UpdateHomepage.xaml```
 
+   en_US：```http://pclhomeplazaoss.lingyunawa.top:27000/d/Homepages/Joker2184/UpdateHomepage_enus.xaml```
+7. 返回启动页，完成！
+
+
+###
+关于构建
+
+构建文件库存放在https://github.com/Joker2184/UpdateHomepage-Build
 
 ## 鸣谢
 
