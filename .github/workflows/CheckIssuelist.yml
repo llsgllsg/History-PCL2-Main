@@ -1,9 +1,8 @@
 name: Check Issue List
-
 on:
   schedule:
-    - cron: '0/1 * * * *'  # 每分钟触发一次
-  workflow_dispatch:  # 允许手动触发
+    - cron: '0/1 * * * *'  # 每分钟运行一次
+  workflow_dispatch: # 也可以手动触发
 
 jobs:
   check-pcl:
@@ -12,11 +11,10 @@ jobs:
       - name: 签出储存库
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.PAT_TOKEN }}  # 使用 PAT_TOKEN 进行授权
-
+          token: ${{ secrets.GITHUB_TOKEN }}  # 这里传递 GITHUB_TOKEN 用于身份验证
 
       - name: 运行更新脚本
         id: run_script
-        run: bash Actions/CheckIssueList.sh  # 修改为使用 bash 执行脚本
+        run: sh Actions/CheckIssueList.sh
         env:
-          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # 确保在脚本中也可以使用 token
