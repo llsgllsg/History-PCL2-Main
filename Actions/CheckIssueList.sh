@@ -1,17 +1,24 @@
 #!/bin/bash
 
-# 使用 bash 执行脚本
+# 确保使用 bash 执行脚本
 set -e
 
 # 获取最新 10 个 Issue 的编号和标题
 issues=$(gh api -H "Accept: application/vnd.github+json" \
     repos/Hex-Dragon/PCL2/issues?state=open&per_page=10)
 
+# 调试输出
+echo "获取的 Issue 数据：$issues"
+
 # 提取 Issue 编号和标题，并去除控制字符
 for i in $(seq 0 9); do
     # 使用 jq 提取 Issue 编号和标题，并确保控制字符被正确处理
     number[$i]=$(echo "$issues" | jq -r ".[$i].number" | tr -d '\000-\031')  # 删除控制字符
     title[$i]=$(echo "$issues" | jq -r ".[$i].title" | tr -d '\000-\031')   # 删除控制字符
+
+    # 调试输出，检查变量赋值是否正常
+    echo "number[$i]: ${number[$i]}"
+    echo "title[$i]: ${title[$i]}"
 done
 
 # 基于最新 Issue 编号创建文件路径
