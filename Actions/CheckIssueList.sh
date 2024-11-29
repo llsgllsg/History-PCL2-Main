@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# 使用 bash 执行脚本
+set -e
+
 # 获取最新 10 个 Issue 的编号和标题
 issues=$(gh api -H "Accept: application/vnd.github+json" \
     repos/Hex-Dragon/PCL2/issues?state=open&per_page=10)
