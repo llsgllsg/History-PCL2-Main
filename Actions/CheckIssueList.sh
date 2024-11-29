@@ -9,6 +9,7 @@ titles=""
 
 # 提取 Issue 编号和标题
 for i in $(seq 0 9); do
+    # 拼接数据
     numbers+="$(echo "$issues" | jq -r ".[$i].number") "
     titles+="$(echo "$issues" | jq -r ".[$i].title") "
 done
@@ -18,8 +19,9 @@ echo "获取的 Issue 编号：$numbers"
 echo "获取的 Issue 标题：$titles"
 
 # 将字符串拆分成数组
-number=($numbers)
-title=($titles)
+# 使用 `read` 命令将字符串分割成数组
+read -r -a number <<< "$numbers"
+read -r -a title <<< "$titles"
 
 # 基于最新 Issue 编号创建文件路径
 file_path="libraries/Homepage/Issue#${number[0]}"
