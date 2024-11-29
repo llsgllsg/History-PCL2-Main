@@ -94,8 +94,7 @@ else
     echo "没有找到旧的 XAML 文件，Github提交推送"
 fi
 
-# 配置 Git 提交信息并推送
 git config --local user.email "github-actions[bot]@users.noreply.github.com"
 git config --local user.name "github-actions[bot]"
 git add *
-git diff-index --quiet HEAD || git commit -m "Update to Issue#${number[0]}" && git push
+git diff-index --quiet HEAD || git commit -m "Newissue" && git push
