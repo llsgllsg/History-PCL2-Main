@@ -3,16 +3,23 @@
 # 获取最新的 10 个 Issue 编号和标题
 issues=$(gh issue list --repo Hex-Dragon/PCL2 --limit 10 --json number,title --jq '.')
 
+# 临时存储编号和标题的字符串
+numbers=""
+titles=""
+
 # 提取 Issue 编号和标题
 for i in $(seq 0 9); do
-    number[$i]=$(echo "$issues" | jq -r ".[$i].number")
-    title[$i]=$(echo "$issues" | jq -r ".[$i].title")
+    numbers+="$(echo "$issues" | jq -r ".[$i].number") "
+    titles+="$(echo "$issues" | jq -r ".[$i].title") "
 done
 
 # 打印获取的 Issue 编号和标题
-for i in $(seq 0 9); do
-    echo "Issue #${number[$i]}: ${title[$i]}"
-done
+echo "获取的 Issue 编号：$numbers"
+echo "获取的 Issue 标题：$titles"
+
+# 将字符串拆分成数组
+number=($numbers)
+title=($titles)
 
 # 基于最新 Issue 编号创建文件路径
 file_path="libraries/Homepage/Issue#${number[0]}"
