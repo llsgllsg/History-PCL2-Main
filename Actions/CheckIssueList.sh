@@ -93,8 +93,3 @@ if [ -e "$previous_file_path" ]; then
 else
     echo "没有找到旧的 XAML 文件，Github提交推送"
 fi
-
-git config --local user.email "github-actions[bot]@users.noreply.github.com"
-git config --local user.name "github-actions[bot]"
-git add *
-git diff-index --quiet HEAD || git commit -m "Newissue" && git push
