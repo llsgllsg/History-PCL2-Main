@@ -24,8 +24,8 @@ read -r -a number <<< "$numbers"
 read -r -a title <<< "$titles"
 
 # 基于最新 Issue 编号创建文件路径
-file_path="libraries/Homepage/Issue#${number[0]}"
-previous_file_path="libraries/Homepage/Issue#${number[1]}-1"
+file_path="Issue#${number[0]}"
+previous_file_path="Issue#${number[1]}-1"
 
 # 判断是否存在该文件
 if [ -e "$file_path" ]; then
