@@ -33,16 +33,16 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="400" />
                 </Grid.ColumnDefinitions>
-                <local:MyListItem Title="Issue#5189" Margin="5,0,0,0" IsHitTestVisible="False" Info="mod检测更新功能添加两个平台的检测" Grid.Row="0" Grid.Column="1"/>
-                <local:MyListItem Title="Issue#5186" Margin="5,0,0,0" IsHitTestVisible="False" Info="游戏崩溃" Grid.Row="1" Grid.Column="1"/>
-                <local:MyListItem Title="Issue#5182" Margin="5,0,0,0" IsHitTestVisible="False" Info="无法删除主页的下载地址（可能是bug吧）" Grid.Row="2" Grid.Column="1"/>
-                <local:MyListItem Title="Issue#5178" Margin="5,0,0,0" IsHitTestVisible="False" Info="f5刷新导致搜索栏异常变淡" Grid.Row="3" Grid.Column="1"/>
-                <local:MyListItem Title="Issue#5173" Margin="5,0,0,0" IsHitTestVisible="False" Info="Mod" Grid.Row="4" Grid.Column="1"/>
-                <local:MyListItem Title="Issue#5172" Margin="5,0,0,0" IsHitTestVisible="False" Info="搜索列表刷新时前置mod列表被清空" Grid.Row="5" Grid.Column="1"/>
-                <local:MyListItem Title="Issue#5171" Margin="5,0,0,0" IsHitTestVisible="False" Info="在文本框中复制或剪切文本时卡顿且无法正常复制" Grid.Row="6" Grid.Column="1"/>
-                <local:MyListItem Title="Issue#5168" Margin="5,0,0,0" IsHitTestVisible="False" Info="模组不兼容后，pcl2报错乱码" Grid.Row="7" Grid.Column="1"/>
-                <local:MyListItem Title="Issue#5163" Margin="5,0,0,0" IsHitTestVisible="False" Info="[转" Grid.Row="8" Grid.Column="1"/>
-                <local:MyListItem Title="Issue#5150" Margin="5,0,0,0" IsHitTestVisible="False" Info="#5135]" Grid.Row="9" Grid.Column="1"/>
+                <local:MyListItem Title="Issue#5195" Margin="5,0,0,0" IsHitTestVisible="False" Info="当导入镜像源还未更新的版本的整合时，会导致游戏安装失败。" Grid.Row="0" Grid.Column="1"/>
+                <local:MyListItem Title="Issue#5189" Margin="5,0,0,0" IsHitTestVisible="False" Info="mod检测更新功能添加两个平台的检测" Grid.Row="1" Grid.Column="1"/>
+                <local:MyListItem Title="Issue#5186" Margin="5,0,0,0" IsHitTestVisible="False" Info="游戏崩溃" Grid.Row="2" Grid.Column="1"/>
+                <local:MyListItem Title="Issue#5182" Margin="5,0,0,0" IsHitTestVisible="False" Info="无法删除主页的下载地址（可能是bug吧）" Grid.Row="3" Grid.Column="1"/>
+                <local:MyListItem Title="Issue#5178" Margin="5,0,0,0" IsHitTestVisible="False" Info="f5刷新导致搜索栏异常变淡" Grid.Row="4" Grid.Column="1"/>
+                <local:MyListItem Title="Issue#5173" Margin="5,0,0,0" IsHitTestVisible="False" Info="Mod" Grid.Row="5" Grid.Column="1"/>
+                <local:MyListItem Title="Issue#5172" Margin="5,0,0,0" IsHitTestVisible="False" Info="搜索列表刷新时前置mod列表被清空" Grid.Row="6" Grid.Column="1"/>
+                <local:MyListItem Title="Issue#5171" Margin="5,0,0,0" IsHitTestVisible="False" Info="在文本框中复制或剪切文本时卡顿且无法正常复制" Grid.Row="7" Grid.Column="1"/>
+                <local:MyListItem Title="Issue#5168" Margin="5,0,0,0" IsHitTestVisible="False" Info="模组不兼容后，pcl2报错乱码" Grid.Row="8" Grid.Column="1"/>
+                <local:MyListItem Title="Issue#5163" Margin="5,0,0,0" IsHitTestVisible="False" Info="[转" Grid.Row="9" Grid.Column="1"/>
             </Grid>
         </StackPanel>
     </StackPanel>
