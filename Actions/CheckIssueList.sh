@@ -1,29 +1,22 @@
 #!/bin/bash
 
-# 确保使用 bash 执行脚本
-set -e
+# 获取最新的 10 个 Issue 编号和标题
+issues=$(gh issue list --repo Hex-Dragon/PCL2 --limit 10 --json number,title --jq '.')
 
-# 获取最新 10 个 Issue 的编号和标题
-issues=$(gh api -H "Accept: application/vnd.github+json" \
-    repos/Hex-Dragon/PCL2/issues?state=open&per_page=10)
-
-# 调试输出
-echo "获取的 Issue 数据：$issues"
-
-# 提取 Issue 编号和标题，并去除控制字符
+# 提取 Issue 编号和标题
 for i in $(seq 0 9); do
-    # 使用 jq 提取 Issue 编号和标题，并确保控制字符被正确处理
-    number[$i]=$(echo "$issues" | jq -r ".[$i].number" | tr -d '\000-\031')  # 删除控制字符
-    title[$i]=$(echo "$issues" | jq -r ".[$i].title" | tr -d '\000-\031')   # 删除控制字符
+    number[$i]=$(echo "$issues" | jq -r ".[$i].number")
+    title[$i]=$(echo "$issues" | jq -r ".[$i].title")
+done
 
-    # 调试输出，检查变量赋值是否正常
-    echo "number[$i]: ${number[$i]}"
-    echo "title[$i]: ${title[$i]}"
+# 打印获取的 Issue 编号和标题
+for i in $(seq 0 9); do
+    echo "Issue #${number[$i]}: ${title[$i]}"
 done
 
 # 基于最新 Issue 编号创建文件路径
-file_path="libraries/Homepage/Issue#${number[0]}.xaml"
-previous_file_path="libraries/Homepage/Issue#${number[1]}.xaml"
+file_path="libraries/Homepage/Issue#${number[0]}"
+previous_file_path="libraries/Homepage/Issue#${number[1]}-1"
 
 # 判断是否存在该文件
 if [ -e "$file_path" ]; then
@@ -62,6 +55,7 @@ else
                     <RowDefinition Height="45" />
                     <RowDefinition Height="45" />
                     <RowDefinition Height="45" />
+                    <RowDefinition Height="45" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="400" />
@@ -83,7 +77,7 @@ EOF
 EOF
 fi
 
-# 删除旧的 PR 文件（如果存在），删除的是第二新的 Issue
+# 删除旧的 Issue 文件（如果存在），删除的是第二新的 Issue
 if [ -e "$previous_file_path" ]; then
     echo "删除旧的 XAML 文件: $previous_file_path"
     rm "$previous_file_path"
