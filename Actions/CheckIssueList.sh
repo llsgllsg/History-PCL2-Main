@@ -59,7 +59,7 @@ else
                 Logo="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0z M1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0z"/>
         </Grid>
         <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush6}" StrokeThickness="1.5" Stretch="Fill" Margin="0,8"/>
-        <TextBlock FontSize="16" Margin="13,0,0,0"><Bold>最新Issue [lastest:10 5min reload]</Bold></TextBlock>
+        <TextBlock FontSize="16" Margin="13,0,0,0"><Bold>最新Issue [latest:10 5min reload]</Bold></TextBlock>
         <StackPanel>
             <Grid>
                 <Grid.RowDefinitions>
