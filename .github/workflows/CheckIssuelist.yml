@@ -1,7 +1,7 @@
 name: Check Issue List
 on:
   schedule:
-    - cron: '0/50 * * * *'  # 每分钟运行一次
+    - cron: '0/60 * * * *'  # 每分钟运行一次
   workflow_dispatch: # 也可以手动触发
 
 jobs:
