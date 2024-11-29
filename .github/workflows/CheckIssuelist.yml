@@ -11,10 +11,19 @@ jobs:
       - name: 签出储存库
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}  # 这里传递 GITHUB_TOKEN 用于身份验证
+          token: ${{ secrets.PAT_TOKEN }}  # 使用 PAT 代替 GITHUB_TOKEN
 
       - name: 运行更新脚本
         id: run_script
         run: bash Actions/CheckIssueList.sh
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # 确保在脚本中也可以使用 token
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}  # 确保脚本中也能使用 PAT
+
+      - name: 提交并推送更改
+        run: |
+          git config user.name "Your Name"
+          git config user.email "your-email@example.com"
+          git add .
+          git commit -m "更新 Issue 列表"
+          git push https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/Joker2184/UpdateHomepage.git
+
