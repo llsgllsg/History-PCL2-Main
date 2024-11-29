@@ -27,6 +27,14 @@ read -r -a title <<< "$titles"
 file_path="Issue"
 previous_file_path="Issue"
 
+# 删除旧的 Issue 文件（如果存在），删除的是第二新的 Issue
+if [ -e "$previous_file_path" ]; then
+    echo "删除旧的 XAML 文件: $previous_file_path"
+    rm "$previous_file_path"
+else
+    echo "没有找到旧的 XAML 文件，构建后将Github提交推送"
+fi
+
 # 判断是否存在该文件
 if [ -e "$file_path" ]; then
     echo "文件存在，无需更改"
@@ -86,10 +94,4 @@ EOF
 EOF
 fi
 
-# 删除旧的 Issue 文件（如果存在），删除的是第二新的 Issue
-if [ -e "$previous_file_path" ]; then
-    echo "删除旧的 XAML 文件: $previous_file_path"
-    rm "$previous_file_path"
-else
-    echo "没有找到旧的 XAML 文件，Github提交推送"
-fi
+
