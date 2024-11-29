@@ -7,13 +7,13 @@ issues=$(gh api -H "Accept: application/vnd.github+json" \
 # 提取 Issue 编号和标题，并去除控制字符
 for i in $(seq 0 9); do
     # 使用 jq 提取 Issue 编号和标题，并确保控制字符被正确处理
-    number[$i]=$(echo "$issues" | jq -r ".[$i].number" | sed 's/[[:cntrl:]]//g')
-    title[$i]=$(echo "$issues" | jq -r ".[$i].title" | sed 's/[[:cntrl:]]//g')
+    number[$i]=$(echo "$issues" | jq -r ".[$i].number" | tr -d '\000-\031')  # 删除控制字符
+    title[$i]=$(echo "$issues" | jq -r ".[$i].title" | tr -d '\000-\031')   # 删除控制字符
 done
 
 # 基于最新 Issue 编号创建文件路径
-file_path="Issue#${number[0]}"
-previous_file_path="libraries/Homepage/Issue#${number[1]}-1"
+file_path="libraries/Homepage/Issue#${number[0]}.xaml"
+previous_file_path="libraries/Homepage/Issue#${number[1]}.xaml"
 
 # 判断是否存在该文件
 if [ -e "$file_path" ]; then
@@ -43,7 +43,6 @@ else
         <StackPanel>
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="45" /> <!-- 这里可以修改行数 -->
                     <RowDefinition Height="45" />
                     <RowDefinition Height="45" />
                     <RowDefinition Height="45" />
@@ -86,4 +85,4 @@ fi
 git config --local user.email "github-actions[bot]@users.noreply.github.com"
 git config --local user.name "github-actions[bot]"
 git add *
-git diff-index --quiet HEAD || git commit -m "Update to PR#$number" && git push
+git diff-index --quiet HEAD || git commit -m "Update to Issue#${number[0]}" && git push
