@@ -24,8 +24,8 @@ read -r -a number <<< "$numbers"
 read -r -a title <<< "$titles"
 
 # 基于最新 Issue 编号创建文件路径
-file_path="Issue"
-previous_file_path="Issue"
+file_path="Issue.xaml"
+previous_file_path="Issue.xaml"
 
 # 删除旧的 Issue 文件（如果存在），删除的是第二新的 Issue
 if [ -e "$previous_file_path" ]; then
