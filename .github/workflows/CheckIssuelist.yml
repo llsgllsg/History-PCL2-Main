@@ -15,6 +15,6 @@ jobs:
 
       - name: 运行更新脚本
         id: run_script
-        run: sh Actions/CheckIssueList.sh
+        run: bash Actions/CheckIssueList.sh
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # 确保在脚本中也可以使用 token
