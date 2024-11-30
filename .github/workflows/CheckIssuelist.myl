@@ -1,4 +1,5 @@
 name: Check Issue List
+#由于史山代码导致actions一堆报错邮箱炸了暂时用不到先stop了
 on:
   schedule:
     - cron: '0/5 * * * *'  # 每分钟运行一次
