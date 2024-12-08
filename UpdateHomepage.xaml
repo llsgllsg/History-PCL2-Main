@@ -93,7 +93,7 @@ M512 42.666667A464.64 464.64 0 0 0 42.666667 502.186667 460.373333 460.373333 0 
 <Border.Background>
 <ImageBrush ImageSource="https://pic.imgdb.cn/item/66fde7a30a206445e36ebafe.png" Stretch="UniformToFill" />
 </Border.Background>
-<Image Source="https://pic.imgdb.cn/item/66fde7a30a206445e36ebafe.png" Opacity="0" Stretch="Fill"/>
+<Image="https://pic.imgdb.cn/item/66fde7a30a206445e36ebafe.png" Opacity="0" Stretch="Fill"/>
 
 </Border>
 </StackPanel>
@@ -103,16 +103,16 @@ M512 42.666667A464.64 464.64 0 0 0 42.666667 502.186667 460.373333 460.373333 0 
 <ListItem><Paragraph Style="{StaticResource Lp}">Mod 管理中添加了下载 Mod 选项（#4095，@212112111zwl）
   会自动跳转至下载页面，并筛选对应的版本和加载器（#4075，@JingHai-Lingyun）</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">如果没有 Mod，Mod 管理页面会提供下载和安装 Mod 的选项
-  </Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://i2.hdslb.com/bfs/article/aaf90ac48bb2fb13be53900f347d005911343203.png"/></BlockUIContainer><Paragraph Style="{StaticResource Lp}">如果没有 Mod，Mod 管理页面会提供下载和安装 Mod 的选项
+  </Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://pic.imgdb.cn/item/6755a522d0e0a243d4e004dd.png"/></BlockUIContainer><Paragraph Style="{StaticResource Lp}">如果没有 Mod，Mod 管理页面会提供下载和安装 Mod 的选项
   </Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">允许正式版修改“打开启动器时显示 PCL 图标”设置（#4091，@lingyunawa）</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">新主页预设：杂志主页（#4926，由 @CreeperIsASpy 制作）
   你可以在 <TextBox Style="{StaticResource InlineCode}">设置 → 个性化 → 主页</TextBox> 中选择主页预设！
-  </Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://i2.hdslb.com/bfs/article/469770b3d605fda3b8bf6c780dd6570311343203.png"/></BlockUIContainer><Paragraph Style="{StaticResource Lp}">新主页预设：杂志主页（#4926，由 @CreeperIsASpy 制作）
+  </Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://pic.imgdb.cn/item/6755a522d0e0a243d4e004dc.png"/></BlockUIContainer><Paragraph Style="{StaticResource Lp}">新主页预设：杂志主页（#4926，由 @CreeperIsASpy 制作）
   你可以在 <TextBox Style="{StaticResource InlineCode}">设置 → 个性化 → 主页</TextBox> 中选择主页预设！
   </Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">在 Mod 下载详情页添加了 MC 版本筛选（#5087，@xxtg666）
-  </Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://i2.hdslb.com/bfs/article/5ecd0b1e15ef3642d4c07ee76b1dd2c111343203.png"/></BlockUIContainer><Paragraph Style="{StaticResource Lp}">在 Mod 下载详情页添加了 MC 版本筛选（#5087，@xxtg666）
+  </Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://pic.imgdb.cn/item/6755a522d0e0a243d4e004db.png"/></BlockUIContainer><Paragraph Style="{StaticResource Lp}">在 Mod 下载详情页添加了 MC 版本筛选（#5087，@xxtg666）
   </Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">开源协议更新：允许分发衍生作品
   现在，大家可以在 GitHub 下载 PCL 的源码，自己魔改 PCL 发布魔改版了！
