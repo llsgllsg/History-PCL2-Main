@@ -96,9 +96,9 @@ M512 42.666667A464.64 464.64 0 0 0 42.666667 502.186667 460.373333 460.373333 0 
 <StackPanel Style="{StaticResource ContentStack}" Margin="0,10,0,-10">
 <Border Style="{StaticResource VersionImageBorder}">
 <Border.Background>
-<ImageBrush ImageSource="https://pic.imgdb.cn/item/66fde7a30a206445e36ebb11.png" Stretch="UniformToFill" />
+<ImageBrush ImageSource="https://pic.imgdb.cn/item/66fde7a30a206445e36ebafe.png" Stretch="UniformToFill" />
 </Border.Background>
-<Image Source="https://pic.imgdb.cn/item/66fde7a30a206445e36ebb11.png" Opacity="0" Stretch="Fill"/>
+<Image Source="https://pic.imgdb.cn/item/66fde7a30a206445e36ebafe.png" Opacity="0" Stretch="Fill"/>
 
 </Border>
 </StackPanel>
