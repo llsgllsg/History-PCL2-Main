@@ -41,6 +41,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 </StackPanel.Resources>
 <local:MyCard Title="📰 2.8.11" CanSwap="True" IsSwaped="False" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
+<local:MyHint Margin="0,0,0,15" Text="此版本仅快照版独有 本文更新内容已同步至正式版2.8.12" IsWarn="False" />
 <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,-20,0,0">
     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,10">
         <TextBlock Text="PCL 新闻速报" FontSize="32" FontWeight="Bold" Foreground="{DynamicResource ColorBrush3}" HorizontalAlignment="Center" />
