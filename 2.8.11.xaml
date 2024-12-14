@@ -80,9 +80,9 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <StackPanel Style="{StaticResource ContentStack}" Margin="0,10,0,-10">
 <Border Style="{StaticResource VersionImageBorder}">
 <Border.Background>
-<ImageBrush ImageSource="https://pic.imgdb.cn/item/66fde7a30a206445e36ebafe.png" Stretch="UniformToFill" />
+<ImageBrush ImageSource="https://pic.imgdb.cn/item/66fde7a30a206445e36ebb11.png" Stretch="UniformToFill" />
 </Border.Background>
-<Image Source="https://pic.imgdb.cn/item/66fde7a30a206445e36ebafe.png" Opacity="0" Stretch="Fill"/>
+<Image Source="https://pic.imgdb.cn/item/66fde7a30a206445e36ebb11.png" Opacity="0" Stretch="Fill"/>
 
 </Border>
 </StackPanel>
