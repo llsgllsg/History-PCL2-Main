@@ -1,0 +1,8 @@
+<local:MyCard Title="">
+    <StackPanel Margin="25,30,25,30">
+        <TextBlock Margin="0,0,0,4" Foreground="{DynamicResource ColorBrush2}"
+                   Text="429" FontSize="70" TextAlignment = "Center" FontWeight="Bold"/>
+        <TextBlock Margin="0,0,0,4" Foreground="{DynamicResource ColorBrush3}" FontSize="16"
+                   Text="访问次数过多 再次获取将封禁IP1小时" TextAlignment = "Center"/>
+    </StackPanel>
+</local:MyCard>
