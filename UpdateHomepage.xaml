@@ -109,7 +109,7 @@ PCL2 社区版并非由上游开发者龙腾猫跃开发与管理，且与龙腾
               Stretch="Uniform"
               Data="M939.902 458.563L910.17 144.567c-1.507-16.272-14.465-29.13-30.737-30.737L565.438 84.098h-.402c-3.215 0-5.726 1.005-7.634 2.913l-470.39 470.39a10.004 10.004 0 000 14.164l365.423 365.424c1.909 1.908 4.42 2.913 7.132 2.913s5.223-1.005 7.132-2.913l470.39-470.39c2.01-2.11 3.014-5.023 2.813-7.932zM363.165 442.903c-34.346-34.346-34.346-90.128 0-124.474 34.346-34.346 90.128-34.346 124.474 0 34.346 34.346 34.346 90.128 0 124.474-34.447 34.447-90.228 34.447-124.474 0z"/>
         <Border CornerRadius="4" Background="{DynamicResource ColorBrush6}" Margin="2">
-            <local:MyTextButton Margin="4,1" EventType="弹出窗口" EventData="快照版 | 快照版本仅限赞助者使用。需要小小的赞助一下以支持龙猫的咕咕咕大业。别担心，它很快可能会发布正式版本~">快照版</local:MyTextButton>
+            <local:MyTextButton Margin="4,1" EventType="弹出窗口" EventData="正式版 | PCL 正式版可永久免费下载使用，无需赞助，也可以用于制作整合包">正式版</local:MyTextButton>
         </Border>
     </WrapPanel>
     <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="1.2" Stretch="Fill" Margin="8,2"/>
