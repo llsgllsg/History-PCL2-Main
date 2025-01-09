@@ -19,9 +19,7 @@
 #### 使用链接
 4. 点击 “联网更新”
 5. 在 “下载地址” 栏中输入地址：
-   zh_CN:```http://pclhomeplazaoss.lingyunawa.top:27000/d/Homepages/Joker2184/UpdateHomepage.xaml```
-
-   en_US：```http://pclhomeplazaoss.lingyunawa.top:27000/d/Homepages/Joker2184/UpdateHomepage_enus.xaml```
+   zh_CN:```http://pclhomeplazaoss.lingyunawa.top:26994/d/Homepages/Joker2184/UpdateHomepage.xaml```
 7. 返回启动页，完成！
 
 
