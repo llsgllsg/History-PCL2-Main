@@ -217,7 +217,7 @@ M512 42.666667A464.64 464.64 0 0 0 42.666667 502.186667 460.373333 460.373333 0 
     </StackPanel>
 </local:MyCard>
 <ContentControl Content="周 边 新 闻" Template="{StaticResource Separator}"/>
-<local:MyCard Title="📰 CEVersion" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
+<local:MyCard Title="📰 CEVersion" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" Margin="25,40,23,15">
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
