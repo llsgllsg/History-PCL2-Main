@@ -48,3 +48,5 @@ https://UpdateHomepage.pages.dev/+文件名.json/xaml
 获取
 
 你可以通过[爱发电](https://afdian.com/a/PHCommunity)赞助服务器
+
+吃瓜/反馈群：1042958700
